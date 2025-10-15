@@ -46,9 +46,12 @@
                     <div class="main-menu__btn-boxes">
                         <div class="main-menu__btn-box-1">
                             @guest
-                            <!-- <a href="{{ route('login') }}" class="thm-btn">Login</a> -->
+                            <a href="{{ route('login') }}" class="thm-btn">Login</a>
                             @else
-                            <a href=""class="thm-btn">Logout</a>
+                            <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                                @csrf
+                                <button type="submit" class="thm-btn" style="background: none; border: none; color: inherit; cursor: pointer;">Logout</button>
+                            </form>
                             @endguest
                         </div>
                     </div>

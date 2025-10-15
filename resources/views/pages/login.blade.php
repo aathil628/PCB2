@@ -3,7 +3,7 @@
 $title = 'Login';
 $subtitle = 'Login';
 @endphp
-@section('title', ' Login || MyfirstPCB || MyfirstPCB Laravel Template ')
+@section('title', ' Login | MyfirstPCB')
 @section('meta_description', 'Login to your MyfirstPCB account securely to access PCB order history, design tools, and exclusive services. Fast and safe login for all electronic enthusiasts.')
 @section('meta_keywords', 'login, MyfirstPCB login, user account, PCB order login, secure login, electronics projects, PCB platform')
 @section('content')

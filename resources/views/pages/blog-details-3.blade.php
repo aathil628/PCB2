@@ -3,7 +3,7 @@
 $title = 'Blog Details';
 $subtitle = 'Blog Details';
 @endphp
-@section('title', ' Blog Details || MyfirstPCB || MyfirstPCB Laravel Template ')
+@section('title', 'Advanced PCB Design Projects for Beginners | MyFirstPCB')
 @section('content')
 
 <x-strickyHeader />
@@ -119,50 +119,6 @@ $subtitle = 'Blog Details';
             </div>
             <div class="col-xl-4 col-lg-5">
                 <div class="sidebar">
-                    <div class="sidebar__single sidebar__search">
-                        <div class="sidebar__title-box">
-                            <div class="sidebar__title-icon">
-                                <img src="{{ asset('assets/images/icon/sidebar-title-icon.png') }}" alt="">
-                            </div>
-                            <h3 class="sidebar__title">Search </h3>
-                        </div>
-                        <p class="sidebar__search-text">Search blogs to discover a vast world of online content
-                            on countless topics.</p>
-                        <form action="#" class="sidebar__search-form">
-                            <input type="search" placeholder="Search..">
-                            <button type="submit"><i class="icon-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="sidebar__single sidebar__category">
-                        <div class="sidebar__title-box">
-                            <div class="sidebar__title-icon">
-                                <img src="{{ asset('assets/images/icon/sidebar-title-icon.png') }}" alt="">
-                            </div>
-                            <h3 class="sidebar__title">Category </h3>
-                        </div>
-                        <ul class="sidebar__category-list list-unstyled">
-                            <li>
-                                <a href={{ url('blog-details') }}>Digital Marketing - (45)<span
-                                        class="fas fa-arrow-right"></span></a>
-                            </li>
-                            <li>
-                                <a href={{ url('blog-details') }}>Health & Fitness - (12)<span
-                                        class="fas fa-arrow-right"></span></a>
-                            </li>
-                            <li class="active">
-                                <a href={{ url('blog-details') }}>Programming & Tech - (78)<span
-                                        class="fas fa-arrow-right"></span></a>
-                            </li>
-                            <li>
-                                <a href={{ url('blog-details') }}>Product Design - (45)<span
-                                        class="fas fa-arrow-right"></span></a>
-                            </li>
-                            <li>
-                                <a href={{ url('blog-details') }}>Online Chef - (12)<span
-                                        class="fas fa-arrow-right"></span></a>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="sidebar__single sidebar__post">
                         <div class="sidebar__title-box">
                             <div class="sidebar__title-icon">
@@ -173,73 +129,53 @@ $subtitle = 'Blog Details';
                         <ul class="sidebar__post-list list-unstyled">
                             <li>
                                 <div class="sidebar__post-image">
-                                    <img src="{{ asset('assets/images/blog/blog-lp-1.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/blog/robotics-kids-trivandrum.jpg') }}" alt="PCB Toolkit">
                                 </div>
                                 <div class="sidebar__post-content">
                                     <ul class="sidebar__post-meta list-unstyled">
                                         <li>
-                                            <p><span class="icon-tags"></span>Development</p>
+                                            <p><span class="icon-tags"></span>PCB Toolkit</p>
                                         </li>
                                         <li>
-                                            <p><span class="icon-clock"></span>10 Min Read</p>
+                                            <p><span class="icon-clock"></span>8 Min Read</p>
                                         </li>
                                     </ul>
-                                    <h3 class="sidebar__post-title"><a href={{ url('blog-details') }}>Creating a
-                                            Productive Study Space for Online Learning</a></h3>
+                                    <h3 class="sidebar__post-title"><a href="{{ route('blog-details-1') }}">Why Every Maker Should Have a PCB Toolkit Ready</a></h3>
                                 </div>
                             </li>
                             <li>
                                 <div class="sidebar__post-image">
-                                    <img src="{{ asset('assets/images/blog/blog-lp-2.jpg') }}" alt="">">
+                                    <img src="{{ asset('assets/images/blog/industry-connect.jpg') }}" alt="PCB Projects">
                                 </div>
                                 <div class="sidebar__post-content">
                                     <ul class="sidebar__post-meta list-unstyled">
                                         <li>
-                                            <p><span class="icon-tags"></span>Development</p>
+                                            <p><span class="icon-tags"></span>PCB Projects</p>
                                         </li>
                                         <li>
-                                            <p><span class="icon-clock"></span>10 Min Read</p>
+                                            <p><span class="icon-clock"></span>5 Min Read</p>
                                         </li>
                                     </ul>
-                                    <h3 class="sidebar__post-title"><a href={{ url('blog-details') }}>Universities,
-                                            colleges, and independent platforms</a></h3>
+                                    <h3 class="sidebar__post-title"><a href="{{ route('blog-details-2') }}">5 Simple Projects You Can Do With Our Junior PCB Toolkit</a></h3>
                                 </div>
                             </li>
                             <li>
                                 <div class="sidebar__post-image">
-                                    <img src="{{ asset('assets/images/blog/blog-lp-3.jpg') }}" alt="">>
+                                    <img src="{{ asset('assets/images/blog/starter- pack for-learning- pcb.jpg') }}" alt="PCB Learning">
                                 </div>
                                 <div class="sidebar__post-content">
                                     <ul class="sidebar__post-meta list-unstyled">
                                         <li>
-                                            <p><span class="icon-tags"></span>Development</p>
+                                            <p><span class="icon-tags"></span>PCB Learning</p>
                                         </li>
                                         <li>
-                                            <p><span class="icon-clock"></span>10 Min Read</p>
+                                            <p><span class="icon-clock"></span>12 Min Read</p>
                                         </li>
                                     </ul>
-                                    <h3 class="sidebar__post-title"><a href={{ url('blog-details') }}>How to Succeed
-                                            in Online Learning: Tips for Students</a></h3>
+                                    <h3 class="sidebar__post-title"><a href="{{ route('blog-details-4') }}">The Ultimate Starter Pack for Learning PCB Design</a></h3>
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                    <div class="sidebar__single sidebar__tag">
-                        <div class="sidebar__title-box">
-                            <div class="sidebar__title-icon">
-                                <img src="{{ asset('assets/images/icon/sidebar-title-icon.png') }}" alt="">
-                            </div>
-                            <h3 class="sidebar__title">Keywords</h3>
-                        </div>
-                        <div class="sidebar__tag-list">
-                            <a href={{ url('blog-details') }}>Business</a>
-                            <a href={{ url('blog-details') }}>Design</a>
-                            <a href={{ url('blog-details') }}>Development</a>
-                            <a href={{ url('blog-details') }}>Technology</a>
-                            <a href={{ url('blog-details') }}>Fitness</a>
-                            <a href={{ url('blog-details') }}>Cooking</a>
-                            <a href={{ url('blog-details') }}>Health Care</a>
-                        </div>
                     </div>
                     <div class="sidebar__single sidebar__newsletter">
                         <div class="sidebar__title-box">

@@ -120,11 +120,17 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Logged out successfully!',
-            'redirect_url' => route('login'),
-        ]);
+        // Handle AJAX requests
+        if ($request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Logged out successfully!',
+                'redirect_url' => route('login'),
+            ]);
+        }
+
+        // Handle regular form submissions
+        return redirect()->route('login')->with('success', 'Logged out successfully!');
     }
 
  public function forgetPassword(Request $request)

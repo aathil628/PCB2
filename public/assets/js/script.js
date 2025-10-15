@@ -875,12 +875,19 @@
             $(form).attr("action"),
             $(form).serialize(),
             function (response) {
-              $(form).parent().find(".result").append(response);
-              $(form).find('input[type="text"]').val("");
-              $(form).find('input[type="email"]').val("");
-              $(form).find("textarea").val("");
-            }
-          );
+              if (response.success) {
+                $(form).parent().find(".result").html(response.message);
+                $(form).find('input[type="text"]').val("");
+                $(form).find('input[type="email"]').val("");
+                $(form).find("textarea").val("");
+              } else {
+                $(form).parent().find(".result").html('<div class="alert alert-danger">Error: ' + response.message + '</div>');
+              }
+            },
+            'json'
+          ).fail(function(xhr) {
+            $(form).parent().find(".result").html('<div class="alert alert-danger">Error: Please try again later.</div>');
+          });
           return false;
         }
       });

@@ -24,7 +24,15 @@ class ContactController extends Controller
             'message' => $request->message,
         ]);
 
-        // Redirect to confirmation page
+        // Handle AJAX requests
+        if ($request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => '<div class="alert alert-success">Thank you for contacting us! We will get back to you soon.</div>'
+            ]);
+        }
+
+        // Redirect to confirmation page for regular form submissions
         return redirect()->route('contact.confirmation');
     }
 }

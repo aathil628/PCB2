@@ -43,7 +43,11 @@
                 @guest
                 <a href="{{ route('login') }}" class="mobile-nav__login-link">Login</a>
                 @else
-                <a href="{{ route('profile') }}" class="mobile-nav__logout-link">profile</a>
+                <a href="{{ route('profile') }}" class="mobile-nav__profile-link">Profile</a>
+                <form method="POST" action="{{ route('logout') }}" style="display: inline; margin-left: 10px;">
+                    @csrf
+                    <button type="submit" class="mobile-nav__logout-link" style="background: none; border: none; color: inherit; cursor: pointer; text-decoration: underline;">Logout</button>
+                </form>
                 @endguest
 
             </li>

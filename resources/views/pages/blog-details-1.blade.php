@@ -3,7 +3,7 @@
 $title = 'Blog Details';
 $subtitle = 'Blog Details';
 @endphp
-@section('title', ' Blog Details || MyfirstPCB || MyfirstPCB Laravel Template ')
+@section('title', 'Why Every Maker Should Have a PCB Toolkit Ready | MyFirstPCB')
 @section('content')
 
 <x-strickyHeader />
@@ -127,53 +127,50 @@ $subtitle = 'Blog Details';
                         <ul class="sidebar__post-list list-unstyled">
                             <li>
                                 <div class="sidebar__post-image">
-                                    <img src="{{ asset('assets/images/blog/blog-lp-1.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/blog/industry-connect.jpg') }}" alt="PCB Toolkit Projects">
                                 </div>
                                 <div class="sidebar__post-content">
                                     <ul class="sidebar__post-meta list-unstyled">
                                         <li>
-                                            <p><span class="icon-tags"></span>Development</p>
+                                            <p><span class="icon-tags"></span>PCB Projects</p>
                                         </li>
                                         <li>
-                                            <p><span class="icon-clock"></span>10 Min Read</p>
+                                            <p><span class="icon-clock"></span>5 Min Read</p>
                                         </li>
                                     </ul>
-                                    <h3 class="sidebar__post-title"><a href={{ url('blog-details') }}>Creating a
-                                            Productive Study Space for Online Learning</a></h3>
+                                    <h3 class="sidebar__post-title"><a href="{{ route('blog-details-2') }}">5 Simple Projects You Can Do With Our Junior PCB Toolkit</a></h3>
                                 </div>
                             </li>
                             <li>
                                 <div class="sidebar__post-image">
-                                    <img src="{{ asset('assets/images/blog/blog-lp-2.jpg') }}" alt="">">
+                                    <img src="{{ asset('assets/images/blog/robotics-curriculum.jpg') }}" alt="PCB Learning">
                                 </div>
                                 <div class="sidebar__post-content">
                                     <ul class="sidebar__post-meta list-unstyled">
                                         <li>
-                                            <p><span class="icon-tags"></span>Development</p>
+                                            <p><span class="icon-tags"></span>PCB Learning</p>
                                         </li>
                                         <li>
-                                            <p><span class="icon-clock"></span>10 Min Read</p>
+                                            <p><span class="icon-clock"></span>8 Min Read</p>
                                         </li>
                                     </ul>
-                                    <h3 class="sidebar__post-title"><a href={{ url('blog-details') }}>Universities,
-                                            colleges, and independent platforms</a></h3>
+                                    <h3 class="sidebar__post-title"><a href="{{ route('blog-details-3') }}">Advanced PCB Design Projects for Beginners</a></h3>
                                 </div>
                             </li>
                             <li>
                                 <div class="sidebar__post-image">
-                                    <img src="{{ asset('assets/images/blog/blog-lp-3.jpg') }}" alt="">>
+                                    <img src="{{ asset('assets/images/blog/starter- pack for-learning- pcb.jpg') }}" alt="PCB Starter Pack">
                                 </div>
                                 <div class="sidebar__post-content">
                                     <ul class="sidebar__post-meta list-unstyled">
                                         <li>
-                                            <p><span class="icon-tags"></span>Development</p>
+                                            <p><span class="icon-tags"></span>PCB Learning</p>
                                         </li>
                                         <li>
-                                            <p><span class="icon-clock"></span>10 Min Read</p>
+                                            <p><span class="icon-clock"></span>12 Min Read</p>
                                         </li>
                                     </ul>
-                                    <h3 class="sidebar__post-title"><a href={{ url('blog-details') }}>How to Succeed
-                                            in Online Learning: Tips for Students</a></h3>
+                                    <h3 class="sidebar__post-title"><a href="{{ route('blog-details-4') }}">The Ultimate Starter Pack for Learning PCB Design</a></h3>
                                 </div>
                             </li>
                         </ul>
