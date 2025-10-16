@@ -1309,23 +1309,18 @@
 
         const contactWhatsapp = document.getElementById('contactWhatsapp');
 
-        contactWhatsapp.addEventListener('click', function () {
-
-            const isAuthenticated = {{ auth()->check() ? 'true' : 'false' }};
-            if (!isAuthenticated) {
-                toastr.error("Login first");
-                return;
-            }
+        if (contactWhatsapp) {
+        contactWhatsapp.addEventListener('click', function (e) {
+            // prevent default anchor navigation so we control the URL
+            e.preventDefault();
 
             const whatsAppNumber = '918590870849';
-            const message = `Hello, I would like to inquire about your courses.`;
+            const message = 'Hello, I would like to inquire about your courses.';
             const whatsappURL = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(message)}`;
-            console.log("message:-", message);
-            console.log("User name:-", name);
-            console.log("whatsappURL:-", whatsappURL);
 
             window.open(whatsappURL, '_blank');
         });
+    }
 
         function enrollInCourse(course) {
             const courseName = course.title;

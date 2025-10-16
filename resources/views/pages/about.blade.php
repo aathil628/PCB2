@@ -223,13 +223,8 @@
     <!-- Counter One Start -->
     <section class="counter-one">
         <div class="counter-one__bg" style="background-image: url({{ asset('assets/images/backgrounds/counter-one-bg.jpg') }});">
-            <div class="counter-one__video-link">
-                <div class="counter-one__video-shape-1">
-                    <img src="{{ asset('assets/images/shapes/counter-one-video-shape-1.png') }}" alt="">
-                </div>
-                <div class="counter-one__video-image">
-                    <img src="{{ asset('assets/images/resources/counter-one-static.jpg') }}" alt="About preview">
-                </div>
+            <div class="counter-one__video-link pill-left"
+                 style="background-image: url('{{ asset('assets/images/resources/counter-one-static.jpg') }}');">
             </div>
         </div>
         <div class="counter-one__shape-1" style="background-image: url({{ asset('assets/images/shapes/counter-one-shape-1.png') }});"></div>

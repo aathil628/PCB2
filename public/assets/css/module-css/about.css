@@ -1200,20 +1200,25 @@
     margin-bottom: 7px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.counter-one__video-link.pill-left {
+    overflow: hidden;
+    display: block;
+    width: 120%;
+    /* adjust height to match your layout */
+    min-height: 360px;
+    /* pill left, square right */
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    /* make the image cover the container */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
 
 /*--------------------------------------------------------------
 # End
