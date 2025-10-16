@@ -8,8 +8,6 @@
 @section('meta_keywords', 'PCB course, electronics course, PCB design tutorial, electronics project, PCB manufacturing, MyfirstPCB courses, learn PCB design')
 @section('content')
 
-@section('content')
-
 <x-strickyHeader/>
 
 <style>
@@ -100,7 +98,7 @@
                                     <li data-tab="#instructor" class="tab-btn tab-btn-three">
                                         <p><span class="icon-graduation-cap"></span>Instructor</p>
                                     </li>
-                                    <li data-tab="#review" class="tab-btn active-btn tab-btn-four">
+                                    <li data-tab="#review" class="tab-btn active-btn  tab-btn-four">
                                         <p><span class="icon-comments"></span>Review</p>
                                     </li>
                                 </ul>
@@ -109,28 +107,17 @@
                                         <div class="course-details__tab-inner">
                                             <div class="course-details__overview">
                                                 <h3 class="course-details__overview-title">Course Overview</h3>
-                                                <p class="course-details__overview-text-1">Master Python Programming
-                                                    for Beginners and Beyond is a comprehensive course designed to
-                                                    take you from the fundamentals of Python to advanced topics,
-                                                    providing you with the skills needed to solve real-world
-                                                    problems. </p>
-                                                <p class="course-details__overview-text-2">Whether you're new to
-                                                    programming or looking to deepen your Python knowledge, this
-                                                    course covers essential concepts and hands-on projects to make
-                                                    you proficient in Python, one of the world's most versatile and
-                                                    in-demand programming languages.</p>
-                                                <h3 class="course-details__overview-title-2">What You Will Learn?
-                                                </h3>
+                                                <p class="course-details__overview-text-1">PCB Design and Fabrications is a hands-on course designed to equip students with the core skills required to design, develop and fabricate Printed Circuit Boards (PCBs) using modern tools like KiCAD 9 and Saturn PCB Toolkit.</p>
+                                                <p class="course-details__overview-text-2">From understanding schematics to generating Gerber files and assembling real hardware, this course provides practical, step-by-step experience and prepares you for professional excellence in electronics and embedded system design.</p>
+                                                <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
                                                 <ul class="course-details__overview-points list-unstyled">
                                                     <li>
                                                         <div class="course-details__overview-points-icon">
                                                             <span class="fas fa-check"></span>
                                                         </div>
                                                         <div class="course-details__overview-points-content">
-                                                            <h5>Python Basics:</h5>
-                                                            <p>Understand the fundamentals of Python, including
-                                                                syntax, variables, data <br>types, and control
-                                                                structures.</p>
+                                                            <h5>PCB Design Foundations:</h5>
+                                                            <p>Grasp the fundamentals, history, and process of PCB design using modern tools.</p>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -138,9 +125,8 @@
                                                             <span class="fas fa-check"></span>
                                                         </div>
                                                         <div class="course-details__overview-points-content">
-                                                            <h5>Data Structures:</h5>
-                                                            <p>Dive deep into lists, tuples, dictionaries, and sets
-                                                                for efficient data storage<br> and manipulation.</p>
+                                                            <h5>KiCAD Mastery:</h5>
+                                                            <p>Learn to set up, navigate, and create complete schematics and layouts in KiCAD 9.</p>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -148,9 +134,8 @@
                                                             <span class="fas fa-check"></span>
                                                         </div>
                                                         <div class="course-details__overview-points-content">
-                                                            <h5>Functions and Modules:</h5>
-                                                            <p>Learn to write reusable functions and use Python
-                                                                modules for better code <br>organization.</p>
+                                                            <h5>Design to Fabrication:</h5>
+                                                            <p>Understand netlists, routing, Gerber generation, and the full PCB manufacturing workflow.</p>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -158,18 +143,13 @@
                                                             <span class="fas fa-check"></span>
                                                         </div>
                                                         <div class="course-details__overview-points-content">
-                                                            <h5>Object-Oriented Programming (OOP): </h5>
-                                                            <p>Grasp OOP principles with Python, including classes,
-                                                                objects, inheritance,<br> and encapsulation.</p>
+                                                            <h5>Practical Projects:</h5>
+                                                            <p>Build and test real circuits, gaining hands-on experience from design to assembly.</p>
                                                         </div>
                                                     </li>
                                                 </ul>
                                                 <h3 class="course-details__overview-title-3">Requirement?</h3>
-                                                <p class="course-details__overview-text-3">Whether you're new to
-                                                    programming or looking to deepen your Python knowledge, this
-                                                    course covers essential concepts and hands-on projects to make
-                                                    you proficient in Python, one of the world's most versatile and
-                                                    in-demand programming languages.</p>
+                                                <p class="course-details__overview-text-3">No prior PCB design experience is needed. This course starts with the basics and guides you through fabrication and assembly.</p>
                                                 <div class="course-details__points-box">
                                                     <div class="row">
                                                         <div class="col-xl-6">
@@ -178,22 +158,15 @@
                                                                     <div class="course-details__points-list-icon">
                                                                         <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
                                                                     </div>
-                                                                    <h3 class="course-details__points-list-title">No
-                                                                        Prior Coding Experience<br> Required:</h3>
-                                                                    <p class="course-details__points-list-text">This
-                                                                        course is beginner-friendly and<br> does not
-                                                                        assume prior programming<br> knowledge.</p>
+                                                                    <h3 class="course-details__points-list-title">Computer with KiCAD Installed</h3>
+                                                                    <p class="course-details__points-list-text">You’ll need a computer (Windows, macOS, or Linux) with KiCAD 9 installed.</p>
                                                                 </li>
                                                                 <li>
                                                                     <div class="course-details__points-list-icon">
                                                                         <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
                                                                     </div>
-                                                                    <h3 class="course-details__points-list-title">
-                                                                        Computer with Java<br> Installed:</h3>
-                                                                    <p class="course-details__points-list-text">A
-                                                                        computer with Java installed is<br> capable
-                                                                        of running Java applications<br> and
-                                                                        applets.</p>
+                                                                    <h3 class="course-details__points-list-title">Basic Electronics Knowledge (Recommended)</h3>
+                                                                    <p class="course-details__points-list-text">Familiarity with electronic components and circuits is helpful but not mandatory.</p>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -203,22 +176,8 @@
                                                                     <div class="course-details__points-list-icon">
                                                                         <img src="{{ asset('assets/images/icon/course-details-points-list-icon-3.png') }}" alt="">
                                                                     </div>
-                                                                    <h3 class="course-details__points-list-title">
-                                                                        Computer with Python<br> Installed: </h3>
-                                                                    <p class="course-details__points-list-text">
-                                                                        You'll need a computer (Windows,<br> macOS,
-                                                                        or Linux) with Python<br> installed. </p>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="course-details__points-list-icon">
-                                                                        <img src="{{ asset('assets/images/icon/course-details-points-list-icon-4.png') }}" alt="">
-                                                                    </div>
-                                                                    <h3 class="course-details__points-list-title">
-                                                                        Willingness to Learn &<br> Creativity: </h3>
-                                                                    <p class="course-details__points-list-text">An
-                                                                        open mind and enthusiasm for<br> learning
-                                                                        are all you need to succeed in<br> this
-                                                                        course.</p>
+                                                                    <h3 class="course-details__points-list-title">Hardware Kit Provided</h3>
+                                                                    <p class="course-details__points-list-text">Includes IC 555, resistors, capacitors, LEDs, connectors, and a copper-clad sheet — free of cost.</p>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -232,11 +191,7 @@
                                         <div class="course-details__tab-inner">
                                             <div class="course-details__curriculam">
                                                 <h3 class="course-details__curriculam-title">Course Curriculum</h3>
-                                                <p class="course-details__curriculam-text">Through engaging lessons
-                                                    and hands-on projects, you’ll learn Python fundamentals, data
-                                                    structures, object-oriented programming, and popular libraries
-                                                    like NumPy and pandas. You’ll also tackle real-world
-                                                    applications such as data analysis and web scraping.</p>
+                                                <p class="course-details__curriculam-text">A structured, session-wise journey from PCB design fundamentals to fabrication and assembly. Includes lessons, guided hands-on tasks, and deliverables.</p>
                                                 <div class="course-details__curriculam-faq">
                                                     <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
                                                         <div class="accrodion">
@@ -244,38 +199,29 @@
                                                                 <div class="accrodion-title-box">
                                                                     <div class="accrodion-title__count"></div>
                                                                     <div class="accrodion-title-text">
-                                                                        <h4>What is construction?</h4>
+                                                                        <h4>Introduction to PCB Design</h4>
                                                                     </div>
                                                                 </div>
                                                                 <ul class="accrodion-meta list-unstyled">
                                                                     <li>
-                                                                        <p><span class="icon-book"></span>80 Lesson
+                                                                        <p><span class="icon-book"></span>7 Lesson
                                                                         </p>
                                                                     </li>
                                                                     <li>
-                                                                        <p><span class="icon-clock"></span>62h,
-                                                                            20min</p>
+                                                                        <p><span class="icon-clock"></span>1h 10min</p>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                             <div class="accrodion-content">
                                                                 <div class="inner">
-                                                                    <h3 class="accrodion-content__title">
-                                                                        Intermediate</h3>
-                                                                    <p class="accrodion-content__text">This
-                                                                        curriculum offers a structured path
-                                                                        with
-                                                                        estimated times for each module, allowing
-                                                                        students to plan their study schedule
-                                                                        effectively.</p>
+                                                                    <h3 class="accrodion-content__title">Overview</h3>
+                                                                    <p class="accrodion-content__text">History of PCB design, the design process, components, packages, and an introduction to KiCAD 9.</p>
                                                                     <ul
                                                                         class="accrodion-content__points list-unstyled">
                                                                         <li>
                                                                             <p
                                                                                 class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
+                                                                                <span class="fal fa-video"></span>History of PCB Design</p>
                                                                             <div
                                                                                 class="accrodion-content__points-btn">
                                                                                 <a href="#">Preview</a>
@@ -288,9 +234,7 @@
                                                                         <li>
                                                                             <p
                                                                                 class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
+                                                                                <span class="fal fa-video"></span>Overview of PCB design process</p>
                                                                             <div
                                                                                 class="accrodion-content__points-btn">
                                                                                 <a href="#">Preview</a>
@@ -345,98 +289,34 @@
                                                                 <div class="accrodion-title-box">
                                                                     <div class="accrodion-title__count"></div>
                                                                     <div class="accrodion-title-text">
-                                                                        <h4>What is construction?</h4>
+                                                                        <h4>Schematic Design</h4>
                                                                     </div>
                                                                 </div>
                                                                 <ul class="accrodion-meta list-unstyled">
                                                                     <li>
-                                                                        <p><span class="icon-book"></span>45 Lesson
-                                                                        </p>
+                                                                        <p><span class="icon-book"></span>11 Lesson</p>
                                                                     </li>
                                                                     <li>
-                                                                        <p><span class="icon-clock"></span>62h,
-                                                                            20min</p>
+                                                                        <p><span class="icon-clock"></span>5h 30min</p>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                             <div class="accrodion-content">
                                                                 <div class="inner">
-                                                                    <h3 class="accrodion-content__title">
-                                                                        Intermediate</h3>
-                                                                    <p class="accrodion-content__text">This
-                                                                        curriculum offers a structured path
-                                                                        with
-                                                                        estimated times for each module, allowing
-                                                                        students to plan their study schedule
-                                                                        effectively.</p>
-                                                                    <ul
-                                                                        class="accrodion-content__points list-unstyled">
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
-                                                                            </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
-                                                                            </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Understanding
-                                                                                Variables and Data Types</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Tuples:
-                                                                                Understanding Immutability and Use
-                                                                                Cases</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-file-alt"></span>
-                                                                                Nested Loops and Loop Control
-                                                                                Statements (break, continue, pass)
-                                                                            </p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
+                                                                    <h3 class="accrodion-content__title">Overview</h3>
+                                                                    <p class="accrodion-content__text">Create schematics, understand symbols, use power labels, and complete a sample astable multivibrator circuit.</p>
+                                                                    <ul class="accrodion-content__points list-unstyled">
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Creating a new project</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Understanding Schematic Symbols</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Placing & Connecting components</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Using power symbols & global labels</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Hierarchical schematics (sub sheets)</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Components Selection & Shortcuts</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>ERC (Electrical Rule Check)</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Annotating components</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Sample Circuit Design – Astable Multivibrator</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Hands-on: Completing a schematic</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>ERC Check</p></li>
                                                                     </ul>
                                                                 </div><!-- /.inner -->
                                                             </div>
@@ -446,98 +326,27 @@
                                                                 <div class="accrodion-title-box">
                                                                     <div class="accrodion-title__count"></div>
                                                                     <div class="accrodion-title-text">
-                                                                        <h4>Control Flow and Loops</h4>
+                                                                        <h4>PCB layout</h4>
                                                                     </div>
                                                                 </div>
                                                                 <ul class="accrodion-meta list-unstyled">
-                                                                    <li>
-                                                                        <p><span class="icon-book"></span>80 Lesson
-                                                                        </p>
-                                                                    </li>
-                                                                    <li>
-                                                                        <p><span class="icon-clock"></span>62h,
-                                                                            20min</p>
-                                                                    </li>
+                                                                    <li><p><span class="icon-book"></span>8 Lesson</p></li>
+                                                                    <li><p><span class="icon-clock"></span>2h 50min</p></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="accrodion-content">
                                                                 <div class="inner">
-                                                                    <h3 class="accrodion-content__title">
-                                                                        Intermediate</h3>
-                                                                    <p class="accrodion-content__text">This
-                                                                        curriculum offers a structured path
-                                                                        with
-                                                                        estimated times for each module, allowing
-                                                                        students to plan their study schedule
-                                                                        effectively.</p>
-                                                                    <ul
-                                                                        class="accrodion-content__points list-unstyled">
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
-                                                                            </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
-                                                                            </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Understanding
-                                                                                Variables and Data Types</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Tuples:
-                                                                                Understanding Immutability and Use
-                                                                                Cases</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-file-alt"></span>
-                                                                                Nested Loops and Loop Control
-                                                                                Statements (break, continue, pass)
-                                                                            </p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
+                                                                    <h3 class="accrodion-content__title">Overview</h3>
+                                                                    <p class="accrodion-content__text">Move to PCB editor, place components, route, apply rules, pours and DRC. Create custom footprints.</p>
+                                                                    <ul class="accrodion-content__points list-unstyled">
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Importing net list into PCB editor</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Understanding layers</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Board outline set-up & constraints</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Placing components</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Routing & Design Rules</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Using Vias & Copper pours</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Design Rule Check</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>PCB Library Design</p></li>
                                                                     </ul>
                                                                 </div><!-- /.inner -->
                                                             </div>
@@ -547,98 +356,48 @@
                                                                 <div class="accrodion-title-box">
                                                                     <div class="accrodion-title__count"></div>
                                                                     <div class="accrodion-title-text">
-                                                                        <h4>Functions and Modules</h4>
+                                                                        <h4>Gerber files Generation</h4>
                                                                     </div>
                                                                 </div>
                                                                 <ul class="accrodion-meta list-unstyled">
-                                                                    <li>
-                                                                        <p><span class="icon-book"></span>80 Lesson
-                                                                        </p>
-                                                                    </li>
-                                                                    <li>
-                                                                        <p><span class="icon-clock"></span>62h,
-                                                                            20min</p>
-                                                                    </li>
+                                                                    <li><p><span class="icon-book"></span>4 Lesson</p></li>
+                                                                    <li><p><span class="icon-clock"></span>2h 50min</p></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="accrodion-content">
                                                                 <div class="inner">
-                                                                    <h3 class="accrodion-content__title">
-                                                                        Intermediate</h3>
-                                                                    <p class="accrodion-content__text">This
-                                                                        curriculum offers a structured path
-                                                                        with
-                                                                        estimated times for each module, allowing
-                                                                        students to plan their study schedule
-                                                                        effectively.</p>
-                                                                    <ul
-                                                                        class="accrodion-content__points list-unstyled">
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
+                                                                    <h3 class="accrodion-content__title">Overview</h3>
+                                                                    <p class="accrodion-content__text">Generate Gerber and drill files, export 3D models, and prepare a complete fabrication package.</p>
+                                                                    <ul class="accrodion-content__points list-unstyled">
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Gerber files & Drill files Generation</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>3D model export & visualization</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Preparing files for fabrication</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Fabrication Process</p></li>
+                                                                    </ul>
+                                                                </div><!-- /.inner -->
                                                                             </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
                                                                             </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-video"></span>Overview
-                                                                                of Python and Its Applications</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
+                                                        <div class="accrodion">
+                                                            <div class="accrodion-title">
+                                                                <div class="accrodion-title-box">
+                                                                    <div class="accrodion-title__count"></div>
+                                                                    <div class="accrodion-title-text">
+                                                                        <h4>PCB Fabrication & Assembly</h4>
                                                                             </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
                                                                             </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Understanding
-                                                                                Variables and Data Types</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
+                                                                <ul class="accrodion-meta list-unstyled">
+                                                                    <li><p><span class="icon-book"></span>3 Lesson</p></li>
+                                                                    <li><p><span class="icon-clock"></span>3h 00min</p></li>
+                                                                </ul>
                                                                             </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Tuples:
-                                                                                Understanding Immutability and Use
-                                                                                Cases</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-file-alt"></span>
-                                                                                Nested Loops and Loop Control
-                                                                                Statements (break, continue, pass)
-                                                                            </p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
+                                                            <div class="accrodion-content">
+                                                                <div class="inner">
+                                                                    <h3 class="accrodion-content__title">Overview</h3>
+                                                                    <p class="accrodion-content__text">Experience the complete PCB manufacturing process, practice soldering and test/debug assembled boards.</p>
+                                                                    <ul class="accrodion-content__points list-unstyled">
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Hands-on: PCB manufacturing process</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Testing & debugging PCBs - Review</p></li>
+                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Soldering techniques (SMD & through-hole)</p></li>
                                                                     </ul>
                                                                 </div><!-- /.inner -->
                                                             </div>
@@ -1014,17 +773,17 @@
                 <div class="col-xl-4 col-lg-5">
                     <div class="course-details__right">
                         <div class="course-details__info-box">
-                            <div class="course-details__video-link">
-
-                                <div class="course-details__video-link-bg" 
-                                    style="background-image: url('{{ asset('assets/images/backgrounds/course-details-video-link-bg.jpg') }}');">
-                                </div>
-                                <a href="{{ $course->preview_video_url ?: 'https://www.youtube.com/watch?v=Get7rqXYrbQ' }}" class="video-popup">
+                            <div class="course-details__video-link" style="position:relative; overflow:hidden; border-radius:20px;">
+                                <video id="coursePreviewVideo" width="100%" height="auto" preload="metadata" poster="{{ asset('assets/images/resources/MyfirstPCB.png') }}" style="display:block;" controls playsinline controlsList="nodownload">
+                                    <source src="{{ asset('assets/videos/myfirstpcb-preview_2.mp4') }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <button type="button" id="coursePreviewPlayBtn" aria-label="Play preview" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:none;background:transparent;cursor:pointer;">
                                     <div class="course-details__video-icon">
                                         <span class="icon-play"></span>
                                         <i class="ripple"></i>
                                     </div>
-                                </a>
+                                </button>
                             </div>
 
                             <div class="course-details__doller-and-btn-box d-flex justify-content-between">
@@ -1051,31 +810,23 @@
                             </div>
 
                             <div class="course-details__info-list">
-                                <h3 class="course-details__info-list-title">This Course Included</h3>
+                                <h3 class="course-details__info-list-title">This Course Includes</h3>
                                 <ul class="course-details__info-list-1 list-unstyled">
-                                    <!-- <li>
-                                        <p><i class="icon-book"></i>Lesson</p>
-                                        <span>50</span>
-                                    </li> -->
                                     <li>
                                         <p><i class="icon-clock"></i>Duration</p>
-                                        <span>{{ $course->duration }}</span>
+                                        <span>10h 30min</span>
                                     </li>
                                     <li>
                                         <p><i class="icon-chart-simple"></i>Skill Level</p>
-                                        <span>{{ $course->skill_level }}</span>
+                                        <span>Entry Level</span>
                                     </li>
                                     <li>
                                         <p><i class="icon-globe"></i>Language</p>
-                                        <span>{{ $course->languages }}</span>
-                                    </li>
-                                    <li>
-                                        <p><i class="icon-stamp"></i>Certificate</p>
-                                        <span>After Completed </span>
+                                        <span>English</span>
                                     </li>
                                     <!-- <li>
-                                        <p><i class="icon-hourglass"></i>Deadline</p>
-                                        <span>November 23, 2024</span>
+                                        <p><i class="icon-stamp"></i>Certificate</p>
+                                        <span>After Completed</span>
                                     </li> -->
                                 </ul>
                             </div>
@@ -1094,6 +845,79 @@
         </div>
     </section>
     <!--Course Details End-->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Tab switching: supports data-tab or data-bs-tab attributes
+    const tabButtons = document.querySelectorAll('.tab-buttons .tab-btn');
+    const tabs = document.querySelectorAll('.tabs-content .tab');
+    if (!tabButtons.length || !tabs.length) return;
+
+    // Normalize attributes (data-bs-tab -> data-tab)
+    tabButtons.forEach(btn => {
+        if (!btn.hasAttribute('data-tab') && btn.hasAttribute('data-bs-tab')) {
+            btn.setAttribute('data-tab', btn.getAttribute('data-bs-tab'));
+        }
+    });
+
+    function activateButton(btn) {
+        tabButtons.forEach(b => b.classList.remove('active-btn'));
+        btn.classList.add('active-btn');
+    }
+
+    function activateTab(selector) {
+        tabs.forEach(t => t.classList.remove('active-tab'));
+        const target = document.querySelector(selector);
+        if (target) target.classList.add('active-tab');
+    }
+
+    // Ensure an initial active button/tab
+    const initialBtn = document.querySelector('.tab-buttons .tab-btn.active-btn') || tabButtons[0];
+    if (initialBtn) {
+        activateButton(initialBtn);
+        const sel = initialBtn.getAttribute('data-tab') || '#overview';
+        activateTab(sel);
+    }
+
+    // Click handlers
+    tabButtons.forEach(btn => {
+        btn.style.cursor = 'pointer';
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const selector = btn.getAttribute('data-tab') || btn.getAttribute('href');
+            if (!selector) return;
+            activateButton(btn);
+            activateTab(selector);
+        });
+    });
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('coursePreviewVideo');
+        var playBtn = document.getElementById('coursePreviewPlayBtn');
+        if (!video || !playBtn) return;
+
+        function hideButton() { playBtn.style.display = 'none'; }
+        function showButton() { playBtn.style.display = ''; }
+
+        playBtn.addEventListener('click', function () {
+            // If already playing, pause; otherwise play
+            if (video.paused) {
+                video.play();
+                hideButton();
+            } else {
+                video.pause();
+                showButton();
+            }
+        });
+
+        video.addEventListener('play', hideButton);
+        video.addEventListener('pause', showButton);
+        video.addEventListener('ended', showButton);
+    });
+ </script>
 
     <!--Newsletter Two Start -->
     

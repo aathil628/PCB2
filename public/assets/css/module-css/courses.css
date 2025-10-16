@@ -2295,7 +2295,7 @@
 }
 
 .faq-one-accrodion .accrodion-title__count::before {
-    content: "Module "counter(count);
+    content: "Session "counter(count);
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;

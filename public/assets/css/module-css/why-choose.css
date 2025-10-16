@@ -969,7 +969,7 @@
 
 .why-choose-two__right-content-two-user-details-top-img {
     position: absolute;
-    bottom: -12px;
+	bottom: -1px;
     left: 0;
     right: 0;
     text-align: center;
@@ -977,7 +977,10 @@
 }
 
 .why-choose-two__right-content-two-user-details-top-img img {
-    width: auto;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 
 .why-choose-two__right-content-two-user-details-bottom {

@@ -1134,22 +1134,6 @@
         <div class="counter-two__wrap">
             <ul class="list-unstyled counter-two__list marquee_mode">
                 <li>
-                    <div class="counter-two__single">
-                        <div class="counter-two__img-box">
-                            <div class="counter-two__img">
-                                <img src="{{ asset('assets/images/resources/counter-2-1.jpg') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="counter-two__content">
-                            <div class="counter-two__count-box">
-                                <p class="odometer" data-count="120">00</p>
-                                <span>K+</span>
-                            </div>
-                            <p class="counter-two__text">Successfully <br> Student</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
                     <div class="counter-two__shpae-1">
                         <img src="{{ asset('assets/images/shapes/counter-two-shape-1.png') }}" alt="">
                     </div>
@@ -1815,9 +1799,9 @@
                                         PageMaker including versions of Lorem Ipsum.
                                     </p>
                                     <div class="testimonial-two__client-info">
-                                        <div class="testimonial-two__client-logo">
+                                        <!-- <div class="testimonial-two__client-logo">
                                             <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="">
-                                        </div>
+                                        </div> -->
                                         <div class="testimonial-two__client-name-box">
                                             <h4 class="testimonial-two__client-name">
                                                 <a href={{ url('testimonials') }}>Mitchel Clack</a>
@@ -1846,9 +1830,9 @@
                                         PageMaker including versions of Lorem Ipsum.
                                     </p>
                                     <div class="testimonial-two__client-info">
-                                        <div class="testimonial-two__client-logo">
+                                        <!-- <div class="testimonial-two__client-logo">
                                             <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="">
-                                        </div>
+                                        </div> -->
                                         <div class="testimonial-two__client-name-box">
                                             <h4 class="testimonial-two__client-name">
                                                 <a href={{ url('testimonials') }}>Mitchela Smith</a>
@@ -1877,9 +1861,9 @@
                                         PageMaker including versions of Lorem Ipsum.
                                     </p>
                                     <div class="testimonial-two__client-info">
-                                        <div class="testimonial-two__client-logo">
+                                        <!-- <div class="testimonial-two__client-logo">
                                             <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="">
-                                        </div>
+                                        </div> -->
                                         <div class="testimonial-two__client-name-box">
                                             <h4 class="testimonial-two__client-name">
                                                 <a href={{ url('testimonials') }}>Sarah Smith</a>

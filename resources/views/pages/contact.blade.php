@@ -3,7 +3,7 @@
 $title = 'Contact Us';
 $subtitle = 'Contact Us';
 @endphp
-@section('title', ' Contact || MyfirstPCB || MyfirstPCB Laravel Template ')
+@section('title', ' Contact | MyfirstPCB')
 @section('meta_description', 'Get in touch with MyfirstPCB for support, inquiries, and assistance with PCB orders, design tools, and electronics project solutions.')
 @section('meta_keywords', 'contact MyfirstPCB, PCB support, customer service, PCB order help, electronics inquiries, PCB platform contact')
 @section('content')
@@ -81,7 +81,7 @@ $subtitle = 'Contact Us';
                         <h2 class="section-title-two__title title-animation">We’re Here to Help and Ready to Hear from
                             You</h2>
                     </div>
-                    <form class="contact-form-validated contact-three__form" action="{{ route('contact.store') }}"
+                    <form id="contactForm" class="contact-three__form" action="{{ route('contact.store') }}"
                         method="POST">
                         @csrf
                         <div class="row">
@@ -117,9 +117,7 @@ $subtitle = 'Contact Us';
                             </div>
                         </div>
                     </form>
-
-
-                    <div class="result"></div>
+                    
                 </div>
             </div>
         </div>
@@ -182,4 +180,51 @@ $subtitle = 'Contact Us';
 <x-mobileMenu />
 <x-searchPopup />
 <x-scroll-to-top />
+
+<!-- Toastr for success toast like login page -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactForm = document.getElementById('contactForm');
+        if (!contactForm) return;
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+            fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+            .then(async res => {
+                const data = await res.json().catch(() => null);
+                return { ok: res.ok, data };
+            })
+            .then(({ ok, data }) => {
+                if (ok && data && data.success) {
+                    toastr.success('Thank you for contacting us! We will get back to you soon.', 'Success!', {
+                        timeOut: 5000,
+                        closeButton: true,
+                        progressBar: true,
+                        positionClass: 'toast-top-right'
+                    });
+                    contactForm.reset();
+                } else {
+                    toastr.error((data && data.message) || 'Failed to send message. Please try again.', 'Error!');
+                }
+            })
+            .catch(() => {
+                toastr.error('An error occurred. Please try again later.', 'Error!');
+            });
+        });
+    });
+</script>
 @endsection

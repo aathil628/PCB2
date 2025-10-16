@@ -189,9 +189,12 @@
             <div id="profileLogout" class="profile-section mx-3 my-3" style="display:none;">
                 <h2 style="color:#BD362F; font-weight:600;" class="px-3 my-4">Logout</h2>
                 <p style="color:#606580;" class="px-3 my-4">Are you sure you want to logout?</p>
-                    <div class="px-3 my-4">
-                    <button id="logout" class="btn" style="background:#BD362F;color:#fff;border-radius:22px;">Logout</button>
-                    </div>
+                <div class="px-3 my-4">
+                    <form id="logoutForm" method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="btn" style="background:#BD362F;color:#fff;border-radius:22px;">Logout</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -283,39 +286,7 @@ formupdate.addEventListener('submit', function(e) {
     });
 });
 
-// Logout
-  const logout = document.getElementById('logout');
-
-  if (logout) {
-    logout.addEventListener('click', function () {
-      fetch('{{ route("logout") }}', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        },
-      })
-        .then(response => {
-          if (!response.ok) {
-            return response.json().then(data => Promise.reject(data));
-          }
-          return response.json();
-        })
-        .then(data => {
-          if (data.success) {
-            toastr.success(data.message, 'Success!', { timeOut: 2000 });
-            setTimeout(() => {
-              window.location.href = data.redirect_url;
-            }, 2000);
-          } else {
-            toastr.error(data.message || 'Logout failed. Please try again.', 'Error!');
-          }
-        })
-        .catch(error => {
-          console.error("Logout error:", error);
-        });
-    });
-  }
+// No JS needed for logout; form posts directly with CSRF
 
 </script>
 

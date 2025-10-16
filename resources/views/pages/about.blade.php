@@ -329,9 +329,9 @@
                                     I enrolled Eric in Nytt Robotics' weekend class, and it’s the best decision ever. He’s excited about learning and talks about sensors and motors every day!
                                 </p>
                                 <div class="testimonial-two__client-info">
-                                    <div class="testimonial-two__client-logo">
+                                    <!-- <div class="testimonial-two__client-logo">
                                         <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="Parent from Trivandrum">
-                                    </div>
+                                    </div> -->
                                     <div class="testimonial-two__client-name-box">
                                         <h4 class="testimonial-two__client-name"><a href="{{ url('testimonials') }}">Sumi P</a></h4>
                                         <p class="testimonial-two__client-sub-title">Mother of Eric Aaron, Christ Nagar, Trivandrum</p>
@@ -354,9 +354,9 @@
                                     My daughter Tirza now builds small robots at home! The classes are fun, practical, and help her understand technology in a meaningful way.
                                 </p>
                                 <div class="testimonial-two__client-info">
-                                    <div class="testimonial-two__client-logo">
+                                    <!-- <div class="testimonial-two__client-logo">
                                         <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="Testimonial Kerala school parent">
-                                    </div>
+                                    </div> -->
                                     <div class="testimonial-two__client-name-box">
                                         <h4 class="testimonial-two__client-name"><a href="{{ url('testimonials') }}">Teena Francis</a></h4>
                                         <p class="testimonial-two__client-sub-title">Mother of Tirza, Holy Angels, Trivandrum</p>
@@ -379,9 +379,9 @@
                                     Aami loves her robotics sessions. Nytt has turned her screen time into creative time. We are truly thankful for this opportunity in Coimbatore!
                                 </p>
                                 <div class="testimonial-two__client-info">
-                                    <div class="testimonial-two__client-logo">
+                                    <!-- <div class="testimonial-two__client-logo">
                                         <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="Father from Coimbatore">
-                                    </div>
+                                    </div> -->
                                     <div class="testimonial-two__client-name-box">
                                         <h4 class="testimonial-two__client-name"><a href="{{ url('testimonials') }}">Reshin Rahman</a></h4>
                                         <p class="testimonial-two__client-sub-title">Father of Aami, St Shantal</p>
@@ -404,9 +404,9 @@
                                     Rithik is now confident in coding and mechanical concepts at just 10 years old. As a father, it’s amazing to see such learning happening in Trivandrum!
                                 </p>
                                 <div class="testimonial-two__client-info">
-                                    <div class="testimonial-two__client-logo">
+                                    <!-- <div class="testimonial-two__client-logo">
                                         <img src="{{ asset('assets/images/testimonial/testimonial-two-client-logo.png') }}" alt="Loyola parent robotics feedback">
-                                    </div>
+                                    </div> -->
                                     <div class="testimonial-two__client-name-box">
                                         <h4 class="testimonial-two__client-name"><a href="{{ url('testimonials') }}">Ravi Sankar</a></h4>
                                         <p class="testimonial-two__client-sub-title">Father of Rithik, Loyola, Trivandrum</p>

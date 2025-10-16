@@ -44,7 +44,7 @@
                       </a>
                     </div>
                     <div class="nav-course-card__heade">
-                      <a class="nav-course-card__item" href="{{ route('course-details', 1) }}">
+                      <a class="nav-course-card__item" href="{{ route('course-details', 3) }}">
                       <div class="nav-course-card__title">Advanced PCB Design</div>
                       <div class="nav-course-card__sub">Mastering Design and Analysis</div>
                       </a>

@@ -15,10 +15,10 @@
                                 <div class="footer-widget-two__about">
                                     <div class="footer-widget-two__about-logo">
                                         <a href="{{ url('/') }}">
-                                            <img class="footer-logo" src="{{ asset('assets/images/resources/logo-2.png') }}" alt="">
+                                            <img class="footer-logo" src="{{ asset('assets/images/resources/MFP-logo_white.png') }}" alt="MyFirstPCB">
                                         </a>
                                     </div>
-                                    <p class="footer-widget-two__about-text">Learn PCB design and robotics the practical way. Hands-on courses for students and professionals.</p>
+                                    <p class="footer-widget-two__about-text">Empowering young minds with hands-on PCB design and electronics education</p>
                                     <div class="site-footer-two__social">
                                         <a href="https://www.linkedin.com/in/my-first-pcb-89273b380/" aria-label="LinkedIn"><span class="fab fa-linkedin-in"></span></a>
                                     </div>

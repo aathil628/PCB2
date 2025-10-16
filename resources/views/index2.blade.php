@@ -681,7 +681,7 @@
                 <div class="counter-two__single">
                     <div class="counter-two__img-box">
                         <div class="counter-two__img">
-                            <img src="{{ asset('assets/images/resources/counter-2-1.jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/resources/counter-2-4.jpg') }}" alt="">
                         </div>
                     </div>
                     <div class="counter-two__content">
@@ -740,22 +740,7 @@
                     <img src="{{ asset('assets/images/shapes/counter-two-shape-1.png') }}" alt="">
                 </div>
             </li>
-            <li>
-                <div class="counter-two__single">
-                    <div class="counter-two__img-box">
-                        <div class="counter-two__img">
-                            <img src="{{ asset('assets/images/resources/counter-2-2.jpg') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="counter-two__content">
-                        <div class="counter-two__count-box">
-                            <p class="odometer" data-count="120">00</p>
-                            <span>K+</span>
-                        </div>
-                        <p class="counter-two__text">Successfully <br> Student</p>
-                    </div>
-                </div>
-            </li>
+            
         </ul>
     </div>
 </section>
@@ -787,21 +772,24 @@
         <div class="team-two__carousel owl-theme owl-carousel">
             <!--Team Two Single Start-->
             <div class="item">
-                <div class="team-two__single" style="background: none; box-shadow: none;">
+                <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-1.png') }}" alt="">
+                        <img src="{{ asset('assets/images/team/team-2-1.png') }}" alt="Team member" />
                     </div>
-                    <!-- <div class="team-two__arrow">
-                        <a href="{{ url('instructor-details') }}"><span class="icon-circle-left"></span></a>
-                    </div> -->
+                    <div class="team-two__arrow">
+                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                    </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title"></p>
-                        <h3 class="team-two__name">
-                            <a href="{{ url('instructor-details') }}"></a>
-                        </h3>
+                        <p class="team-two__sub-title">CEO</p>
+                        <h3 class="team-two__name">Sture <span>Wikman</span></h3>
                     </div>
-                    <div>
-                        <div class="team-two__social-list" style="widht: 395px; height: 67px;">
+                    <div class="team-two__social-box">
+                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
@@ -809,21 +797,24 @@
             <!--Team Two Single End-->
             <!--Team Two Single Start-->
             <div class="item">
-                <div class="team-two__single" style="background: none; box-shadow: none;" >
+                <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
                     </div>
-                    <!-- <div class="team-two__arrow">
-                        <a href="{{ url('instructor-details') }}"><span class="icon-circle-left"></span></a>
-                    </div> -->
+                    <div class="team-two__arrow">
+                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                    </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title"></p>
-                        <h3 class="team-two__name">
-                            <a href="{{ url('instructor-details') }}"></a>
-                        </h3>
+                        <p class="team-two__sub-title">Operations</p>
+                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
                     </div>
-                    <div>
-                        <div class="team-two__social-list" style="widht: 395px; height: 67px;">
+                    <div class="team-two__social-box">
+                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/in/sreekumar-narayan/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
@@ -831,21 +822,24 @@
             <!--Team Two Single End-->
             <!--Team Two Single Start-->
             <div class="item">
-                <div class="team-two__single" style="background: none; box-shadow: none;">
+                <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-3.png') }}" alt="">
+                        <img src="{{ asset('assets/images/team/team-2-3.png') }}" alt="Team member" />
                     </div>
-                    <!-- <div class="team-two__arrow">
-                        <a href="{{ url('instructor-details') }}"><span class="icon-circle-left"></span></a>
-                    </div> -->
+                    <div class="team-two__arrow">
+                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                    </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title"></p>
-                        <h3 class="team-two__name">
-                            <a href="{{ url('instructor-details') }}"></a>
-                        </h3>
+                        <p class="team-two__sub-title">Programming</p>
+                        <h3 class="team-two__name">Praveen <span>Palaniswamy</span></h3>
                     </div>
-                    <div>
-                        <div class="team-two__social-list" style="widht: 395px; height: 67px;">
+                    <div class="team-two__social-box">
+                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
@@ -853,28 +847,29 @@
             <!--Team Two Single End-->
             <!--Team Two Single Start-->
             <div class="item">
-                <div class="team-two__single" style="background: none; box-shadow: none;">
+                <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-4.png') }}" alt="">
+                        <img src="{{ asset('assets/images/team/team-2-4.png') }}" alt="Team member" />
                     </div>
-                    <!-- <div class="team-two__arrow">
-                        <a href="{{ url('instructor-details') }}"><span class="icon-circle-left"></span></a>
-                    </div> -->
+                    <div class="team-two__arrow">
+                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                    </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title"></p>
-                        <h3 class="team-two__name">
-                            <a href="{{ url('instructor-details') }}"></a>
-                        </h3>
+                        <p class="team-two__sub-title">Marketing</p>
+                        <h3 class="team-two__name">Jeannie <span>Lendeng</span></h3>
                     </div>
-                    <div>
-                        <div class="team-two__social-list" style="widht: 395px; height: 67px;">
+                    <div class="team-two__social-box">
+                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Team Two Single End-->
-            
-            
         </div>
     </div>
     <div class="sliding-text-five">

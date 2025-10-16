@@ -850,6 +850,8 @@
 
 
   if ($(".contact-form-validated").length) {
+    // Disabled legacy contact form AJAX; handled via page-specific script
+    return;
     $(".contact-form-validated").each(function () {
       let self = $(this);
       self.validate({

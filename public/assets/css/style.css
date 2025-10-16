@@ -1212,9 +1212,9 @@ ul {
   background: rgba(var(--fistudy-base-rgb), 0.06);
 }
 
-/* Footer logo white treatment without new asset */
+/* Footer logo should render as provided (no color inversion) */
 .footer-logo {
-  filter: invert(1) brightness(2);
+  filter: none !important;
 }
 
 .main-menu .main-menu__list>li>ul>li>ul>li>ul,
