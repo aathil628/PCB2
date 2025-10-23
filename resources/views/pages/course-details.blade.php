@@ -45,14 +45,32 @@
         height: 30px;
     }
 }
+.tabs-box .tab-buttons li:not([data-tab="#overview"]),
+.tabs-box .tabs-content .tab:not(#overview) { display: none !important; }
+
+#bookingModal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 9999; }
+#bookingModal.open { display: flex; }
+#bookingModal .modal-card { background: #fff; width: 100%; max-width: 640px; border-radius: 16px; padding: 24px; }
+#bookingModal .modal-header { display:flex; justify-content: space-between; align-items:center; margin-bottom: 12px; }
+#bookingModal .close-btn { background: transparent; border: none; font-size: 22px; line-height: 1; cursor: pointer; }
+#bookingModal .form-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+#bookingModal input, #bookingModal textarea { width: 100%; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 12px; }
+#bookingModal textarea { min-height: 100px; }
+    /* Modal submit button cleanup */
+    #bookingModal .thm-btn-two {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    #bookingModal .thm-btn-two:focus,
+    #bookingModal .thm-btn-two:focus-visible,
+    #bookingModal .thm-btn-two:active { outline: none !important; box-shadow: none !important; }
+    /* Placeholder color */
+    #bookingModal input::placeholder, #bookingModal textarea::placeholder { color: #9ca3af !important; opacity: 1; }
 </style>
-
-
-<!-- Toastr CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
 
     <!--Course Details Start-->
     <section class="course-details">
@@ -89,21 +107,12 @@
                             </div>
                             <div class="course-details__main-tab-box tabs-box">
                                 <ul class="tab-buttons list-unstyled">
-                                    <li data-tab="#overview" class="tab-btn tab-btn-one">
+                                    <li data-tab="#overview" class="tab-btn active-btn tab-btn-one">
                                         <p><span class="icon-pen-ruler"></span>Overview</p>
-                                    </li>
-                                    <li data-tab="#curriculum" class="tab-btn tab-btn-two">
-                                        <p><span class="icon-book"></span>Curriculum</p>
-                                    </li>
-                                    <li data-tab="#instructor" class="tab-btn tab-btn-three">
-                                        <p><span class="icon-graduation-cap"></span>Instructor</p>
-                                    </li>
-                                    <li data-tab="#review" class="tab-btn active-btn  tab-btn-four">
-                                        <p><span class="icon-comments"></span>Review</p>
                                     </li>
                                 </ul>
                                 <div class="tabs-content">
-                                    <div class="tab" id="overview">
+                                    <div class="tab active-tab" id="overview">
                                         <div class="course-details__tab-inner">
                                             <div class="course-details__overview">
                                                 <h3 class="course-details__overview-title">Course Overview</h3>
@@ -186,585 +195,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--Tab-->
-                                    <div class="tab" id="curriculum">
-                                        <div class="course-details__tab-inner">
-                                            <div class="course-details__curriculam">
-                                                <h3 class="course-details__curriculam-title">Course Curriculum</h3>
-                                                <p class="course-details__curriculam-text">A structured, session-wise journey from PCB design fundamentals to fabrication and assembly. Includes lessons, guided hands-on tasks, and deliverables.</p>
-                                                <div class="course-details__curriculam-faq">
-                                                    <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                                        <div class="accrodion">
-                                                            <div class="accrodion-title">
-                                                                <div class="accrodion-title-box">
-                                                                    <div class="accrodion-title__count"></div>
-                                                                    <div class="accrodion-title-text">
-                                                                        <h4>Introduction to PCB Design</h4>
-                                                                    </div>
-                                                                </div>
-                                                                <ul class="accrodion-meta list-unstyled">
-                                                                    <li>
-                                                                        <p><span class="icon-book"></span>7 Lesson
-                                                                        </p>
-                                                                    </li>
-                                                                    <li>
-                                                                        <p><span class="icon-clock"></span>1h 10min</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="accrodion-content">
-                                                                <div class="inner">
-                                                                    <h3 class="accrodion-content__title">Overview</h3>
-                                                                    <p class="accrodion-content__text">History of PCB design, the design process, components, packages, and an introduction to KiCAD 9.</p>
-                                                                    <ul
-                                                                        class="accrodion-content__points list-unstyled">
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span class="fal fa-video"></span>History of PCB Design</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
-                                                                            </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span class="fal fa-video"></span>Overview of PCB design process</p>
-                                                                            <div
-                                                                                class="accrodion-content__points-btn">
-                                                                                <a href="#">Preview</a>
-                                                                            </div>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Understanding
-                                                                                Variables and Data Types</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="far fa-microphone"></span>Tuples:
-                                                                                Understanding Immutability and Use
-                                                                                Cases</p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <p
-                                                                                class="accrodion-content__points-text">
-                                                                                <span
-                                                                                    class="fal fa-file-alt"></span>
-                                                                                Nested Loops and Loop Control
-                                                                                Statements (break, continue, pass)
-                                                                            </p>
-                                                                            <div class="accrodion-content__icon">
-                                                                                <span
-                                                                                    class="far fa-lock-alt"></span>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div><!-- /.inner -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="accrodion active">
-                                                            <div class="accrodion-title">
-                                                                <div class="accrodion-title-box">
-                                                                    <div class="accrodion-title__count"></div>
-                                                                    <div class="accrodion-title-text">
-                                                                        <h4>Schematic Design</h4>
-                                                                    </div>
-                                                                </div>
-                                                                <ul class="accrodion-meta list-unstyled">
-                                                                    <li>
-                                                                        <p><span class="icon-book"></span>11 Lesson</p>
-                                                                    </li>
-                                                                    <li>
-                                                                        <p><span class="icon-clock"></span>5h 30min</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="accrodion-content">
-                                                                <div class="inner">
-                                                                    <h3 class="accrodion-content__title">Overview</h3>
-                                                                    <p class="accrodion-content__text">Create schematics, understand symbols, use power labels, and complete a sample astable multivibrator circuit.</p>
-                                                                    <ul class="accrodion-content__points list-unstyled">
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Creating a new project</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Understanding Schematic Symbols</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Placing & Connecting components</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Using power symbols & global labels</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Hierarchical schematics (sub sheets)</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Components Selection & Shortcuts</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>ERC (Electrical Rule Check)</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Annotating components</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Sample Circuit Design – Astable Multivibrator</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Hands-on: Completing a schematic</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>ERC Check</p></li>
-                                                                    </ul>
-                                                                </div><!-- /.inner -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="accrodion">
-                                                            <div class="accrodion-title">
-                                                                <div class="accrodion-title-box">
-                                                                    <div class="accrodion-title__count"></div>
-                                                                    <div class="accrodion-title-text">
-                                                                        <h4>PCB layout</h4>
-                                                                    </div>
-                                                                </div>
-                                                                <ul class="accrodion-meta list-unstyled">
-                                                                    <li><p><span class="icon-book"></span>8 Lesson</p></li>
-                                                                    <li><p><span class="icon-clock"></span>2h 50min</p></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="accrodion-content">
-                                                                <div class="inner">
-                                                                    <h3 class="accrodion-content__title">Overview</h3>
-                                                                    <p class="accrodion-content__text">Move to PCB editor, place components, route, apply rules, pours and DRC. Create custom footprints.</p>
-                                                                    <ul class="accrodion-content__points list-unstyled">
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Importing net list into PCB editor</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Understanding layers</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Board outline set-up & constraints</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Placing components</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Routing & Design Rules</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Using Vias & Copper pours</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>Design Rule Check</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-file"></span>PCB Library Design</p></li>
-                                                                    </ul>
-                                                                </div><!-- /.inner -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="accrodion">
-                                                            <div class="accrodion-title">
-                                                                <div class="accrodion-title-box">
-                                                                    <div class="accrodion-title__count"></div>
-                                                                    <div class="accrodion-title-text">
-                                                                        <h4>Gerber files Generation</h4>
-                                                                    </div>
-                                                                </div>
-                                                                <ul class="accrodion-meta list-unstyled">
-                                                                    <li><p><span class="icon-book"></span>4 Lesson</p></li>
-                                                                    <li><p><span class="icon-clock"></span>2h 50min</p></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="accrodion-content">
-                                                                <div class="inner">
-                                                                    <h3 class="accrodion-content__title">Overview</h3>
-                                                                    <p class="accrodion-content__text">Generate Gerber and drill files, export 3D models, and prepare a complete fabrication package.</p>
-                                                                    <ul class="accrodion-content__points list-unstyled">
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Gerber files & Drill files Generation</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>3D model export & visualization</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Preparing files for fabrication</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="far fa-headphones"></span>Fabrication Process</p></li>
-                                                                    </ul>
-                                                                </div><!-- /.inner -->
-                                                                            </div>
-                                                                            </div>
-                                                        <div class="accrodion">
-                                                            <div class="accrodion-title">
-                                                                <div class="accrodion-title-box">
-                                                                    <div class="accrodion-title__count"></div>
-                                                                    <div class="accrodion-title-text">
-                                                                        <h4>PCB Fabrication & Assembly</h4>
-                                                                            </div>
-                                                                            </div>
-                                                                <ul class="accrodion-meta list-unstyled">
-                                                                    <li><p><span class="icon-book"></span>3 Lesson</p></li>
-                                                                    <li><p><span class="icon-clock"></span>3h 00min</p></li>
-                                                                </ul>
-                                                                            </div>
-                                                            <div class="accrodion-content">
-                                                                <div class="inner">
-                                                                    <h3 class="accrodion-content__title">Overview</h3>
-                                                                    <p class="accrodion-content__text">Experience the complete PCB manufacturing process, practice soldering and test/debug assembled boards.</p>
-                                                                    <ul class="accrodion-content__points list-unstyled">
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Hands-on: PCB manufacturing process</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Testing & debugging PCBs - Review</p></li>
-                                                                        <li><p class="accrodion-content__points-text"><span class="fal fa-video"></span>Soldering techniques (SMD & through-hole)</p></li>
-                                                                    </ul>
-                                                                </div><!-- /.inner -->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Tab-->
-                                    <div class="tab" id="instructor">
-                                        <div class="course-details__tab-inner">
-                                            <div class="course-details__Instructor">
-                                                <div class="course-details__Instructor-img">
-                                                    <img src="{{ asset('assets/images/resources/tutor-img-2.jpg') }}" alt="tutor-img">
-                                                </div>
-                                                <div class="course-details__Instructor-content">
-                                                    <div
-                                                        class="course-details__Instructor-client-name-box-and-view">
-                                                        <div class="course-details__Instructor-client-name-box">
-                                                            <h4>{{ $course-> instructor_name }}</h4>
-                                                            <p>Sensor-based R&D | Edge device architecture | PCB design</p>
-                                                        </div>
-                                                        <!-- <div class="course-details__Instructor-view">
-                                                            <a href="#">View Details<span
-                                                                    class="icon-angles-right"></span></a>
-                                                        </div> -->
-                                                    </div>
-                                                    <!-- <ul
-                                                        class="course-details__Instructor-ratting-list list-unstyled">
-                                                        <li>
-                                                            <p><span class="fas fa-star"></span>(5.0 / 4.2 Rating)
-                                                            </p>
-                                                        </li>
-                                                        <li>
-                                                            <p><span class="fas fa-play-circle"></span>76 Courses
-                                                            </p>
-                                                        </li>
-                                                    </ul> -->
-                                                    <p class="course-details__Instructor-text">{{ $course->instructor_name }} With over 20+ years of experience, excelling in sensor-based R&D, edge device architecture, and PCB design. <br />
-                                                         Strong background in IoT automation, technical management of embedded systems, and demonstrates expertise in multi-bit microcontrollers.</p>
-                                                    <div class="course-details__Instructor-social">
-                                                        <a href="https://www.linkedin.com/in/sreekumar-narayan/" target="_blank" rel="noopener">
-                                                            <span class="fab fa-linkedin-in"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Tab-->
-                                    <div class="tab active-tab" id="review">
-                                        <div class="course-details__tab-inner">
-                                            <div class="course-details__ratting-and-review-box">
-                                                <ul class="course-details__ratting-box list-unstyled">
-                                                    <li>
-                                                        <div class="course-details__ratting-list">
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                        </div>
-                                                        <div class="progress-levels">
-                                                            <!--Skill Box-->
-                                                            <div class="progress-box">
-                                                                <div class="inner count-box">
-                                                                    <div class="bar">
-                                                                        <div class="bar-innner">
-                                                                            <div class="skill-percent">
-                                                                                <span class="count-text"
-                                                                                    data-speed="3000"
-                                                                                    data-stop="90">0</span>
-                                                                                <span class="percent">%</span>
-                                                                            </div>
-                                                                            <div class="bar-fill" data-percent="90">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__ratting-list">
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                        </div>
-                                                        <div class="progress-levels">
-                                                            <!--Skill Box-->
-                                                            <div class="progress-box">
-                                                                <div class="inner count-box">
-                                                                    <div class="bar">
-                                                                        <div class="bar-innner">
-                                                                            <div class="skill-percent">
-                                                                                <span class="count-text"
-                                                                                    data-speed="3000"
-                                                                                    data-stop="70">0</span>
-                                                                                <span class="percent">%</span>
-                                                                            </div>
-                                                                            <div class="bar-fill" data-percent="70">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__ratting-list">
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                        </div>
-                                                        <div class="progress-levels">
-                                                            <!--Skill Box-->
-                                                            <div class="progress-box">
-                                                                <div class="inner count-box">
-                                                                    <div class="bar">
-                                                                        <div class="bar-innner">
-                                                                            <div class="skill-percent">
-                                                                                <span class="count-text"
-                                                                                    data-speed="3000"
-                                                                                    data-stop="60">0</span>
-                                                                                <span class="percent">%</span>
-                                                                            </div>
-                                                                            <div class="bar-fill" data-percent="60">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__ratting-list">
-                                                            <span class="icon-star"></span>
-                                                            <span class="icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                        </div>
-                                                        <div class="progress-levels">
-                                                            <!--Skill Box-->
-                                                            <div class="progress-box">
-                                                                <div class="inner count-box">
-                                                                    <div class="bar">
-                                                                        <div class="bar-innner">
-                                                                            <div class="skill-percent">
-                                                                                <span class="count-text"
-                                                                                    data-speed="3000"
-                                                                                    data-stop="40">0</span>
-                                                                                <span class="percent">%</span>
-                                                                            </div>
-                                                                            <div class="bar-fill" data-percent="40">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__ratting-list">
-                                                            <span class="icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                            <span class="fill-white icon-star"></span>
-                                                        </div>
-                                                        <div class="progress-levels">
-                                                            <!--Skill Box-->
-                                                            <div class="progress-box">
-                                                                <div class="inner count-box">
-                                                                    <div class="bar">
-                                                                        <div class="bar-innner">
-                                                                            <div class="skill-percent">
-                                                                                <span class="count-text"
-                                                                                    data-speed="3000"
-                                                                                    data-stop="30">0</span>
-                                                                                <span class="percent">%</span>
-                                                                            </div>
-                                                                            <div class="bar-fill" data-percent="30">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="course-details__review-box">
-                                                    <div class="course-details__review-count">
-                                                        <span class="odometer" data-count="{{ $course->rating_value }}">00</span>
-                                                    </div>
-                                                    <div class="course-details__review-content">
-                                                        <ul class="course-details__review-ratting list-unstyled">
-                                                            <li>
-                                                                <span class="icon-star"></span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="icon-star"></span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="icon-star"></span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="icon-star"></span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="icon-star"></span>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="course-details__review-text">
-                                                            <p><span class="icon-star"></span>Excellent</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="comment-one">
-                                                <h3 class="comment-one__title">Course Reviews</h3>
-                                                <ul class="comment-one__single-list list-unstyled">
-                                                    @forelse($reviews as $review)
-                                                    <li>
-                                                        <div class="comment-one__single">
-                                                            <div class="comment-one__image-box">
-                                                                 <div class="initials-image comment-one__image" style="width: 50px; height: 50px; border-radius: 50%; background-color: #ccc; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white;">
-                                                                    {{ strtoupper(substr($review->name, 0, 1)) }}
-                                                                    </div>
-                                                                <!-- <div class="">
-                                                                    <img src="{{ asset('assets/images/blog/comment-1-1.jpg') }}" alt="">
-                                                                </div> -->
-                                                            </div>
-                                                            <div class="comment-one__content">
-                                                                <div class="comment-one__name-box">
-                                                                    <h4>{{ $review->name }}</span>
-                                                                    </h4>
-                                                                </div>
-                                                                <p class="ps-3">{{ $review->message }}</p>
-                                                                <div class="comment-one__btn-box d-flex justify-content-end">
-                                                                    <span>{{ \Carbon\Carbon::parse($review->updated_at)->format('d F, Y') }}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    @empty
-                                                        <p>No reviews yet. Be the first to review this course!</p>
-                                                    @endforelse
-                                                    <!-- <li>
-                                                        <div class="comment-one__single">
-                                                            <div class="comment-one__image-box">
-                                                                <div class="comment-one__image">
-                                                                    <img src="{{ asset('assets/images/blog/comment-1-2.jpg') }}" alt="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-one__content">
-                                                                <div class="comment-one__name-box">
-                                                                    <h4>Jordan Walk <span>By Author</span></h4>
-                                                                </div>
-                                                                <p>Absolutely! It’s amazing how online learning
-                                                                    adapts to our lives,
-                                                                    isn’t it? Being able to balance work, family,
-                                                                    and education is
-                                                                    such a huge advantage. Glad it’s working so well
-                                                                    for you!</p>
-                                                                <div class="comment-one__btn-box">
-                                                                    <a href={{ url('blog-details') }}
-                                                                        class="comment-one__btn">Reply</a>
-                                                                    <span>18 July, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li> -->
-                                                </ul>
-                                                <!-- <ul
-                                                    class="comment-one__single-list comment-one__single-list-2 list-unstyled">
-                                                    <li>
-                                                        <div class="comment-one__single">
-                                                            <div class="comment-one__image-box">
-                                                                <div class="comment-one__image">
-                                                                    <img src="{{ asset('assets/images/blog/comment-1-3.jpg') }}" alt="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-one__content">
-                                                                <div class="comment-one__name-box">
-                                                                    <h4>Lisa Oliva <span>Fashion Designer</span>
-                                                                    </h4>
-                                                                </div>
-                                                                <p>This article really resonates with me! As a
-                                                                    working parent,
-                                                                    online learning has been a game-changer. I’m
-                                                                    able to continue my
-                                                                    education without sacrificing family time. I
-                                                                    genuinely believe
-                                                                    that this is the future of education.</p>
-                                                                <div class="comment-one__btn-box">
-                                                                    <a href={{ url('blog-details') }}
-                                                                        class="comment-one__btn">Reply</a>
-                                                                    <span>18 July, 2024</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul> -->
-                                            </div>
-                                            <div class="comment-form">
-                                                <h3 class="comment-form__title">Submit Your Reviews</h3>
-                                                <div class="comment-form__text-and-ratting">
-                                                    <p class="comment-form__text">Your Ratings </p>
-                                                    <ul class="comment-form__ratting list-unstyled" id="star-rating">
-                                                        <li><span class="icon-star active" data-rating="1"></span></li>
-                                                        <li><span class="icon-star" data-rating="2"></span></li>
-                                                        <li><span class="icon-star" data-rating="3"></span></li>
-                                                        <li><span class="icon-star" data-rating="4"></span></li>
-                                                        <li><span class="icon-star" data-rating="5"></span></li>
-                                                    </ul>
-                                                </div>
-                                                <form id="review-form" action="{{ route('reviews.store', $course->id ?? 1) }}" method="POST"
-                                                    class="comment-form__form contact-form-validated"
-                                                    novalidate="novalidate">
-                                                    @csrf
-                                                    <input type="hidden" name="course_id" value="{{ $course->id ?? 1  }}">
-                                                    <input type="hidden" name="rating" id="selected-rating" value="5">
-                                                    <div class="row">
-                                                        <div class="col-xl-6 col-lg-6">
-                                                            <div class="comment-form__input-box">
-                                                                <input type="text" value="{{ Auth::user()->name ?? ''}}"
-                                                                    name="name" placeholder="Your Name" required>
-                                                            </div>
-                                                            <div class="invalid-feedback"></div>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-6">
-                                                            <div class="comment-form__input-box">
-                                                                <input type="email" value="{{ Auth::user()->email ?? ''}}"
-                                                                    name="email" placeholder="Your Email" required>
-                                                            </div>
-                                                            <div class="invalid-feedback"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div class="comment-form__input-box text-message-box">
-                                                                <textarea name="message"
-                                                                    placeholder="Write Review" required></textarea>
-                                                                <div class="invalid-feedback"></div>
-                                                            </div>
-                                                            <div class="comment-form__btn-box">
-                                                                <button type="submit"
-                                                                    class="comment-form__btn" id="review-submit-btn">
-                                                                    <span class="icon-arrow-circle"></span>
-                                                                    <span id="submit-text">Submit Review</span>
-                                                                    <span id="loading-text" style="display:none;">Submitting..</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div class="result" id="review-result"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Tab-->
                                 </div>
                             </div>
                         </div>
@@ -788,8 +218,8 @@
 
                             <div class="course-details__doller-and-btn-box d-flex justify-content-between">
                                 <div class="course-details__doller-btn-box">
-                                    <a class="thm-btn-two" onclick="enrollInCourse(this)">
-                                        <span>Enroll Now</span>
+                                    <a class="thm-btn-two btn" onclick="showBookingModal()">
+                                        <span>Book Live Session</span>
                                         <i class="icon-angles-right"></i>
                                     </a>
                                 </div>
@@ -845,6 +275,84 @@
         </div>
     </section>
     <!--Course Details End-->
+
+    <div id="bookingModal" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4>Printed Circuit Board Design: From Concept to Production (3-Day Course) - ₹1000</h4>
+                <button type="button" class="close-btn" onclick="closeBookingModal()" aria-label="Close">×</button>
+            </div>
+            <form id="bookingForm">
+                <input type="hidden" name="course_id" value="{{ $course->id }}">
+                <div class="form-grid">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" value="{{ Auth::user()->name ?? '' }}" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" value="{{ Auth::user()->email ?? '' }}" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <label>Contact Number</label>
+                        <input type="tel" name="contact_number" placeholder="WhatsApp or Phone" required>
+                        <small>Our team will contact you via WhatsApp or call to complete the payment and schedule your session slot.</small>
+                    </div>
+                    <div>
+                        <label>Shipping Address</label>
+                        <textarea name="shipping_address" placeholder="Complete address to receive your PCB kit" required></textarea>
+                        <small>A complete PCB kit will be delivered to your address.</small>
+                    </div>
+                </div>
+                <div style="margin-top:16px; display:flex; justify-content:flex-end; gap:8px;">
+                    <!-- <button type="button" class="thm-btn-two" style="background:#eee;color:#333;" onclick="closeBookingModal()">Cancel</button> -->
+                    <button type="submit" class="thm-btn-two">
+                        <span>Enroll Now</span>
+                        <i class="icon-angles-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showBookingModal(){
+            document.getElementById('bookingModal').classList.add('open');
+        }
+        function closeBookingModal(){
+            document.getElementById('bookingModal').classList.remove('open');
+        }
+        (function(){
+            const form = document.getElementById('bookingForm');
+            if(!form) return;
+            form.addEventListener('submit', async function(e){
+                e.preventDefault();
+                const userId = "{{ Auth::user()->id ?? '' }}";
+                if(!userId){ window.location.href = '{{ route('login') }}'; return; }
+                const fd = new FormData(form);
+                const data = Object.fromEntries(fd.entries());
+                data.user_id = userId;
+                try{
+                    const res = await fetch('{{ route('enrollment.initiate') }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type':'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    if(res.ok){
+                        closeBookingModal();
+                        alert('Thanks! We will contact you shortly to complete payment and schedule your session.');
+                    }else{
+                        alert('Unable to submit. Please try again.');
+                    }
+                }catch(err){
+                    alert('Network error. Please try again.');
+                }
+            });
+        })();
+    </script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {

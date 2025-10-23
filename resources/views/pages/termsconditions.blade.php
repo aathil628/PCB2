@@ -1,9 +1,9 @@
-@extends('layouts.layout2')
+@extends('layouts.layout4')
 @php
 $title = 'Terms & Conditions';
 $subtitle = 'Terms & Conditions';
 @endphp
-@section('title', ' Terms & Conditions || MyFirstPcb || MyFirstPcb Laravel Template ')
+@section('title', ' Terms & Conditions | MyFirstPcb ')
 @section('content')
 
 <x-strickyHeader />

@@ -52,10 +52,17 @@
                         electronics knowledge for both school and college curriculums.</p>
                     <div class="banner-two__btn-and-success-student-box">
                         <div class="banner-two__btn-box">
-                            <a href="{{ url('contact') }}" class="thm-btn-two">
+                            @guest
+                            <a href="{{ route('login') }}" class="thm-btn-two">
                                 <span>Get Started</span>
                                 <i class="icon-angles-right"></i>
                             </a>
+                            @else
+                            <a href="{{ route('course') }}" class="thm-btn-two">
+                                <span>Get Started</span>
+                                <i class="icon-angles-right"></i>
+                            </a>
+                            @endguest
                         </div>
                         <div class="banner-two__success-student-box">
 
@@ -88,7 +95,7 @@
                                     <p class="odometer" data-count="2000">00</p>
                                     <span>+</span>
                                 </div>
-                                <p class="banner-two__success-student-text">Success Student</p>
+                                <p class="banner-two__success-student-text">Students Enrolled</p>
                             </div>
                         </div>
                     </div>
@@ -115,14 +122,7 @@
                                                 href="{{ route('course-details', optional($courses->first())->id ?? 1) }}">PCB design and fabrication <br />
                                                 hands on course</a></h4>
                                         <!-- <p class="banner-two__course-discount-price">$150.00</p> -->
-                                        <div class="banner-two__course-discount-rating">
-                                            
-                                            <div class="banner-two__course-discount-star">
-                                                <span class="icon-star"></span>
-                                                <span class="icon-star"></span>
-                                                <span class="icon-star"></span>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="banner-two__course-discount-arrow" style="marigin-top: 0.5rem;">
                                             <a href="{{ isset($courses) && $courses->count() ? route('course-details', $courses->first()->id) : route('course') }}"><span
                                                     class="icon-angles-right"></span></a>
@@ -194,9 +194,7 @@
                                 <!-- /storage/courses/courses-2-1.jpg -->
 
                             </div>
-                            <div class="courses-two__heart">
-                                <a href="#"><span class="icon-heart"></span></a>
-                            </div>
+                            
                         </div>
                         <div class="courses-two__content">
                             <div class="courses-two__doller-and-review">
@@ -217,16 +215,7 @@
                                         <i class="icon-angles-right"></i>
                                     </a>
                                 </div>
-                                <div class="courses-two__client-box">
-                                    <div class="courses-two__client-img">
-                                        <img src="{{ asset('assets/images/resources/tutor-img-1.jpg') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="courses-two__client-content">
-                                        <h4>{{ $course->instructor_name }}</h4>
-                                        <p><span class="odometer" data-count="20">{{ $course->instructor_exp }}</span><i>+</i> Years Experience</p>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <ul class="courses-two__meta list-unstyled d-flex justify-content-between">
                                 <li>
@@ -235,26 +224,7 @@
                                     </div>
                                     <p>{{ $course->skill_level }}</p>
                                 </li>
-                                <!-- <li>
-                                    <div class="icon">
-                                        <span class="icon-book"></span>
-                                    </div>
-                                    <p>45 Lessons</p>
-                                </li> -->
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-clock"></span>
-                                    </div>
-                                    <p>{{ $course->duration }}</p>
-                                </li>
-                                <li>
-                                    @php $stars = (int) round($course->rating_value ?? 0); @endphp
-                                    <ul class="list-unstyled d-flex" style="gap:4px; margin:0;">
-                                        @for ($i = 1; $i <= 5; $i++)
-                                            <li><span class="icon-star" style="color: {{ $i <= $stars ? '#ffc107' : '#ddd' }};"></span></li>
-                                        @endfor
-                                    </ul>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -395,7 +365,7 @@
                         <div class="about-two__btn-box">
                             <!-- {{ url('about') }} -->
                             <a class="thm-btn-two" id="contactWhatsapp" href="https://wa.me/918590870849?text=Hi%20MyFirstPCB" target="_blank" rel="noopener">
-                                <span>Whats app</span>
+                                <span>Enquire on WhatsApp</span>
                                 <i class="icon-angles-right"></i>
                             </a>
                         </div>
@@ -579,8 +549,8 @@
                                                 alt="Robotics Instructor Coimbatore">
                                         </div>
                                         <div class="why-choose-two__right-content-one-user-details-content">
-                                            <h5>Indian Team</h5>
-                                            <p> Training Team </p>
+                                            <h5>Academic Team</h5>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -658,8 +628,8 @@
                                                 alt="Certified Robotics Educator">
                                         </div>
                                         <div class="why-choose-two__right-content-two-user-details-content">
-                                            <h5>Stockholm Team</h5>
-                                            <p>Sture & Team</p>
+                                            <h5>Management Team</h5>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -751,6 +721,10 @@
 
 <!--Team Two Start -->
 <section class="team-two">
+    <style>
+        .team-two__social-box .team-two__social-list { opacity: 1 !important; visibility: visible !important; transform: none !important; display: block !important; }
+        .team-two__plus { display: none !important; }
+    </style>
     <div class="team-two__shape-1 float-bob-y">
         <img src="{{ asset('assets/images/shapes/team-two-shape-1.png') }}" alt="">
     </div>
@@ -777,19 +751,15 @@
                         <img src="{{ asset('assets/images/team/team-2-1.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
-                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
                         <p class="team-two__sub-title">CEO</p>
                         <h3 class="team-two__name">Sture <span>Wikman</span></h3>
                     </div>
                     <div class="team-two__social-box">
-                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
                         <div class="team-two__social-list">
                             <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
-                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
-                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
-                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
@@ -802,19 +772,15 @@
                         <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
-                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
                         <p class="team-two__sub-title">Operations</p>
                         <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
                     </div>
                     <div class="team-two__social-box">
-                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/in/sreekumar-narayan/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
-                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
-                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
-                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -827,19 +793,15 @@
                         <img src="{{ asset('assets/images/team/team-2-3.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
-                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
                         <p class="team-two__sub-title">Programming</p>
                         <h3 class="team-two__name">Praveen <span>Palaniswamy</span></h3>
                     </div>
                     <div class="team-two__social-box">
-                        <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
                         <div class="team-two__social-list">
                             <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
-                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
-                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
-                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
@@ -852,7 +814,7 @@
                         <img src="{{ asset('assets/images/team/team-2-4.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
-                        <a href="{{ route('instructor-details') }}"><span class="icon-circle-left"></span></a>
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
                         <p class="team-two__sub-title">Marketing</p>
@@ -862,14 +824,138 @@
                         <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
                         <div class="team-two__social-list">
                             <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
-                            <a href="#" aria-label="Pinterest"><span class="fab fa-pinterest-p"></span></a>
-                            <a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a>
-                            <a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Team Two Single End-->
+             <!--Team Two Single Start-->
+            <div class="item">
+                <div class="team-two__single">
+                    <div class="team-two__img-1">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                    </div>
+                    <div class="team-two__arrow">
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
+                    </div>
+                    <div class="team-two__content">
+                        <p class="team-two__sub-title"> IoT Project Lead</p>
+                        <h3 class="team-two__name">Dr.<span> Sreekumar</span></h3>
+                    </div>
+                    <div class="team-two__social-box">
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team Two Single End-->
+             <!--Team Two Single Start-->
+            <div class="item">
+                <div class="team-two__single">
+                    <div class="team-two__img-1">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                    </div>
+                    <div class="team-two__arrow">
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
+                    </div>
+                    <div class="team-two__content">
+                        <p class="team-two__sub-title">Operations</p>
+                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                    </div>
+                    <div class="team-two__social-box">
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team Two Single End-->
+             <!--Team Two Single Start-->
+            <div class="item">
+                <div class="team-two__single">
+                    <div class="team-two__img-1">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                    </div>
+                    <div class="team-two__arrow">
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
+                    </div>
+                    <div class="team-two__content">
+                        <p class="team-two__sub-title">Operations</p>
+                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                    </div>
+                    <div class="team-two__social-box">
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team Two Single End-->
+             <!--Team Two Single Start-->
+            <div class="item">
+                <div class="team-two__single">
+                    <div class="team-two__img-1">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                    </div>
+                    <div class="team-two__arrow">
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
+                    </div>
+                    <div class="team-two__content">
+                        <p class="team-two__sub-title">Operations</p>
+                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                    </div>
+                    <div class="team-two__social-box">
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team Two Single End-->
+             <!--Team Two Single Start-->
+            <div class="item">
+                <div class="team-two__single">
+                    <div class="team-two__img-1">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                    </div>
+                    <div class="team-two__arrow">
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
+                    </div>
+                    <div class="team-two__content">
+                        <p class="team-two__sub-title">Operations</p>
+                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                    </div>
+                    <div class="team-two__social-box">
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team Two Single End-->
+             <!--Team Two Single Start-->
+            <div class="item">
+                <div class="team-two__single">
+                    <div class="team-two__img-1">
+                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                    </div>
+                    <div class="team-two__arrow">
+                        <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
+                    </div>
+                    <div class="team-two__content">
+                        <p class="team-two__sub-title">Operations</p>
+                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                    </div>
+                    <div class="team-two__social-box">
+                        <div class="team-two__social-list">
+                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team Two Single End-->
+
         </div>
     </div>
     <div class="sliding-text-five">
@@ -1261,45 +1347,60 @@
 <!--Contact Info One Start -->
 <section class="contact-info-one mt-5">
     <div class="container">
-        <ul class="list-unstyled contact-info-one__list">
-            <li>
-                <div class="contact-info-one__single">
-                    <div class="contact-info-one__icon">
-                        <span class="icon-envelope"></span>
-                    </div>
+        <style>
+            .footer-contact-grid{display:grid;gap:16px}
+            .footer-contact-grid .row-1{display:grid;grid-template-columns:repeat(1,1fr);gap:16px}
+            .footer-contact-grid .row-2{display:grid;grid-template-columns:repeat(1,1fr);gap:16px}
+            .footer-contact-grid .contact-card{display:flex;align-items:flex-start;gap:12px;background:#0b0b0b40;border-radius:8px;padding:16px;color:#fff}
+            .footer-contact-grid .contact-card .contact-title{font-size:14px;line-height:1.2;margin:0;opacity:.95;color:#fff}
+            .footer-contact-grid .contact-card .contact-text{font-size:16px;line-height:1.5;margin:2px 0 0;color:#fff}
+            .footer-contact-grid .contact-card .contact-text a{font-size:16px;color:#fff}
+            .footer-contact-grid .contact-card .contact-text a:hover{text-decoration:underline}
+            .footer-contact-grid .contact-info-one__icon span{color:#fff}
+            @media(min-width:576px){.footer-contact-grid .row-1{grid-template-columns:repeat(2,1fr)}.footer-contact-grid .row-2{grid-template-columns:repeat(2,1fr)}}
+            @media(min-width:992px){.footer-contact-grid .row-1{grid-template-columns:repeat(3,1fr)}.footer-contact-grid .row-2{grid-template-columns:repeat(2,1fr)}}
+        </style>
+        <div class="footer-contact-grid">
+            <div class="row-1">
+                <div class="contact-card">
+                    <div class="contact-info-one__icon"><span class="icon-location"></span></div>
                     <div class="contact-info-one__content">
-                        <p class="contact-info-one__sub-title">Email Address:</p>
-                        <h5 class="contact-info-one__email">
-                             <a href="mailto:contact@myfirstpcb.com">contact@myfirstpcb.com</a>
-                        </h5>
+                        <p class="contact-title">Trivandrum Address</p>
+                        <h5 class="contact-text">Nytt Analytics Pvt Ltd<br/>CCCIET, Nalanchira, Trivandrum 695015</h5>
                     </div>
                 </div>
-            </li>
-            <li>
-                <div class="contact-info-one__single">
-                    <div class="contact-info-one__icon">
-                        <span class="icon-phone"></span>
-                    </div>
+                <div class="contact-card">
+                    <div class="contact-info-one__icon"><span class="icon-location"></span></div>
                     <div class="contact-info-one__content">
-                        <p class="contact-info-one__sub-title">Phone Number</p>
-                        <h5 class="contact-info-one__email">
-                            <a href="tel:+91 8590870849">+91 85908 70849</a>
-                        </h5>
+                        <p class="contact-title">Coimbatore Address</p>
+                        <h5 class="contact-text">Nytt Analytics Pvt Ltd<br/>Plot No 3, Sounderan Mills, Sulur, Coimbatore, India</h5>
                     </div>
                 </div>
-            </li>
-            <li>
-                <div class="contact-info-one__single">
-                    <div class="contact-info-one__icon">
-                        <span class="icon-location"></span>
-                    </div>
+                <div class="contact-card">
+                    <div class="contact-info-one__icon"><span class="icon-location"></span></div>
                     <div class="contact-info-one__content">
-                        <p class="contact-info-one__sub-title">Our Address</p>
-                        <h5 class="contact-info-one__email">Malmskillnadsgatan 42, 111 57, <br/> Stockholm, Sweden</h5>
+                        <p class="contact-title">Corporate Address</p>
+                        <h5 class="contact-text">Malmskillnadsgatan 42, 111 57,<br/>Stockholm, Sweden</h5>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+            <div class="row-2">
+                <div class="contact-card">
+                    <div class="contact-info-one__icon"><span class="icon-envelope"></span></div>
+                    <div class="contact-info-one__content">
+                        <p class="contact-title">Email Address</p>
+                        <h5 class="contact-text"><a href="mailto:contact@myfirstpcb.com">contact@myfirstpcb.com</a></h5>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-info-one__icon"><span class="icon-phone"></span></div>
+                    <div class="contact-info-one__content">
+                        <p class="contact-title">Phone Number</p>
+                        <h5 class="contact-text"><a href="tel:+918590870849">+91 85908 70849</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!--Contact Info One End -->
@@ -1329,6 +1430,11 @@
             const whatsappNumber = '8590870849';
             const name = "{{ Auth::user()->name ?? '' }}";
             const email = "{{ Auth::user()->email ?? '' }}";
+
+            if (!user_id) {
+                window.location.href = '{{ route('login') }}';
+                return;
+            }
 
             const formData = {
                 course_id: course_id,

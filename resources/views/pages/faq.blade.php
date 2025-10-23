@@ -1,9 +1,9 @@
-@extends('layouts.layout2')
+@extends('layouts.layout4')
 @php
 $title = 'Faq';
 $subtitle = 'Faq';
 @endphp
-@section('title', ' Faq || Fistudy || Fistudy Laravel Template ')
+@section('title', ' Faq | MyFirstPCB ')
 @section('content')
 
 <x-strickyHeader />
@@ -236,43 +236,6 @@ $subtitle = 'Faq';
 </section>
 <!--Faq Page End-->
 
-<!--Newsletter Two Start -->
-<section class="newsletter-two">
-    <div class="container">
-        <div class="newsletter-two__inner">
-            <div class="newsletter-two__img">
-                <img src="{{ asset('assets/images/resources/newsletter-two-img-1.png') }}" alt="">
-            </div>
-            <div class="newsletter-two__inner-content">
-                <div class="newsletter-two__shape-bg"
-                    style="background-image: url('{{ asset('assets/images/shapes/newsletter-two-shape-bg.png') }}');">
-                </div>
-                <div class="newsletter-two__like">
-                    <img src="{{ asset('assets/images/shapes/newsletter-two-like.png') }}" alt="">
-                </div>
-                <div class="newsletter-two__title-box">
-                    <h3 class="newsletter-two__title">Subscribe our <span>Newsletter</span></h3>
-                    <p class="newsletter-two__text">Explore a diverse selection of courses all in one platform,
-                        <br>
-                        designed to cater to various learning
-                    </p>
-                </div>
-                <div class="newsletter-two__form-box">
-                    <form class="newsletter-two__form">
-                        <div class="newsletter-two__input">
-                            <input type="email" placeholder="Enter Your Email">
-                        </div>
-                        <button type="submit" class="newsletter-two__btn">
-                            <span class="icon-arrow-circle"></span> Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Newsletter Two End -->
-
 <!--Contact Info One Start -->
 <section class="contact-info-one">
     <div class="container">
@@ -285,7 +248,7 @@ $subtitle = 'Faq';
                     <div class="contact-info-one__content">
                         <p class="contact-info-one__sub-title">Email Address:</p>
                         <h5 class="contact-info-one__email">
-                            <a href="mailto:info@example.com">info@example.com</a>
+                            <a href="mailto:contact@myfirstpcb.com">contact@myfirstpcb.com</a>
                         </h5>
                     </div>
                 </div>
@@ -298,7 +261,7 @@ $subtitle = 'Faq';
                     <div class="contact-info-one__content">
                         <p class="contact-info-one__sub-title">Phone Number</p>
                         <h5 class="contact-info-one__email">
-                            <a href="tel:001239957689">+00 123 (99) 57689</a>
+                            <a href="tel:+918590870849">+91 85908 70849</a>
                         </h5>
                     </div>
                 </div>
@@ -310,7 +273,7 @@ $subtitle = 'Faq';
                     </div>
                     <div class="contact-info-one__content">
                         <p class="contact-info-one__sub-title">Our Address</p>
-                        <h5 class="contact-info-one__email">1234 Elm Street Springfield,</h5>
+                        <h5 class="contact-info-one__email">Malmskillnadsgatan 42, 111 57, <br /> Stockholm, Sweden</h5>
                     </div>
                 </div>
             </li>

@@ -22,7 +22,7 @@ Route::middleware(['auth'])->group(function () {
     })->name('admin.contacts');
 
      Route::get('/profile', function () {
-        return view('pages\profile');
+        return view('pages.profile');
     })->name('profile');
 
     Route::post('/profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
@@ -48,6 +48,9 @@ Route::get('sign-up', [PagesController::class, 'sign_up'])->name('sign-up');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup.submit');
 Route::get('login', [PagesController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+// OTP auth endpoints
+Route::post('/auth/send-otp', [AuthController::class, 'sendOtp'])->name('auth.sendOtp');
+Route::post('/auth/verify-otp', [AuthController::class, 'verifyOtp'])->name('auth.verifyOtp');
 
   Route::get('course-details/{id}', [PagesController::class, 'course_details'])->name('course-details');
     // Route::get('course-details', [PagesController::class, 'course_details'])->name('course-details');
@@ -81,13 +84,13 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
     })->name('contact.confirmation');
 
     Route::get('/privacy-policy', function () {
-        return view('pages\privacypolicy');
+        return view('pages.privacypolicy');
     })->name('privacy');
     Route::get('/refund-policy', function () {
-        return view('pages\refundpolicy');
+        return view('pages.refundpolicy');
     })->name('refund');
     Route::get('/terms-condition', function () {
-        return view('pages\termsconditions');
+        return view('pages.termsconditions');
     })->name('terms');
 
 

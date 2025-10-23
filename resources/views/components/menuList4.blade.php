@@ -34,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="main-menu-two__right">
-                    <div class="main-menu-two__search-box">
+                    <div class="main-menu-two__search-box d-none">
                         <a href={{ url('#') }} class="main-menu-two__search searcher-toggler-box icon-search"></a>
                     </div>
                     <div class="main-menu-two__signin-reg">

@@ -1,9 +1,9 @@
-@extends('layouts.layout2')
+@extends('layouts.layout4')
 @php
 $title = 'Refund Policy';
 $subtitle = 'Refund Policy';
 @endphp
-@section('title', ' Refund Policy || MyFirstPcb || MyFirstPcb Laravel Template ')
+@section('title', ' Refund Policy | MyFirstPcb  ')
 @section('content')
 
 <x-strickyHeader />

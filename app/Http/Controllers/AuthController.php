@@ -15,21 +15,24 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception as PHPMailerException;
 
 use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
-    public function signup(Request $request){
+    public function signup(Request $request)
+    {
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:225',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6',
             'cohort' => 'nullable|string|max:225',
-            'reason' =>  'required|string',
-            'agreement' => 'accepted',
+            'reason' =>  'nullable|string',
+            'agreement' => 'nullable|boolean',
         ]);
+
 
         if ($validator->fails()) {
             return response()->json([
@@ -38,22 +41,25 @@ class AuthController extends Controller
             ], 422);
         }
 
+
         try{
+            $randomPassword = Str::random(12);
             $user = User::create([
                         'name' => $request->name,
                         'email' => $request->email,
-                        'password' => bcrypt($request->password),
+                        'password' => bcrypt($randomPassword),
                         'cohort' => $request->cohort,
                         'reason' => $request->reason,
-                        'agreement' => true
+                        'agreement' => $request->boolean('agreement', false)
                     ]);
 
-            // Log::info('Update Profile response:', $user->toArray());
+            // Auto-login after signup
+            Auth::login($user);
 
-             return response()->json([
+            return response()->json([
                 'success' => true,
                 'message' => 'Registration completed successfully!',
-                'redirect_url' => route('login')
+                'redirect_url' => route('course')
             ]);
         }catch (\Exception $e) {
             Log::error('User creation failed: ' . $e->getMessage());
@@ -66,12 +72,122 @@ class AuthController extends Controller
 
     }
 
+    public function sendOtp(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+        $email = strtolower(trim($request->email));
+        $userExists = User::where('email', $email)->exists();
+
+        $otp = random_int(100000, 999999);
+        $expiresAt = now()->addMinutes(10);
+
+        $otpData = [
+            'code' => (string)$otp,
+            'expires_at' => $expiresAt->timestamp,
+            'user_exists' => $userExists,
+        ];
+        session(["otp_{$email}" => $otpData]);
+
+        try {
+            $mailer = new PHPMailer(true);
+            $mailer->SMTPDebug = 0;
+            $mailer->isSMTP();
+            $mailer->Host       = env('MAIL_HOST', 'mail.myfirstpcb.com');
+            $mailer->SMTPAuth   = true;
+            $mailer->Username   = env('MAIL_USERNAME', 'contact@myfirstpcb.com');
+            $mailer->Password   = env('MAIL_PASSWORD', '');
+            $mailer->Port       = (int) env('MAIL_PORT', 25);
+            $encryption         = env('MAIL_ENCRYPTION', ''); // '', 'tls', or 'ssl'
+            if (!empty($encryption)) {
+                $mailer->SMTPSecure = $encryption;
+            }
+            // Relax SSL verification for local/dev (matches PasswordResetLinkMail)
+            $mailer->SMTPOptions = [
+                'ssl' => [
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true,
+                ],
+            ];
+
+            $fromAddress = env('MAIL_FROM_ADDRESS', 'contact@myfirstpcb.com');
+            $fromName    = env('MAIL_FROM_NAME', 'MyFirstPCB');
+            $mailer->setFrom($fromAddress, $fromName);
+            $mailer->addAddress($email);
+
+            $mailer->isHTML(true);
+            $mailer->Subject = 'Your MyFirstPCB OTP';
+            $mailer->Body    = '<p>Your OTP is <strong>' . $otp . '</strong>.</p><p>This code expires in 10 minutes.</p>';
+            $mailer->AltBody = 'Your OTP is ' . $otp . ' (expires in 10 minutes).';
+
+            $mailer->send();
+
+            Log::info('OTP sent', ['email' => $email]);
+            return response()->json([
+                'success' => true,
+                'message' => 'OTP has been sent to your email.',
+                'user_exists' => $userExists,
+            ]);
+        } catch (PHPMailerException $e) {
+            Log::error('Failed to send OTP email (PHPMailer)', ['email' => $email, 'error' => $e->getMessage()]);
+            return response()->json([
+                'success' => false,
+                'message' => 'Unable to send OTP. Please verify mail settings or try again shortly.'
+            ], 500);
+        } catch (\Exception $e) {
+            Log::error('Failed to send OTP email', ['email' => $email, 'error' => $e->getMessage()]);
+            return response()->json([
+                'success' => false,
+                'message' => 'Unable to send OTP. Please verify mail settings or try again shortly.'
+            ], 500);
+        }
+    }
+
+    public function verifyOtp(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'otp' => 'required|string',
+        ]);
+
+        $email = strtolower(trim($request->email));
+        $saved = session("otp_{$email}");
+        if (!$saved) {
+            return response()->json(['success' => false, 'message' => 'OTP not found or expired. Please request a new one.'], 400);
+        }
+        if ((string)$saved['code'] !== (string)$request->otp) {
+            return response()->json(['success' => false, 'message' => 'Invalid OTP.'], 400);
+        }
+        if (time() > (int)$saved['expires_at']) {
+            session()->forget("otp_{$email}");
+            return response()->json(['success' => false, 'message' => 'OTP expired. Please request a new one.'], 400);
+        }
+
+        session()->forget("otp_{$email}");
+
+        $user = User::where('email', $email)->first();
+        if ($user) {
+            Auth::login($user);
+            return response()->json([
+                'success' => true,
+                'registered' => true,
+                'redirect_url' => route('course'),
+            ]);
+        }
+        return response()->json([
+            'success' => true,
+            'registered' => false,
+            'redirect_url' => route('sign-up') . '?email=' . urlencode($email),
+        ]);
+    }
+
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
+
 
         if ($validator->fails()) {
             return response()->json([

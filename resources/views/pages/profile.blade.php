@@ -157,6 +157,10 @@
                         <textarea class="form-control" id="profile_reason" rows="3"  style="background:#F7F9FD;" readonly></textarea>
                         <!-- <small class="form-text" style="color:#757582;">Links and coupon codes are not permitted in this section.</small> -->
                     </div>
+                    <div class="mt-5">
+                        <h3 style="color:#26355D; font-weight:600;">Purchased Courses</h3>
+                        <div id="purchasedMainList" class="mt-3" style="background:#fff;border-radius:16px;padding:1rem;box-shadow:0 3px 6px rgba(0,0,0,0.05);"></div>
+                    </div>
                 </div>
             </div>
             <!-- Edit Profile View -->
@@ -234,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#profile_reason').value = data.reason || '';
 
         const coursesDiv = document.getElementById('profileCourses');
+        const purchasedMainList = document.getElementById('purchasedMainList');
         if (coursesDiv && data.courses && data.courses.length > 0) {
             let coursesHtml = '';
 
@@ -247,6 +252,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             coursesDiv.querySelector('.course-list').innerHTML = coursesHtml;
+            if (purchasedMainList) purchasedMainList.innerHTML = coursesHtml;
+        } else {
+            const emptyHtml = `
+                <div style="text-align:center; padding:2rem;">
+                    <p style="color:#606580; margin-bottom:1rem;">Buy your first kit and start designing your own PCB</p>
+                    <a href="{{ route('course') }}" class="btn" style="background:#6B73FF;color:#fff;border-radius:22px;">Go to Courses</a>
+                </div>`;
+            if (coursesDiv) {
+                const tabList = coursesDiv.querySelector('.course-list');
+                if (tabList) tabList.innerHTML = emptyHtml;
+            }
+            if (purchasedMainList) purchasedMainList.innerHTML = emptyHtml;
         }
     })
     .catch(error => {

@@ -22,7 +22,7 @@
           <ul class="main-menu__list">
             <li class="{{ request()->routeIs('index') ? 'current' : '' }}"><a href="{{ route('index') }}">Home</a></li>
             <li class="dropdown {{ request()->routeIs('course*') ? 'current' : '' }}">
-              <a href="#">Course</a>
+              <a href="{{ route('course') }}">Course</a>
               <ul class="shadow-box p-0" style="padding:0;">
                 <li class="p-0" style="padding:0;">
                   @php
@@ -55,13 +55,14 @@
             </li>
             <li class="{{ request()->routeIs('blog*') ? 'current' : '' }}"><a href="{{ route('blog') }}">Blog</a></li>
             <li class="{{ request()->routeIs('about') ? 'current' : '' }}"><a href="{{ route('about') }}">About</a></li>
+            <li class="{{ request()->routeIs('faq') ? 'current' : '' }}"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="{{ request()->routeIs('contact') ? 'current' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
           </ul>
         </div>
 
         <!-- Desktop Right Controls -->
         <div class="main-menu-two__right d-flex align-items-center">
-          <div class="main-menu-two__search-box">
+          <div class="main-menu-two__search-box d-none">
             <a href="{{ url('#') }}" class="main-menu-two__search searcher-toggler-box icon-search"></a>
           </div>
           <div class="main-menu-two__signin-reg d-flex align-items-center">

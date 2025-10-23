@@ -3,7 +3,7 @@
     $title = '404 Error';
     $subtitle = '404 Error';
 @endphp
-@section('title', ' 404 Error || Fistudy || Fistudy Laravel Template ')
+@section('title', ' 404 Error || MyFirstPCB ')
 @section('content')
 
 <x-strickyHeader/>

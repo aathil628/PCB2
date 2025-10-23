@@ -1,5 +1,5 @@
 @extends('layouts.layout5')
-@section('title', 'Home Two || Fistudy || Fistudy Laravel Template ')
+@section('title', 'Home Two || MyFirstPCB')
 @section('content')
 <x-strickyHeader/>
 

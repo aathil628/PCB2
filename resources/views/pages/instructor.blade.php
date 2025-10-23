@@ -3,7 +3,7 @@
     $title = 'Instructor';
     $subtitle = 'Instructor';
 @endphp
-@section('title', ' Instructor || Fistudy || Fistudy Laravel Template ')
+@section('title', ' Instructor || MyFirstPCB ')
 @section('content')
 
 <x-strickyHeader/>

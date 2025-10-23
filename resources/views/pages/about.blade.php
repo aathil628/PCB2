@@ -220,55 +220,6 @@
 <!-- Why Choose Three End -->
 
 
-    <!-- Counter One Start -->
-    <section class="counter-one">
-        <div class="counter-one__bg" style="background-image: url({{ asset('assets/images/backgrounds/counter-one-bg.jpg') }});">
-            <div class="counter-one__video-link pill-left"
-                 style="background-image: url('{{ asset('assets/images/resources/counter-one-static.jpg') }}');">
-            </div>
-        </div>
-        <div class="counter-one__shape-1" style="background-image: url({{ asset('assets/images/shapes/counter-one-shape-1.png') }});"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8">
-                    <div class="counter-one__left">
-                        <ul class="counter-one__list list-unstyled">
-                            <li>
-                                <div class="counter-one__count-hover-img" style="background-image: url({{ asset('assets/images/resources/counter-one-single-hover-img.jpg') }});">
-                                </div>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="10" data-speed="1500">00</h3>
-                                    <span>k</span>
-                                </div>
-                                <p>Student Trained</p>
-                            </li>
-                            <li>
-                                <div class="counter-one__count-hover-img" style="background-image: url({{ asset('assets/images/resources/counter-one-single-hover-img.jpg') }});">
-                                </div>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="50" data-speed="1500">00</h3>
-                                    <span>+</span>
-                                </div>
-                                <p>Recorded Courses</p>
-                            </li>
-                            <li>
-                                <div class="counter-one__count-hover-img" style="background-image: url({{ asset('assets/images/resources/counter-one-single-hover-img.jpg') }});">
-                                </div>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="15" data-speed="1500">00</h3>
-                                    <span>M</span>
-                                </div>
-                                <p>Satisfaction Rate</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Counter One End -->
-
-
  <!-- Testimonial Two Start -->
  <section class="testimonial-two">
     <div class="testimonial-two__shape-6">

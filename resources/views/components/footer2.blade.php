@@ -21,6 +21,7 @@
                                     <p class="footer-widget-two__about-text">Empowering young minds with hands-on PCB design and electronics education</p>
                                     <div class="site-footer-two__social">
                                         <a href="https://www.linkedin.com/in/my-first-pcb-89273b380/" aria-label="LinkedIn"><span class="fab fa-linkedin-in"></span></a>
+                                        <a href="https://www.instagram.com/myfirstpcb?igsh=MWxhcHh3eTdmOXFzaw=="><span class="fab fa-instagram"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +49,7 @@
                                                 Partners</a></li> -->
                                         <li><a href="{{ route('privacy') }}"> <span class="icon-plus"></span> Privacy &
                                                 Policy</a></li>
-                                        <li><a href="{{ route('terms') }}"> <span class="icon-plus"></span> Tearm & Condition</a></li>
+                                        <li><a href="{{ route('terms') }}"> <span class="icon-plus"></span> Terms & Conditions</a></li>
                                         <li><a href="{{ route('refund') }}"> <span class="icon-plus"></span> Refund Policy</a></li>
                                         <!-- <li><a href="{{ url('course') }}"> <span class="icon-plus"></span> Live Workshop</a></li>
                                         <li><a href="{{ url('about') }}"> <span class="icon-plus"></span> Chose Career</a></li> -->

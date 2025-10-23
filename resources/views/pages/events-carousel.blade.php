@@ -3,7 +3,7 @@
     $title = 'Event Carousel';
     $subtitle = 'Event Carousel';
 @endphp
-@section('title', ' Event Carousel || Fistudy || Fistudy Laravel Template ')
+@section('title', ' Event Carousel || MyFirstPCB ')
 @section('content')
 
 <x-strickyHeader/>

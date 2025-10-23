@@ -3,7 +3,7 @@
     $title = 'Gallery';
     $subtitle = 'Gallery';
 @endphp
-@section('title', ' Gallery || Fistudy || Fistudy Laravel Template ')
+@section('title', ' Gallery || MyFirstPCB ')
 @section('content')
 
 <x-strickyHeader/>

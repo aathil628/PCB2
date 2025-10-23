@@ -16,6 +16,7 @@ $subtitle = 'Our Blogs';
         <div class="row">
             <!--Blog 1: Robotics Courses for Kids in Trivandrum-->
             <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                <a href="{{ route('blog-details-1') }}" style="text-decoration:none;color:inherit;display:block;">
                 <div class="blog-two__single">
                     <div class="blog-two__img">
                         <img src="{{ asset('assets/images/blog/robotics-kids-trivandrum.jpg') }}"
@@ -27,7 +28,7 @@ $subtitle = 'Our Blogs';
                     </div>
                     <div class="blog-two__content">
                         <h4 class="blog-two__title">
-                            <a href="{{ route('blog-details-1') }}">Why Every Maker Should Have a PCB Toolkit Ready</a>
+                            Why Every Maker Should Have a PCB Toolkit Ready
                         </h4>
                         <p class="blog-two__text">If you’re into electronics, tinkering, or DIY projects, there’s one
                             thing you’ll quickly learn: having the right tools at your side makes all the difference.
@@ -35,10 +36,12 @@ $subtitle = 'Our Blogs';
                             a proper toolkit, small hurdles can slow you down or even kill your momentum.</p>
                     </div>
                 </div>
+                </a>
             </div>
 
             <!--Blog 2: Industry Connect-->
             <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <a href="{{ route('blog-details-2') }}" style="text-decoration:none;color:inherit;display:block;">
                 <div class="blog-two__single">
                     <div class="blog-two__img">
                         <img src="{{ asset('assets/images/blog/industry-connect.jpg') }}" alt="Consistency in Quality"
@@ -50,9 +53,7 @@ $subtitle = 'Our Blogs';
                     </div>
                     <div class="blog-two__content">
                         <h4 class="blog-two__title">
-                            <a href="{{ route('blog-details-2') }}">5 Simple Projects You Can Do With Our Junior PCB
-                                Toolkit
-                            </a>
+                            5 Simple Projects You Can Do With Our Junior PCB Toolkit
                         </h4>
                         <p class="blog-two__text">Getting started with electronics can feel intimidating, but the truth
                             is, you don’t need to dive into complex circuits on day one. With the Junior PCB Toolkit,
@@ -61,10 +62,12 @@ $subtitle = 'Our Blogs';
                         </p>
                     </div>
                 </div>
+                </a>
             </div>
 
             <!--Blog 3-->
             <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                <a href="{{ route('blog-details-3') }}" style="text-decoration:none;color:inherit;display:block;">
                 <div class="blog-two__single">
                     <div class="blog-two__img">
                         <img src="{{ asset('assets/images/blog/robotics-curriculum.jpg') }}" alt="Faster Learning Curve"
@@ -76,10 +79,7 @@ $subtitle = 'Our Blogs';
                     </div>
                     <div class="blog-two__content">
                         <h4 class="blog-two__title">
-                            <a href="{{ route('blog-details-3') }}">5 Simple Projects You Can Do With Our Junior PCB
-                                Toolkit
-
-                            </a>
+                            5 Simple Projects You Can Do With Our Junior PCB Toolkit
                         </h4>
                         <p class="blog-two__text">Starting with electronics doesn’t have to be complicated. With the
                             Junior PCB Toolkit, you already have everything you need to bring small but exciting
@@ -88,10 +88,12 @@ $subtitle = 'Our Blogs';
                         </p>
                     </div>
                 </div>
+                </a>
             </div>
 
             <!-- Blog 4 -->
                          <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                <a href="{{ route('blog-details-4') }}" style="text-decoration:none;color:inherit;display:block;">
                 <div class="blog-two__single">
                     <div class="blog-two__img">
                         <img src="{{ asset('assets/images/blog/starter- pack for-learning- pcb.jpg') }}" alt="Faster Learning Curve"
@@ -103,13 +105,13 @@ $subtitle = 'Our Blogs';
                     </div>
                     <div class="blog-two__content">
                         <h4 class="blog-two__title">
-                            <a href="{{ route('blog-details-4') }}">The Ultimate Starter Pack for Learning PCB Design (Without Getting Overwhelmed)
-                            </a>
+                            The Ultimate Starter Pack for Learning PCB Design (Without Getting Overwhelmed)
                         </h4>
                         <p class="blog-two__text">If you’ve ever thought about making your own circuits or designing your own PCBs, you probably know the feeling: too many tools, too many tutorials, and too many decisions. It’s easy to get overwhelmed before you even begin.
                         </p>
                     </div>
                 </div>
+                </a>
             </div>
 
 

@@ -1,9 +1,9 @@
-@extends('layouts.layout2')
+@extends('layouts.layout4')
 @php
 $title = 'Privacy Policy';
 $subtitle = 'Privacy Policy';
 @endphp
-@section('title', ' Privacy Policy || MyFirstPcb || MyFirstPcb Laravel Template ')
+@section('title', ' Privacy Policy | MyFirstPcb ')
 @section('content')
 
 <x-strickyHeader />
@@ -26,7 +26,7 @@ $subtitle = 'Privacy Policy';
             </div>
 
             <div class="last-update my-5">
-                <h5>Effective Date: 13/08/2025</h5>
+                <h5>Last Updated on: 13/08/2025</h5>
             </div>
             <div class="intro row my-5">
                 <div class="intro-head col">

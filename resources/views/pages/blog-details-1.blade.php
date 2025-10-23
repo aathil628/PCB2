@@ -176,19 +176,7 @@ $subtitle = 'Blog Details';
                         </ul>
                     </div>
 
-                    <div class="sidebar__single sidebar__newsletter">
-                        <div class="sidebar__title-box">
-                            <div class="sidebar__title-icon">
-                                <img src="{{ asset('assets/images/icon/sidebar-title-icon.png') }}" alt="">
-                            </div>
-                            <h3 class="sidebar__title">Newsletter </h3>
-                        </div>
-                        <p class="sidebar__newsletter-text">Subscribe our newsletter to get every update </p>
-                        <form action="#" class="sidebar__newsletter-form">
-                            <input type="search" placeholder="Search Blogs">
-                            <button type="submit">Subscribe<i class="icon-circle-left"></i></button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -196,42 +184,7 @@ $subtitle = 'Blog Details';
 </section>
 <!--Blog Details End-->
 
-<!--Newsletter Two Start -->
-<section class="newsletter-two">
-    <div class="container">
-        <div class="newsletter-two__inner">
-            <div class="newsletter-two__img">
-                <img src="{{ asset('assets/images/resources/newsletter-two-img-1.png') }}" alt="">
-            </div>
-            <div class="newsletter-two__inner-content">
-                <div class="newsletter-two__shape-bg"
-                    style="background-image: url('{{ asset('assets/images/shapes/newsletter-two-shape-bg.png') }}');">
-                </div>
-                <div class="newsletter-two__like">
-                    <img src="{{ asset('assets/images/shapes/newsletter-two-like.png') }}" alt="">
-                </div>
-                <div class="newsletter-two__title-box">
-                    <h3 class="newsletter-two__title">Subscribe our <span>Newsletter</span></h3>
-                    <p class="newsletter-two__text">Explore a diverse selection of courses all in one platform,
-                        <br>
-                        designed to cater to various learning
-                    </p>
-                </div>
-                <div class="newsletter-two__form-box">
-                    <form class="newsletter-two__form">
-                        <div class="newsletter-two__input">
-                            <input type="email" placeholder="Enter Your Email">
-                        </div>
-                        <button type="submit" class="newsletter-two__btn">
-                            <span class="icon-arrow-circle"></span> Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Newsletter Two End -->
+ 
 
 <!--Contact Info One Start -->
 <section class="contact-info-one">

@@ -1,5 +1,5 @@
 @extends('layouts.layout4')
-@section('title', 'Signup || MyfirstPCB || MyfirstPCB Laravel Template ')
+@section('title', 'Signup | MyfirstPCB  ')
 @section('meta_description', 'Create your free MyfirstPCB account today to access advanced PCB design tools, manage orders, and stay updated with the latest electronics manufacturing solutions.')
 @section('meta_keywords', 'sign up, create account, MyfirstPCB registration, PCB design, electronics projects, order PCB, custom PCB platform')
 @section('content')
@@ -59,35 +59,20 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" name="email" id="email" class="form-control" required>
+                    <input type="email" name="email" id="email" class="form-control" required value="{{ request('email') }}">
                     <div class="invalid-feedback"></div>
                 </div>
-
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" required>
-                    <div class="invalid-feedback"></div>
-                    <div class="form-text">Password must be at least 6 characters long.</div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="reason" class="form-label">Why do you want to learn PCB?</label>
-                    <textarea name="reason" id="reason" class="form-control" rows="3" required></textarea>
-                    <div class="invalid-feedback"></div>
-                </div>
-
 
                 <div class="row align-items-center justify-content-center">
                     <div class="col-1">
-                        <input type="checkbox" name="agreement" id="agreement" class="form-check-input" value="1"
-                            required>
+                        <input type="checkbox" name="agreement" id="agreement" class="form-check-input" value="1">
+
                     </div>
                     <div class="col ps-4 p-md-0 m-0">
                         <label>I agree to receive course info on Email/WhatsApp.</label>
                     </div>
                     <div class="invalid-feedback"></div>
                 </div>
-
 
                 <button type="submit" class="lp-btn" id="submitBtn">
                     <span id="submitText">✨ Start My PCB Journey</span>
@@ -97,7 +82,6 @@
                     </span>
                 </button>
 
-                <p class="lp-micro">Free Trial + ₹500 Credit • Takes 30 sec • Certificate on Completion</p>
             </form>
         </div>
 
@@ -263,13 +247,6 @@
     .lp-btn:hover {
         opacity: 0.9;
     }
-
-    .lp-micro {
-        font-size: 13px;
-        color: #666;
-        margin-top: 10px;
-        text-align: center;
-    }
 </style>
 
 <script>
@@ -305,9 +282,8 @@
             const formData = {
                 name: document.getElementById("name").value,
                 email: document.getElementById("email").value,
-                password: document.getElementById("password").value,
-                agreement: document.getElementById("agreement").value,
-                reason: document.getElementById("reason").value,
+                agreement: document.getElementById("agreement").checked ? 1 : 0,
+                cohort: document.getElementById("cohort").value,
             }
 
             console.log("Form data from form:-", formData)

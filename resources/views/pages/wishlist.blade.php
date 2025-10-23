@@ -3,7 +3,7 @@
     $title = 'Wishlist';
     $subtitle = 'Wishlist';
 @endphp
-@section('title', ' Wishlist || Fistudy || Fistudy Laravel Template ')
+@section('title', ' Wishlist || MyFirstPCB ')
 @section('content')
 
 <x-strickyHeader/>

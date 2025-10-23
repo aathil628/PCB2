@@ -14,7 +14,7 @@
     <div class="custom-cursor__cursor-two"></div>
 
     <div class="page-wrapper">
-        <header class="main-header main-header-three">
+        <header class="main-header-two">
             <!-- <div class="main-menu__top">
                 <div class="container">
                     <div class="main-menu__top-inner">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div> -->
-            <x-menuList/>
+            <x-menuList3/>
         </header>
         
 
