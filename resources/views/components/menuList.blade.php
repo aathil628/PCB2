@@ -15,16 +15,16 @@
                             <ul class="shadow-box course-dd">
                                 <li class="dd-card">
                                     <div class="dd-head-inner">
-                                        <h6 class="dd-title">PCB Design</h6>
-                                        <p class="dd-sub">From Concepts to Production</p>
+                                        <h6 class="dd-title">PCB Kickstart Course</h6>
+                                        <p class="dd-sub">3-Day (Age 8–21)</p>
                                     </div>
                                     <a class="dd-item" href="{{ route('course-details', 2) }}">
-                                        <span class="dd-item-title">Practical PCB Design</span>
-                                        <span class="dd-item-sub">1 Month Journey</span>
+                                        <span class="dd-item-title">PCB Maker Course </span>
+                                        <span class="dd-item-sub">1-Month (Age 8–21)</span>
                                     </a>
                                     <a class="dd-item" href="{{ route('course-details', 3) }}">
-                                        <span class="dd-item-title">Advanced PCB Design</span>
-                                        <span class="dd-item-sub">Mastering Design and Analysis</span>
+                                        <span class="dd-item-title">Electronics Innovation Program </span>
+                                        <span class="dd-item-sub">1-Year (Age 8–21)</span>
                                     </a>
                                 </li>
                             </ul>

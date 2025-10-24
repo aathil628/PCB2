@@ -350,15 +350,25 @@
     display: block;
 }
 
+/* Make grid columns flex so cards can stretch to equal height */
+.filter-layout > [class^="col-"],
+.filter-layout > [class*=" col-"],
+.course-grid__right-content-box > .row > [class^="col-"],
+.course-grid__right-content-box > .row > [class*=" col-"] {
+    display: flex;
+}
+
 .courses-two__single {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: #FCFCFC;
     border: 1px solid var(--fistudy-bdr-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
     padding: 19px 19px 14px;
     margin-bottom: 40px;
+    height: 100%;
 }
 
 .courses-two__img-box {
@@ -395,6 +405,8 @@
 
 .courses-two__img img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
     border-radius: 16px;
     transform: scale(1.0);
     transition: all 1500ms ease;
@@ -431,8 +443,10 @@
 
 .courses-two__content {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-top: 14px;
+    flex: 1 1 auto;
 }
 
 .courses-two__doller-and-review {
@@ -482,6 +496,7 @@
     line-height: 33px;
     margin-top: 8px;
     margin-bottom: 18px;
+    min-height: 66px; /* ensure up to 2 lines for consistent card height */
 }
 
 .courses-two__title a {
@@ -497,6 +512,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto;
 }
 
 .courses-two__btn-box {
@@ -1278,6 +1294,11 @@
 .course-grid__right-content-box {
     position: relative;
     display: block;
+}
+
+/* On the Course page, nudge the 3rd card down to avoid touching the row above */
+.course-grid__right-content-box > .row > div:nth-child(3) {
+    margin-top: 24px;
 }
 
 .courses-grid__btn-box {

@@ -33,20 +33,20 @@
                   <div class="nav-course-card">
                     <div class="nav-course-card__heade">
                       <a class="nav-course-card__item" href="{{ route('course-details', 1) }}">
-                      <div class="nav-course-card__title">PCB Design</div>
-                      <div class="nav-course-card__sub">From Concepts to Production</div>
+                      <div class="nav-course-card__title">PCB Kickstart Course</div>
+                      <div class="nav-course-card__sub">3-Day (Age 8–21)</div>
                       </a>
                     </div>
                     <div class="nav-course-card__heade">
                       <a class="nav-course-card__item" href="{{ route('course-details', 2) }}">
-                      <div class="nav-course-card__title">Practical PCB Design</div>
-                      <div class="nav-course-card__sub">1 Month Journey</div>
+                      <div class="nav-course-card__title">PCB Maker Course </div>
+                      <div class="nav-course-card__sub">1-Month (Age 8–21)</div>
                       </a>
                     </div>
                     <div class="nav-course-card__heade">
                       <a class="nav-course-card__item" href="{{ route('course-details', 3) }}">
-                      <div class="nav-course-card__title">Advanced PCB Design</div>
-                      <div class="nav-course-card__sub">Mastering Design and Analysis</div>
+                      <div class="nav-course-card__title">Electronics Innovation Program </div>
+                      <div class="nav-course-card__sub">1-Year (Age 8–21)</div>
                       </a>
                     </div>
                   </div>

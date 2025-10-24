@@ -346,7 +346,8 @@ Each course is designed to match school and college curricula while helping ever
                             </div>
                         </li>
                     </ul>
-                    <div class="about-two__client-and-btn-box">
+                    <p class="about-two__text">Contact us to join our Robotics Courses in Coimbatore and Trivandrum.</p>
+                    <div class="about-two__client-and-btn-box mt-3">
                         <div class="about-two__client-info-2">
                             <div class="about-two__client-two-img">
                                 <img src="{{ asset('assets/images/resources/whatsapp.png') }}"
