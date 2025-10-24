@@ -435,52 +435,7 @@
     
     <!--Newsletter Two End -->
 
-    <!--Contact Info One Start -->
-    <section class="contact-info-one">
-        <div class="container">
-            <ul class="list-unstyled contact-info-one__list">
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-envelope"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Email Address:</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="mailto:contact@myfirstpcb.com">contact@myfirstpcb.com</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-phone"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Phone Number</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="#">+91 85908 70849</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-location"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Our Address</p>
-                            <h5 class="contact-info-one__email">Malmskillnadsgatan 42, 111 57, <br/> Stockholm, Sweden</h5>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--Contact Info One End -->
-
+<x-contact-grid/>
 <x-footer2/>
 <x-mobileMenu/>
 <x-searchPopup/>

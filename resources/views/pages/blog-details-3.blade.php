@@ -9,10 +9,10 @@ $subtitle = 'Blog Details';
 <x-strickyHeader />
 
 <!--Blog Details Start-->
-<section class="blog-details">
-    <div class="container">
+<section class="blog-details mt-5">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-8 col-lg-7 mt-5">
                 <div class="blog-details__left">
                     <div class="blog-details__img-box">
                         <div class="blog-details__img">
@@ -117,7 +117,7 @@ $subtitle = 'Blog Details';
                 <p class="mt-4">Ready to build your first circuit? Check out our <strong>Junior Toolkit</strong> today
                     and turn your ideas into reality.</p>
             </div>
-            <div class="col-xl-4 col-lg-5">
+            <div class="col-xl-4 col-lg-5 mt-5">
                 <div class="sidebar">
                     <div class="sidebar__single sidebar__post">
                         <div class="sidebar__title-box">
@@ -177,19 +177,6 @@ $subtitle = 'Blog Details';
                             </li>
                         </ul>
                     </div>
-                    <div class="sidebar__single sidebar__newsletter">
-                        <div class="sidebar__title-box">
-                            <div class="sidebar__title-icon">
-                                <img src="{{ asset('assets/images/icon/sidebar-title-icon.png') }}" alt="">
-                            </div>
-                            <h3 class="sidebar__title">Newsletter </h3>
-                        </div>
-                        <p class="sidebar__newsletter-text">Subscribe our newsletter to get every update </p>
-                        <form action="#" class="sidebar__newsletter-form">
-                            <input type="search" placeholder="Search Blogs">
-                            <button type="submit">Subscribe<i class="icon-circle-left"></i></button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -197,90 +184,10 @@ $subtitle = 'Blog Details';
 </section>
 <!--Blog Details End-->
 
-<!--Newsletter Two Start -->
-<section class="newsletter-two">
-    <div class="container">
-        <div class="newsletter-two__inner">
-            <div class="newsletter-two__img">
-                <img src="{{ asset('assets/images/resources/newsletter-two-img-1.png') }}" alt="">
-            </div>
-            <div class="newsletter-two__inner-content">
-                <div class="newsletter-two__shape-bg"
-                    style="background-image: url('{{ asset('assets/images/shapes/newsletter-two-shape-bg.png') }}');">
-                </div>
-                <div class="newsletter-two__like">
-                    <img src="{{ asset('assets/images/shapes/newsletter-two-like.png') }}" alt="">
-                </div>
-                <div class="newsletter-two__title-box">
-                    <h3 class="newsletter-two__title">Subscribe our <span>Newsletter</span></h3>
-                    <p class="newsletter-two__text">Explore a diverse selection of courses all in one platform,
-                        <br>
-                        designed to cater to various learning
-                    </p>
-                </div>
-                <div class="newsletter-two__form-box">
-                    <form class="newsletter-two__form">
-                        <div class="newsletter-two__input">
-                            <input type="email" placeholder="Enter Your Email">
-                        </div>
-                        <button type="submit" class="newsletter-two__btn">
-                            <span class="icon-arrow-circle"></span> Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Newsletter Two End -->
-
-<!--Contact Info One Start -->
-<section class="contact-info-one">
-    <div class="container">
-        <ul class="list-unstyled contact-info-one__list">
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-envelope"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Email Address:</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="mailto:contact@myfirstpcb.com">contact@myfirstpcb.com</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-phone"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Phone Number</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="tel:001239957689">+91 85908 70849</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-location"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Our Address</p>
-                            <h5 class="contact-info-one__email">Malmskillnadsgatan 42, 111 57, <br/> Stockholm, Sweden</h5>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-    </div>
-</section>
-<!--Contact Info One End -->
+<x-contact-grid />
 
 <x-footer2 />
+
 <x-mobileMenu />
 <x-searchPopup />
 <x-scroll-to-top />

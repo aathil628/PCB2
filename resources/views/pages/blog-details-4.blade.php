@@ -8,10 +8,10 @@ $subtitle = 'Blog Details';
 
 <x-strickyHeader />
 <!--Blog Details Start-->
-<section class="blog-details">
-    <div class="container">
+<section class="blog-details mt-5">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-8 col-lg-7 mt-5">
                 <div class="blog-details__left">
                     <div class="blog-details__img-box">
                         <div class="blog-details__img">
@@ -93,7 +93,7 @@ $subtitle = 'Blog Details';
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-5">
+            <div class="col-xl-4 col-lg-5 mt-5">
                 <div class="sidebar">
                     <div class="sidebar__single sidebar__post">
                         <div class="sidebar__title-box">
@@ -160,53 +160,10 @@ $subtitle = 'Blog Details';
 </section>
 <!--Blog Details End-->
 
-<!--Contact Info One Start -->
-<section class="contact-info-one">
-    <div class="container">
-        <ul class="list-unstyled contact-info-one__list">
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-envelope"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Email Address:</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="mailto:contact@myfirstpcb.com">contact@myfirstpcb.com</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-phone"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Phone Number</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="tel:001239957689">+91 85908 70849</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-location"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Our Address</p>
-                            <h5 class="contact-info-one__email">Malmskillnadsgatan 42, 111 57, <br/> Stockholm, Sweden</h5>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-    </div>
-</section>
-<!--Contact Info One End -->
+<x-contact-grid />
 
 <x-footer2 />
+
 <x-mobileMenu />
 <x-searchPopup />
 <x-scroll-to-top />

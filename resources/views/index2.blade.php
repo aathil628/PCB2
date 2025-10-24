@@ -833,7 +833,7 @@
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
@@ -854,14 +854,14 @@
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title">Operations</p>
-                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                        <p class="team-two__sub-title">Systems Engineer</p>
+                        <h3 class="team-two__name">Vignesh<span> S</span></h3>
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
@@ -875,14 +875,14 @@
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title">Operations</p>
-                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                        <p class="team-two__sub-title">Embedded Developer</p>
+                        <h3 class="team-two__name">Arun<span> Asok</span></h3>
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
@@ -896,14 +896,14 @@
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title">Operations</p>
-                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                        <p class="team-two__sub-title"> Design Lead</p>
+                        <h3 class="team-two__name">Mohaimin<span> Kader</span></h3>
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
@@ -917,14 +917,14 @@
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title">Operations</p>
-                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                        <p class="team-two__sub-title">Graphic Designer</p>
+                        <h3 class="team-two__name">Aravind<span> A S</span></h3>
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
@@ -938,14 +938,14 @@
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.png') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
                     </div>
                     <div class="team-two__content">
-                        <p class="team-two__sub-title">Operations</p>
-                        <h3 class="team-two__name">Praveen<span> Natarajan</span></h3>
+                        <p class="team-two__sub-title">Robotics and Analytics</p>
+                        <h3 class="team-two__name">Yash<span> Chhalotre</span></h3>
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
@@ -1345,7 +1345,7 @@
 
 
 <!--Contact Info One Start -->
-<section class="contact-info-one mt-5">
+<!-- <section class="contact-info-one mt-5">
     <div class="container">
         <style>
             .footer-contact-grid{display:grid;gap:16px}
@@ -1402,7 +1402,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--Contact Info One End -->
 
 
@@ -1472,6 +1472,7 @@
         }
     </script>
 
+<x-contact-grid />
 <x-footer2 />
 <x-mobileMenu />
 <x-searchPopup />

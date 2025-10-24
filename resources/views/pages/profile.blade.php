@@ -130,9 +130,8 @@
             <div class="mt-4">
                 <nav id="profileSidebar" class="nav flex-column">
                     <a href="#" class="nav-link active" data-section="profileMain" style="color:#6B73FF;font-weight:500;">Profile</a>
-                    <a href="#" class="nav-link" data-section="profileEdit" style="color:#26355d;">Edit Profile</a>
-                    <a href="#" class="nav-link" data-section="profileCourses" style="color:#26355d;">Purchased Courses</a>
                     <a href="#" class="nav-link" data-section="profileLogout" style="color:#26355d;">Logout</a>
+                    <a href="#" class="nav-link" data-section="profileDelete" style="color:#BD362F;">Delete Account</a>
                 </nav>
             </div>
         </div>
@@ -143,52 +142,30 @@
                 <h2 style="color:#26355D; font-weight:600; text-align: center;"> Profile</h2>
                 <p style="color:#606580; text-align:center;">Add information about yourself</p>
                 <div style="margin-top:2.5rem;">
-                    <div class="mb-3" style="max-width:340px;">
-                        <label class="form-label" style="font-weight:500; color:#26355D;">Name:</label>
-                        <!-- <input type="text" class="form-control" value="S." style="margin-bottom:0.7rem; background:#F7F9FD;"> -->
-                        <input type="text" class="form-control" id="profile_name" style="background:#F7F9FD;" readonly>
-                    </div>  
-                    <div class="mb-3" style="max-width:340px;">
-                        <label class="form-label"  style="font-weight:500; color:#26355D;">Email</label>
-                        <input type="email" id="profile_email" class="form-control" style="background:#F7F9FD;" readonly>
-                    </div>
-                    <div class="mb-3" style="max-width:400px;">
-                        <label class="form-label" style="font-weight:500; color:#26355D;">Reason</label>
-                        <textarea class="form-control" id="profile_reason" rows="3"  style="background:#F7F9FD;" readonly></textarea>
-                        <!-- <small class="form-text" style="color:#757582;">Links and coupon codes are not permitted in this section.</small> -->
-                    </div>
+                    <form id="profileInlineForm" style="max-width:480px;">
+                        <div class="mb-2" style="display:flex;align-items:center;gap:10px;max-width:480px;">
+                            <div style="flex:1;">
+                                <label class="form-label" style="font-weight:500; color:#26355D;">Name</label>
+                                <input type="text" class="form-control" id="profile_name" style="background:#F7F9FD;" readonly>
+                            </div>
+                            <button type="button" id="editNameBtn" class="btn mt-4" title="Edit Name" style="background:#6B73FF;color:#fff;white-space:nowrap;">
+                                <i class="fas fa-pen"></i>
+                            </button>
+                            <button type="submit" id="saveNameBtn" class="btn mt-4" style="display:none;background:#6B73FF;color:#fff;">Save</button>
+                        </div>
+                        <div class="mb-3" style="max-width:480px;">
+                            <p id="profile_email_text" style="margin:0;color:#26355D;background:#F7F9FD;padding:.55rem .75rem;border-radius:.375rem;">
+                                <!-- filled via JS -->
+                            </p>
+                        </div>
+                    </form>
                     <div class="mt-5">
                         <h3 style="color:#26355D; font-weight:600;">Purchased Courses</h3>
                         <div id="purchasedMainList" class="mt-3" style="background:#fff;border-radius:16px;padding:1rem;box-shadow:0 3px 6px rgba(0,0,0,0.05);"></div>
                     </div>
                 </div>
             </div>
-            <!-- Edit Profile View -->
-            <div id="profileEdit" class="profile-section" style="display:none;">
-                <h2 style="color:#26355D; font-weight:600; text-align: center;">Edit Profile</h2>
-                <form style="margin-top:2rem;max-width:400px;" id="profileEditForm" method="POST" action="{{ route('profile.update') }}">
-                     @csrf
-                    <div class="mb-3">
-                        <label class="form-label" style="color:#26355D;">Name</label>
-                        <input type="text" class="form-control" style="background:#F7F9FD;" id="edit_name" >
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" style="color:#26355D;">Email</label>
-                        <input type="email" class="form-control" style="background:#F7F9FD;" value="{{ Auth::user()->email }}" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label"  style="color:#26355D;">Reason</label>
-                        <textarea class="form-control" rows="3" style="background:#F7F9FD;" id="edit_reason"></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="background:#6B73FF;color:#fff;border-radius:22px;">Save Changes</button>
-                </form>
-            </div>
-            <!-- Purchased Courses -->
-            <div id="profileCourses" class="profile-section" style="display:none;">
-                <h2 style="color:#26355D; font-weight:600;">Purchased Courses</h2>
-                <div class="course-list mt-4 px-3 scrollable-course-list">
-                </div>
-            </div>
+            
             <!-- Logout View -->
             <div id="profileLogout" class="profile-section mx-3 my-3" style="display:none;">
                 <h2 style="color:#BD362F; font-weight:600;" class="px-3 my-4">Logout</h2>
@@ -198,6 +175,36 @@
                         @csrf
                         <button type="submit" class="btn" style="background:#BD362F;color:#fff;border-radius:22px;">Logout</button>
                     </form>
+                </div>
+            </div>
+
+            <!-- Delete Account View -->
+            <div id="profileDelete" class="profile-section mx-3 my-3" style="display:none;">
+                <h2 style="color:#BD362F; font-weight:600;" class="px-3 my-4">Delete Account</h2>
+                <p style="color:#606580;" class="px-3 my-2">This action is permanent and cannot be undone.</p>
+                <div class="px-3 my-4" style="max-width:420px;">
+                    <button type="button" id="openDeleteModalBtn" class="btn" style="background:#BD362F;color:#fff;border-radius:22px;">Delete Account</button>
+                    <form id="deleteAccountForm" method="POST" action="{{ route('profile.destroy') }}" style="display:none;">
+                        @csrf
+                        @method('DELETE')
+                    </form>
+                </div>
+            </div>
+
+            <!-- Confirm Delete Modal -->
+            <div id="deleteConfirmModal" style="display:none;position:fixed;inset:0;z-index:1050;background:rgba(0,0,0,0.5);">
+                <div style="max-width:460px;margin:10% auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2);">
+                    <div style="padding:16px 20px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px;">
+                        <span class="icon-alert" style="color:#BD362F"></span>
+                        <h4 style="margin:0;color:#26355D;">Confirm Deletion</h4>
+                    </div>
+                    <div style="padding:18px 20px;color:#606580;">
+                        Are you sure you want to permanently delete your account? This cannot be undone.
+                    </div>
+                    <div style="padding:14px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end;gap:10px;">
+                        <button type="button" id="cancelDeleteBtn" class="btn" style="background:#F1F3F7;color:#26355D;border-radius:22px;">Cancel</button>
+                        <button type="button" id="confirmDeleteBtn" class="btn" style="background:#BD362F;color:#fff;border-radius:22px;">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,7 +220,7 @@ document.querySelectorAll('#profileSidebar .nav-link').forEach(function(nav) {
             n.style.color = "#26355d";
         });
         this.classList.add('active');
-        this.style.color = "#6B73FF";
+        this.style.color = this.dataset.section === 'profileDelete' ? "#BD362F" : "#6B73FF";
         document.querySelectorAll('.profile-section').forEach(function(sec) {
             sec.style.display = "none";
         });
@@ -233,9 +240,10 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        document.querySelector('#profile_name').value = data.name || '';
-        document.querySelector('#profile_email').value = data.email || '';
-        document.querySelector('#profile_reason').value = data.reason || '';
+        const nameInput = document.querySelector('#profile_name');
+        const emailText = document.querySelector('#profile_email_text');
+        if (nameInput) nameInput.value = data.name || '';
+        if (emailText) emailText.textContent = data.email || '';
 
         const coursesDiv = document.getElementById('profileCourses');
         const purchasedMainList = document.getElementById('purchasedMainList');
@@ -272,36 +280,68 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Profile edit
-const formupdate = document.getElementById('profileEditForm');
+// Inline name edit/save
+const editBtn = document.getElementById('editNameBtn');
+const saveBtn = document.getElementById('saveNameBtn');
+const nameField = document.getElementById('profile_name');
+const profileInlineForm = document.getElementById('profileInlineForm');
 
-formupdate.addEventListener('submit', function(e) {
-
-    // Get form values
-    const name = document.getElementById('edit_name').value;
-    const reason = document.getElementById('edit_reason').value;
-
-    fetch('{{ route("profile.update") }}', {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        },
-        body: JSON.stringify({ name: name, reason: reason })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            toastr.success(data.message || 'Profile updated successfully!', 'Success!', { timeOut: 2000 });
-        } else {
-            toastr.error(data.message || 'Failed to update profile. Please try again.', 'Error!');
-        }
-    })
-    .catch(error => {
-        console.error('Error updating profile:', error);
-        toastr.error('An error occurred. Please try again.', 'Error!');
+if (editBtn && nameField && saveBtn) {
+    editBtn.addEventListener('click', function(){
+        nameField.readOnly = false;
+        nameField.focus();
+        saveBtn.style.display = 'inline-block';
     });
-});
+}
+
+if (profileInlineForm) {
+    profileInlineForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = nameField.value;
+        fetch('{{ route('profile.update') }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({ name: name })
+        })
+        .then(r=>r.json())
+        .then(data=>{
+            if (data.success) {
+                toastr.success(data.message || 'Profile updated successfully!', 'Success!', { timeOut: 2000 });
+                nameField.readOnly = true;
+                saveBtn.style.display = 'none';
+            } else {
+                toastr.error(data.message || 'Failed to update profile.', 'Error!');
+            }
+        })
+        .catch(()=> toastr.error('An error occurred. Please try again.', 'Error!'))
+    });
+}
+
+// Delete Account modal handlers
+const deleteModal = document.getElementById('deleteConfirmModal');
+const openDeleteBtn = document.getElementById('openDeleteModalBtn');
+const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+const deleteForm = document.getElementById('deleteAccountForm');
+
+if (openDeleteBtn && deleteModal) {
+    openDeleteBtn.addEventListener('click', () => {
+        deleteModal.style.display = 'block';
+    });
+}
+if (cancelDeleteBtn && deleteModal) {
+    cancelDeleteBtn.addEventListener('click', () => {
+        deleteModal.style.display = 'none';
+    });
+}
+if (confirmDeleteBtn && deleteForm) {
+    confirmDeleteBtn.addEventListener('click', () => {
+        deleteForm.submit();
+    });
+}
 
 // No JS needed for logout; form posts directly with CSRF
 

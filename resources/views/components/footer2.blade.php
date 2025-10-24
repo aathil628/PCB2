@@ -5,6 +5,7 @@
         <div class="site-footer-two__star text-rotate-box">
             <img src="{{ asset('assets/images/shapes/site-footer-star.png') }}" alt="">
         </div>
+        
         <div class="site-footer-two__top">
             <div class="site-footer-two__main-content">
                 <div class="container">
@@ -79,6 +80,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="site-footer__bottom">
             <div class="container">
                 <div class="row">

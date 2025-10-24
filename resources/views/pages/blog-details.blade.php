@@ -401,52 +401,6 @@
     </section>
     <!--Newsletter Two End -->
 
-    <!--Contact Info One Start -->
-    <section class="contact-info-one">
-        <div class="container">
-            <ul class="list-unstyled contact-info-one__list">
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-envelope"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Email Address:</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="mailto:info@example.com">info@example.com</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-phone"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Phone Number</p>
-                            <h5 class="contact-info-one__email">
-                                <a href="tel:001239957689">+00 123 (99) 57689</a>
-                            </h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-one__single">
-                        <div class="contact-info-one__icon">
-                            <span class="icon-location"></span>
-                        </div>
-                        <div class="contact-info-one__content">
-                            <p class="contact-info-one__sub-title">Our Address</p>
-                            <h5 class="contact-info-one__email">1234 Elm Street Springfield,</h5>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--Contact Info One End -->
-
 <x-footer2/>
 <x-mobileMenu/>
 <x-searchPopup/>
