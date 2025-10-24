@@ -295,7 +295,7 @@
                     </div>
                     <div>
                         <label>Contact Number</label>
-                        <input type="tel" name="contact_number" placeholder="WhatsApp or Phone" required>
+                        <input type="tel" name="phone" placeholder="WhatsApp or Phone" required>
                         <small>Our team will contact you via WhatsApp or call to complete the payment and schedule your session slot.</small>
                     </div>
                     <div>
@@ -327,28 +327,43 @@
             if(!form) return;
             form.addEventListener('submit', async function(e){
                 e.preventDefault();
-                const userId = "{{ Auth::user()->id ?? '' }}";
-                if(!userId){ window.location.href = '{{ route('login') }}'; return; }
                 const fd = new FormData(form);
-                const data = Object.fromEntries(fd.entries());
-                data.user_id = userId;
+                const payload = Object.fromEntries(fd.entries());
                 try{
-                    const res = await fetch('{{ route('enrollment.initiate') }}', {
+                    const response = await fetch('{{ route('enrollment.initiate') }}', {
                         method: 'POST',
                         headers: {
-                            'Content-Type':'application/json',
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                             'X-CSRF-TOKEN': '{{ csrf_token() }}'
                         },
-                        body: JSON.stringify(data)
+                        body: JSON.stringify(payload)
                     });
-                    if(res.ok){
+                    const data = await response.json().catch(() => null);
+                    if (response.ok && data && data.success) {
                         closeBookingModal();
-                        alert('Thanks! We will contact you shortly to complete payment and schedule your session.');
-                    }else{
-                        alert('Unable to submit. Please try again.');
+                        if (typeof toastr !== 'undefined') {
+                            toastr.success('Thank you! Your enrollment inquiry has been recorded. We will contact you shortly.', 'Success!', {
+                                timeOut: 5000,
+                                closeButton: true,
+                                progressBar: true,
+                                positionClass: 'toast-top-right'
+                            });
+                        }
+                        form.reset();
+                    } else {
+                        if (typeof toastr !== 'undefined') {
+                            toastr.error((data && data.message) || 'Unable to submit. Please try again.', 'Error!');
+                        } else {
+                            alert('Unable to submit. Please try again.');
+                        }
                     }
-                }catch(err){
-                    alert('Network error. Please try again.');
+                } catch (err) {
+                    if (typeof toastr !== 'undefined') {
+                        toastr.error('Network error. Please try again later.', 'Error!');
+                    } else {
+                        alert('Network error. Please try again later.');
+                    }
                 }
             });
         })();

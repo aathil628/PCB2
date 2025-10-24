@@ -46,10 +46,9 @@
         <div class="row">
             <div class="col-xl-6">
                 <div class="banner-two__left">
-                    <p class="banner-two__sub-title"># Courses for Students (Age 5 to Age 21)</p>
+                    <p class="banner-two__sub-title"># Courses for Students (Age 10 to Age 21)</p>
                     <h2 class="banner-two__title">Robotics: <span>Future Skill</span><br> Every Child Needs</h2>
-                    <p class="banner-two__text">Give your child the edge with PCB education — tailored to upskill
-                        electronics knowledge for both school and college curriculums.</p>
+                    <p class="banner-two__text">Learn PCB — the core of robotics, AI, and space tech — and build real STEM skills for school and college.</p>
                     <div class="banner-two__btn-and-success-student-box">
                         <div class="banner-two__btn-box">
                             @guest
@@ -160,10 +159,10 @@
                 <div class="section-title-two__tagline-shape">
                     <img src="{{ asset('assets/images/shapes/section-title-two-shape-1.png') }}" alt="">
                 </div>
-                <span class="section-title-two__tagline">Our Courses</span>
+                <span class="section-title-two__tagline">Learn Electronics Online — Free Kit Included</span>
             </div>
-            <h2 class="section-title-two__title title-animation">Explore Our Comprehensive<br> Course
-                <span>Offerings</span>
+            <h2 class="section-title-two__title title-animation">Build Boards at Home with Live <br> Course
+                <span>Training</span>
             </h2>
         </div>
         <div class="courses-two__inner">
@@ -303,17 +302,16 @@
                                 <img src="{{ asset('assets/images/shapes/section-title-two-shape-1.png') }}"
                                     alt="Shape - Robotics Education Section">
                             </div>
-                            <span class="section-title-two__tagline">About Us</span>
+                            <span class="section-title-two__tagline">How This Course Works for You</span>
                         </div>
                         <h2 class="section-title-two__title title-animation">
                             Behind the Scenes: Discover the People & Passion <span>Behind</span>
                         </h2>
                     </div>
                     <p class="about-two__text">
-                        At <strong>Nytt Robotics</strong>, we bring robotics into everyday learning. Led by
-                        <strong>Sture Wikman, CEO of Nytt AB, Sweden</strong>, our goal is to make technology fun and
-                        accessible for student aged 10 to 22. Our program are tailored to fit school curriculum and
-                        college curriculum .
+                        At <strong>Nytt Robotics</strong>, we turn curiosity into creation. Led by
+                        <strong>Sture Wikman, CEO of Nytt AB, Sweden</strong>, , our programs bring robotics and electronics into everyday learning for students aged 10 to 22.
+Each course is designed to match school and college curricula while helping every learner build real skills in circuit design, PCB fabrication, and assembly.
                     </p>
                     <ul class="about-two__points-list list-unstyled">
                         <li>
@@ -323,8 +321,7 @@
                             </div>
                             <div class="about-two__content">
                                 <h3>Design a Circuit:</h3>
-                                <p>Learn to create a professional schematic from scratch using industry-standard
-                                    software.</p>
+                                <p>Students learn to create professional schematics from scratch using industry-standard software.</p>
                             </div>
                         </li>
                         <li>
@@ -334,8 +331,7 @@
                             </div>
                             <div class="about-two__content">
                                 <h3>Fabricate a PCB:</h3>
-                                <p>Master the end-to-end process of turning a digital design into a physical circuit
-                                    board.</p>
+                                <p>They master the end-to-end process of turning a digital design into a real printed circuit board.</p>
                             </div>
                         </li>
                         <li>
@@ -345,7 +341,7 @@
                             </div>
                             <div class="about-two__content">
                                 <h3>Assemble and Test:</h3>
-                                <p>Gain hands-on experience in soldering and debugging to bring your creation to life.
+                                <p>Learners gain hands-on experience in soldering, debugging, and testing — bringing their own creation to life.
                                 </p>
                             </div>
                         </li>
@@ -396,10 +392,10 @@
                                 <img src="{{ asset('assets/images/shapes/section-title-two-shape-1.png') }}"
                                     alt="Why Choose Nytt Robotics">
                             </div>
-                            <span class="section-title-two__tagline">Why Choose Us</span>
+                            <span class="section-title-two__tagline">Why Choose Nytt Robotics</span>
                         </div>
                         <h2 class="section-title-two__title title-animation">
-                            Discover Why Our Students <br> and Clients <span>Choose Us</span>
+                            Discover why our students   <br> trust <span>Nytt Robotics</span>
                         </h2>
                     </div>
 
@@ -422,13 +418,13 @@
                                                 <div class="why-choose-two__points-icon">
                                                     <img src="{{ asset('assets/images/icon/check-icon.png') }}" alt="">
                                                 </div>
-                                                <p>Easy Joining and accessible</p>
+                                                <p>Easy to join and accessible for all learners</p>
                                             </li>
                                             <li>
                                                 <div class="why-choose-two__points-icon">
                                                     <img src="{{ asset('assets/images/icon/check-icon.png') }}" alt="">
                                                 </div>
-                                                <p>Smooth learning experience</p>
+                                                <p>Smooth, guided learning for real understanding</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -447,13 +443,13 @@
                                                 <div class="why-choose-two__points-icon">
                                                     <img src="{{ asset('assets/images/icon/check-icon.png') }}" alt="">
                                                 </div>
-                                                <p>Interactive community</p>
+                                                <p>Interactive community with shared goals</p>
                                             </li>
                                             <li>
                                                 <div class="why-choose-two__points-icon">
                                                     <img src="{{ asset('assets/images/icon/check-icon.png') }}" alt="">
                                                 </div>
-                                                <p>Team-based projects </p>
+                                                <p>Team-based projects that inspire creativity</p>
                                             </li>
                                         </ul>
                                     </div>
