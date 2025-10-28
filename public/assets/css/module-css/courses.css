@@ -1370,7 +1370,23 @@
     font-size: 40px;
     font-weight: 500;
     line-height: 52px;
-    margin: 24px 0 44px;
+    margin: 12px 0 8px;
+}
+
+/* Subtitle directly under the course title */
+.course-details__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    color: #556173;
+    margin: 0 0 18px;
+}
+
+/* Optional second line under the subtitle */
+.course-details__subtitle-2 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #6b778a;
+    margin: -6px 0 18px;
 }
 
 .course-details__client-and-ratting-box {

@@ -83,6 +83,17 @@
                         </div>
                         <div class="course-details__content">
                             <h3 class="course-details__title">{{ $course->title }}</h3>
+                            @php $displayTitle = $course->title; @endphp
+                            @if ($displayTitle === 'PCB Kickstart Course: 3-Day')
+                                <p class="course-details__subtitle">Design, Build & Test Your First Circuit — Free Kit Included</p>
+                                <p class="course-details__subtitle-2">Get started with hands-on PCB design and circuit building. In just 3 days, you’ll bring your first electronic creation to life!</p>
+                            @elseif ($displayTitle === 'PCB Maker Course: 1-Month')
+                                <p class="course-details__subtitle">Learn & Build from Home — Free Kit Delivered to You</p>
+                                <p class="course-details__subtitle-2">Design and test two real circuit boards in four guided sessions. Create, learn, and explore electronics with ease.</p>
+                            @elseif ($displayTitle === 'Electronics Innovation Program: 1-Year')
+                                <p class="course-details__subtitle">Master Real Projects — Monthly Kits & Live Mentorship</p>
+                                <p class="course-details__subtitle-2">Build 10 working circuits, learn coding and robotics, and grow your engineering skills through monthly guided classes.</p>
+                            @endif
                             <div class="course-details__client-and-ratting-box d-flex justify-content-between">
                                 <div class="course-details__client-box">
                                     <div class="course-details__client-img">

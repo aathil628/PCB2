@@ -830,7 +830,7 @@ Each course is designed to match school and college curricula while helping ever
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-5.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
@@ -851,7 +851,7 @@ Each course is designed to match school and college curricula while helping ever
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-6.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
@@ -872,7 +872,7 @@ Each course is designed to match school and college curricula while helping ever
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-7.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
@@ -893,7 +893,7 @@ Each course is designed to match school and college curricula while helping ever
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-8.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
@@ -914,7 +914,7 @@ Each course is designed to match school and college curricula while helping ever
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-9.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
@@ -935,7 +935,7 @@ Each course is designed to match school and college curricula while helping ever
             <div class="item">
                 <div class="team-two__single">
                     <div class="team-two__img-1">
-                        <img src="{{ asset('assets/images/team/team-2-2.pn') }}" alt="Team member" />
+                        <img src="{{ asset('assets/images/team/team-2-10.png') }}" alt="Team member" />
                     </div>
                     <div class="team-two__arrow">
                         <a href="{{ route('about') }}"><span class="icon-circle-left"></span></a>
