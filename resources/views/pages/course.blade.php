@@ -25,32 +25,6 @@
                                     <input type="search" name="q" value="{{ request('q') }}" placeholder="Search courses">
                                     <button type="submit"><i class="icon-search"></i>Search</button>
                                 </form>
-                            <div class="course-grid__skill course-grid__single mt-5">
-                                <div class="course-grid__title-box">
-                                    <h3 class="course-grid__title">Skills Level</h3>
-                                    <div class="course-grid__title-shape-1">
-                                        <img src="{{ asset('assets/images/shapes/course-grid-title-shape-1.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled course-grid__list-item">
-                                    <li>
-                                        <div class="course-grid__list-check"></div>
-                                        <p class="course-grid__list-text">All Level</p>
-                                    </li>
-                                    <li>
-                                        <div class="course-grid__list-check"></div>
-                                        <p class="course-grid__list-text">Beginner</p>
-                                    </li>
-                                    <li>
-                                        <div class="course-grid__list-check"></div>
-                                        <p class="course-grid__list-text">Intermediate</p>
-                                    </li>
-                                    <li>
-                                        <div class="course-grid__list-check"></div>
-                                        <p class="course-grid__list-text">Advanced</p>
-                                    </li>
-                                </ul>
-                            </div>
                                 </div>
                                
                             </div>
