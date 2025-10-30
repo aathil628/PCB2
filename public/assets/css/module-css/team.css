@@ -432,7 +432,7 @@
     align-items: center;
     gap: 12px;
     background-color: var(--fistudy-base);
-    padding: 16px 16px 16px;
+    padding: 10px 10px 10px;
     border-radius: 34px;
     background-position: left center;
     transition-delay: .1s;

@@ -736,7 +736,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/sture-wikman-31a34522/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -757,7 +757,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/praveen-natarajan/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -778,7 +778,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/linkpraveen/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -800,7 +800,7 @@ Each course is designed to match school and college curricula while helping ever
                     <div class="team-two__social-box">
                         <div class="team-two__plus"><i><span class="icon-plus"></span></i></div>
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/jeannie-lendeng-297461133/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -821,7 +821,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/sreekumar-narayan/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -842,7 +842,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/vignesh-s-49a19a216/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -863,7 +863,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/arunasok702/ " target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -884,7 +884,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/mohaimin-kader-508582218/ " target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>
@@ -903,11 +903,11 @@ Each course is designed to match school and college curricula while helping ever
                         <p class="team-two__sub-title">Graphic Designer</p>
                         <h3 class="team-two__name">Aravind<span> A S</span></h3>
                     </div>
-                    <div class="team-two__social-box">
+                    <!-- <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!--Team Two Single End-->
@@ -926,7 +926,7 @@ Each course is designed to match school and college curricula while helping ever
                     </div>
                     <div class="team-two__social-box">
                         <div class="team-two__social-list">
-                            <a href="https://www.linkedin.com/company/myfirstpcb/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="https://www.linkedin.com/in/cdt-yash-chhalotre-55090b24b/" target="_blank" rel="noopener"><span class="fab fa-linkedin-in"></span></a>
                         </div>
                     </div>
                 </div>

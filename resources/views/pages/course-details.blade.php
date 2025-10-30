@@ -157,7 +157,7 @@
                                         <h4>{{ $course->instructor_name }}</h4>
                                     </div>
                                 </div>
-                                <div class="course-details__ratting-box-1">
+                                <!-- <div class="course-details__ratting-box-1">
                                     @php $stars = (int) round($course->rating_value ?? 0); @endphp
                                     <ul class="course-details__ratting list-unstyled" style="display:flex; gap:4px;">
                                         @for ($i = 1; $i <= 5; $i++)
@@ -166,7 +166,7 @@
                                             </li>
                                         @endfor
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="course-details__main-tab-box tabs-box">
                                 <!-- <ul class="tab-buttons list-unstyled mt-5">
@@ -184,8 +184,8 @@
                                                 
                                                 @if($displayTitle === 'PCB Kickstart Course: 3-Day')
                                                     <h3 class="course-details__overview-title">Course Overview</h3>
-                                                    <p class="course-details__overview-text-1">PCB Design and Fabrications is a hands-on course designed to equip students with the core skills required to design, develop and fabricate Printed Circuit Boards (PCBs) using modern tools like KiCAD 9 and Saturn PCB Toolkit.</p>
-                                                    <p class="course-details__overview-text-2">From understanding schematics to generating Gerber files and assembling real hardware, this course provides practical, step-by-step experience and prepares you for professional excellence in electronics and embedded system design.</p>
+                                                    <p class="course-details__overview-text-1">The 3-Day PCB Kickstart Course is a short, high-impact workshop designed for students aged 8–21 who want to build their first real electronic circuit. In three guided sessions, learners will understand basic circuit theory, design a simple schematic in KiCAD, and assemble the circuit on an OHB sheet using silver conductive ink.</p>
+                                                    <p class="course-details__overview-text-2">The course focuses on confidence building — students actually make something that works. By the end of the workshop, they will have a working LED/touch/light-based circuit, understand component symbols, and know the steps from idea → schematic → layout → assembly.</p>
                                                     <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
                                                     <ul class="course-details__overview-points list-unstyled">
                                                         <li>
@@ -193,8 +193,8 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>PCB Design Foundations:</h5>
-                                                                <p>Grasp the fundamentals, history, and process of PCB design using modern tools.</p>
+                                                                <h5>Circuit Foundations:</h5>
+                                                                <p>Learn what voltage, current, and resistance are, and how to connect LEDs and resistors safely.</p>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -202,8 +202,8 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>KiCAD Mastery:</h5>
-                                                                <p>Learn to set up, navigate, and create complete schematics and layouts in KiCAD 9.</p>
+                                                                <h5>KiCAD First Steps:</h5>
+                                                                <p>Create a simple schematic and place components in KiCAD 9 to understand PCB workflows.</p>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -211,8 +211,8 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>Design to Fabrication:</h5>
-                                                                <p>Understand netlists, routing, Gerber generation, and the full PCB manufacturing workflow.</p>
+                                                                <h5>Hands-On Assembly:</h5>
+                                                                <p>Print the layout on OHB using silver ink, place components, and test the circuit live.</p>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -220,13 +220,13 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>Practical Projects:</h5>
-                                                                <p>Build and test real circuits, gaining hands-on experience from design to assembly.</p>
+                                                                <h5>Mini Project:</h5>
+                                                                <p>Build one working circuit such as a light-activated LED, touch switch, or simple ON/OFF board.</p>
                                                             </div>
                                                         </li>
                                                     </ul>
                                                     <h3 class="course-details__overview-title-3">Requirements</h3>
-                                                    <p class="course-details__overview-text-3">No prior PCB design experience is needed. This course starts with the basics and guides you through fabrication and assembly.</p>
+                                                    <p class="course-details__overview-text-3">No PCB experience is required. This course is suitable for absolute beginners and school students.</p>
                                                     <div class="course-details__points-box">
                                                         <div class="row">
                                                             <div class="col-xl-6">
@@ -236,21 +236,63 @@
                                                                             <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
                                                                         </div>
                                                                         <h3 class="course-details__points-list-title">Computer with KiCAD Installed</h3>
-                                                                        <p class="course-details__points-list-text">You'll need a computer (Windows, macOS, or Linux) with KiCAD 9 installed.</p>
+                                                                        <p class="course-details__points-list-text">Windows / macOS / Linux with KiCAD 9 installed for schematic drawing.</p>
                                                                     </li>
                                                                     <li>
                                                                         <div class="course-details__points-list-icon">
                                                                             <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
                                                                         </div>
-                                                                        <h3 class="course-details__points-list-title">Basic Electronics Knowledge (Recommended)</h3>
-                                                                        <p class="course-details__points-list-text">Familiarity with electronic components and circuits is helpful but not mandatory.</p>
+                                                                        <h3 class="course-details__points-list-title">Learning Time</h3>
+                                                                        <p class="course-details__points-list-text">3 Days · 3 Sessions · 1 Hour Each (Total: 3 Hours)</p>
                                                                     </li>
                                                                 </ul>
                                                             </div>
+                                                             <div class="col-xl-6">
+                                                            <ul class="course-details__points-list-2 list-unstyled">
+                                                                <li>
+                                                                    <div class="course-details__points-list-icon">
+                                                                        <img src="{{ asset('assets/images/icon/course-details-points-list-icon-3.png') }}" alt="">
+                                                                    </div>
+                                                                    <h3 class="course-details__points-list-title">Starter Hardware Kit</h3>
+                                                                    <p class="course-details__points-list-text">LEDs, resistors, a sensor/switch, and OHB sheet with silver ink — provided.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                         <h3 class="course-details__overview-title-2">Session Plan</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Outcome</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day 1</td>
+            <td>Basics of Electronics + Symbols + Power</td>
+            <td>Understands LED + resistor circuit</td>
+            <td>1 Hour</td>
+          </tr>
+          <tr>
+            <td>Day 2</td>
+            <td>KiCAD Intro + Drawing the Circuit</td>
+            <td>Has a simple schematic ready</td>
+            <td>1 Hour</td>
+          </tr>
+          <tr>
+            <td>Day 3</td>
+            <td>Printing on OHB + Assembly + Testing</td>
+            <td>Working light / touch circuit</td>
+            <td>1 Hour</td>
+          </tr>
+        </tbody>
+      </table>
                                                 @elseif($displayTitle === 'PCB Maker Course: 1-Month')
                                                     <h3 class="course-details__overview-title">Course Overview</h3>
-                                                    <p class="course-details__overview-text-1">Take your PCB design skills to the next level with our 1-Month intensive course. This program is designed for those who want to dive deeper into professional PCB design and fabrication techniques, with hands-on projects and expert guidance.</p>
-                                                    <p class="course-details__overview-text-2">You'll work on real-world projects, learning advanced PCB design concepts, component selection, and manufacturing considerations to create professional-grade circuit boards.</p>
+                                                    <p class="course-details__overview-text-1">The 1-Month PCB Maker Course is a weekend-based practical program where students build three smart circuits — typically an automatic light, a temperature-controlled fan, and a touch/motion-based circuit. It is ideal for learners who have finished the 3-Day workshop or students who want more hands-on sensor experience.</p>
+                                                    <p class="course-details__overview-text-2">Each circuit is explained, drawn in KiCAD, and then assembled on an OHB/silver-ink board. Learners understand how LM358 comparators, transistors (BC548), LDRs, and LM35 temperature sensors work. By the end of the month, students will have three working PCBs that react to light, heat, or touch — just like real embedded systems.</p>
                                                     <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
                                                     <ul class="course-details__overview-points list-unstyled">
                                                         <li>
@@ -258,8 +300,8 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>Advanced PCB Layout Techniques:</h5>
-                                                                <p>Master multi-layer board design, impedance control, and high-speed routing strategies.</p>
+                                                                <h5>Sensor-Based Circuit Design:</h5>
+                                                                <p>Design with LDR (light), LM35 (temperature), and touch/motion inputs.</p>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -267,8 +309,8 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>Component Selection & Management:</h5>
-                                                                <p>Learn to choose the right components and create custom libraries for efficient design workflows.</p>
+                                                                <h5>Working with LM358 & Transistors:</h5>
+                                                                <p>Use LM358 as a comparator and BC548 as a driver to control fans, LEDs, and small loads.</p>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -276,8 +318,8 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>Design for Manufacturing (DFM):</h5>
-                                                                <p>Understand manufacturing constraints and how to design PCBs that are easy and cost-effective to produce.</p>
+                                                                <h5>KiCAD Project Workflow:</h5>
+                                                                <p>Create 3 separate PCB layouts, one for each circuit — ready for Gerber if needed.</p>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -285,13 +327,13 @@
                                                                 <span class="fas fa-check"></span>
                                                             </div>
                                                             <div class="course-details__overview-points-content">
-                                                                <h5>Project Portfolio Development:</h5>
-                                                                <p>Complete multiple projects to build a professional portfolio of your work.</p>
+                                                                <h5>Troubleshooting & Testing:</h5>
+                                                                <p>Measure signals, check component orientation, and fix common mistakes in student boards.</p>
                                                             </div>
                                                         </li>
                                                     </ul>
                                                     <h3 class="course-details__overview-title-3">Requirements</h3>
-                                                    <p class="course-details__overview-text-3">Basic understanding of electronics and PCB design concepts. Completion of the 3-Day course or equivalent experience is recommended.</p>
+                                                    <p class="course-details__overview-text-3">Basic circuit awareness is helpful, but not mandatory. The course explains every circuit in steps.</p>
                                                     <div class="course-details__points-box">
                                                         <div class="row">
                                                             <div class="col-xl-6">
@@ -300,97 +342,281 @@
                                                                         <div class="course-details__points-list-icon">
                                                                             <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
                                                                         </div>
-                                                                        <h3 class="course-details__points-list-title">Laptop with Design Software</h3>
-                                                                        <p class="course-details__points-list-text">A computer capable of running PCB design software (Windows, macOS, or Linux).</p>
+                                                                        <h3 class="course-details__points-list-title">Computer with KiCAD Installed</h3>
+                                                                        <p class="course-details__points-list-text">All 3 circuits will be drawn in KiCAD 9.</p>
                                                                     </li>
                                                                     <li>
                                                                         <div class="course-details__points-list-icon">
                                                                             <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
                                                                         </div>
-                                                                        <h3 class="course-details__points-list-title">Basic Electronics Kit</h3>
-                                                                        <p class="course-details__points-list-text">Basic electronic components for hands-on projects (list provided upon registration).</p>
+                                                                        <h3 class="course-details__points-list-title">Learning Time</h3>
+                                                                        <p class="course-details__points-list-text">1 Month · 6 Sessions · 1 Hour Each (4 Saturdays + 2 Sundays)</p>
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                @elseif($displayTitle === 'Electronics Innovation Program: 1-Year')
-                                                    <h3 class="course-details__overview-title">Course Overview</h3>
-                                                    <p class="course-details__overview-text-1">Our comprehensive 1-Year Electronics Innovation Program is designed to transform you into a skilled electronics designer. This intensive program covers everything from basic electronics to advanced PCB design and embedded systems development.</p>
-                                                    <p class="course-details__overview-text-2">Through hands-on projects, industry-relevant curriculum, and mentorship, you'll gain the expertise needed to excel in the electronics industry or launch your own hardware startup.</p>
-                                                    <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
-                                                    <ul class="course-details__overview-points list-unstyled">
-                                                        <li>
-                                                            <div class="course-details__overview-points-icon">
-                                                                <span class="fas fa-check"></span>
-                                                            </div>
-                                                            <div class="course-details__overview-points-content">
-                                                                <h5>Advanced PCB Engineering:</h5>
-                                                                <p>Master complex multi-layer board design, high-speed digital, and RF circuit design principles.</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="course-details__overview-points-icon">
-                                                                <span class="fas fa-check"></span>
-                                                            </div>
-                                                            <div class="course-details__overview-points-content">
-                                                                <h5>Embedded Systems Integration:</h5>
-                                                                <p>Learn to integrate microcontrollers, sensors, and communication modules into your PCB designs.</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="course-details__overview-points-icon">
-                                                                <span class="fas fa-check"></span>
-                                                            </div>
-                                                            <div class="course-details__overview-points-content">
-                                                                <h5>Professional-Grade Projects:</h5>
-                                                                <p>Work on real-world projects that solve actual industry problems and build an impressive portfolio.</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="course-details__overview-points-icon">
-                                                                <span class="fas fa-check"></span>
-                                                            </div>
-                                                            <div class="course-details__overview-points-content">
-                                                                <h5>Industry Best Practices:</h5>
-                                                                <p>Learn professional workflows, version control, and collaboration tools used in the industry.</p>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                    <h3 class="course-details__overview-title-3">Requirements</h3>
-                                                    <p class="course-details__overview-text-3">Strong interest in electronics and commitment to complete the program. Prior experience with basic electronics is beneficial but not required.</p>
-                                                    <div class="course-details__points-box">
-                                                        <div class="row">
-                                                            <div class="col-xl-6">
-                                                                <ul class="course-details__points-list-2 list-unstyled">
-                                                                    <li>
-                                                                        <div class="course-details__points-list-icon">
-                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
-                                                                        </div>
-                                                                        <h3 class="course-details__points-list-title">Dedicated Laptop</h3>
-                                                                        <p class="course-details__points-list-text">A reliable computer for design work and programming (minimum specs will be provided).</p>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="course-details__points-list-icon">
-                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
-                                                                        </div>
-                                                                        <h3 class="course-details__points-list-title">Stable Internet Connection</h3>
-                                                                        <p class="course-details__points-list-text">For accessing course materials, live sessions, and cloud-based tools.</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                @endif
-                                                        <div class="col-xl-6">
+                                                             <div class="col-xl-6">
                                                             <ul class="course-details__points-list-2 list-unstyled">
                                                                 <li>
                                                                     <div class="course-details__points-list-icon">
                                                                         <img src="{{ asset('assets/images/icon/course-details-points-list-icon-3.png') }}" alt="">
                                                                     </div>
                                                                     <h3 class="course-details__points-list-title">Hardware Kit Provided</h3>
-                                                                    <p class="course-details__points-list-text">Includes IC 555, resistors, capacitors, LEDs, connectors, and a copper-clad sheet — free of cost.</p>
+                                                                    <p class="course-details__points-list-text">LM358, BC548, LDR, LM35, resistors, fan/LED load, OHB sheet, silver ink.</p>
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                         <h3 class="course-details__overview-title-2">Session & Project Plan</h3>
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Week / Session</th>
+                                                            <th>Project</th>
+                                                            <th>Core Idea</th>
+                                                            <th>Key Concepts</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Week 1 (Sat)</td>
+                                                            <td>Automatic Light</td>
+                                                            <td>LDR controls LED through LM358</td>
+                                                            <td>Voltage divider, comparator output</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Week 2 (Sat)</td>
+                                                            <td>Temperature-Controlled Fan</td>
+                                                            <td>LM35 temperature sensor + BC548 transistor</td>
+                                                            <td>Analog to action, transistor as a switch</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Week 3 (Sat)</td>
+                                                            <td>Touch / Motion Light</td>
+                                                            <td>Small sensor signal → drive LED/buzzer</td>
+                                                            <td>Signal conditioning, noise, sensitivity</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Extra (Sun 1)</td>
+                                                            <td>KiCAD Layout</td>
+                                                            <td>Draw all 3 circuits as separate boards</td>
+                                                            <td>Netlist, footprint, routing basics</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Extra (Sun 2)</td>
+                                                            <td>Assembly + Demo Day</td>
+                                                            <td>Mount, test, and present</td>
+                                                            <td>Debugging, documenting the build</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                @elseif($displayTitle === 'Electronics Innovation Program: 1-Year')
+                                                    <h3 class="course-details__overview-title">Course Overview</h3>
+                                                    <p class="course-details__overview-text-1">The 1-Year Electronics Innovation Program is a complete, mentor-guided pathway for students who want to keep learning all year and build a portfolio of real projects. Every month, learners receive a new circuit to build — starting from basic sensor automation and gradually moving to robotics, motor control, and simple IoT-style applications.</p>
+                                                    <p class="course-details__overview-text-2">Students will design in KiCAD, assemble on OHB/PCB, and, in the later months, integrate microcontrollers (Arduino) to make smart systems. This is ideal for schools, makers, and young engineers who want continuous learning instead of a one-time workshop.</p>
+                                                    <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
+                                                    <ul class="course-details__overview-points list-unstyled">
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>End-to-End PCB Design:</h5>
+                                                                <p>From schematic to layout, routing, Gerber generation, and assembling final hardware.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>10 Real Projects:</h5>
+                                                                <p>Build light automation, temperature control, water level alarm, plant watering, robotics, and a mini smart home.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Coding & Integration:</h5>
+                                                                <p>Use Arduino to read sensors and control relays/motors in the later modules.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Problem-Solving Mindset:</h5>
+                                                                <p>Learn how to select components, read datasheets, and make circuits useful in home, lab, or STEM competitions.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <h3 class="course-details__overview-title-3">Requirements</h3>
+                                                    <p class="course-details__overview-text-3">No prior knowledge is mandatory. Students who finished the 3-Day or 1-Month course will find it even easier.</p>
+                                                    <div class="course-details__points-box">
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <ul class="course-details__points-list-2 list-unstyled">
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Computer with KiCAD + Arduino IDE</h3>
+                                                                        <p class="course-details__points-list-text">Used for schematic design in the early months and coding in later months.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Learning Time</h3>
+                                                                        <p class="course-details__points-list-text">12 Months · 2 Sessions / Month · 1 Hour Each (Total: 24 Guided Sessions)</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                             <div class="col-xl-6">
+                                                            <ul class="course-details__points-list-2 list-unstyled">
+                                                                <li>
+                                                                    <div class="course-details__points-list-icon">
+                                                                        <img src="{{ asset('assets/images/icon/course-details-points-list-icon-3.png') }}" alt="">
+                                                                    </div>
+                                                                    <h3 class="course-details__points-list-title">Monthly Hardware Kit</h3>
+                                                                    <p class="course-details__points-list-text">Sensors, ICs, motors, relays, and microcontroller boards are provided as per project.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <h3 class="course-details__overview-title-2">Month-wise Project Roadmap</h3>
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Month</th>
+                                                            <th>Project</th>
+                                                            <th>Core Idea</th>
+                                                            <th>Key Concepts</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Smart Light</td>
+                                                            <td>LDR + transistor switching</td>
+                                                            <td>Light sensing, auto ON/OFF</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Temperature-Controlled Fan</td>
+                                                            <td>LM35 + LM358</td>
+                                                            <td>Analog sensing, comparator output</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Water Level Alarm</td>
+                                                            <td>Water probes + 555 timer</td>
+                                                            <td>Threshold detection, buzzer drive</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>Sound-Activated Light</td>
+                                                            <td>Electret mic + amplifier</td>
+                                                            <td>Signal amplification, noise filtering</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>Soil Moisture Controller</td>
+                                                            <td>Soil sensor + relay</td>
+                                                            <td>Home / garden automation</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>IR Obstacle Detector</td>
+                                                            <td>IR TX/RX + comparator</td>
+                                                            <td>IR sensing for robots</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>Fire / Heat Alarm</td>
+                                                            <td>Thermistor + buzzer</td>
+                                                            <td>Safety circuits, sensor biasing</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>Light-Following Robot</td>
+                                                            <td>2 LDRs + motor driver</td>
+                                                            <td>Robotics logic, differential drive</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>Line Follower Robot</td>
+                                                            <td>IR array + motor control</td>
+                                                            <td>Embedded decision making</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>Smart Home Mini System</td>
+                                                            <td>Arduino + relay + sensors</td>
+                                                            <td>Integration, IoT-style control</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h3 class="course-details__overview-title-2">Learning Goals</h3>
+      <ul class="course-details__overview-points list-unstyled">
+        <li>
+          <div class="course-details__overview-points-icon"><span class="fas fa-check"></span></div>
+          <div class="course-details__overview-points-content">
+            <h5>Build a Portfolio:</h5>
+            <p>Students complete 10 projects they can show to schools, fairs, and competitions.</p>
+          </div>
+        </li>
+        <li>
+          <div class="course-details__overview-points-icon"><span class="fas fa-check"></span></div>
+          <div class="course-details__overview-points-content">
+            <h5>Move from Passive to Maker:</h5>
+            <p>Learn to design solutions, not just watch videos.</p>
+          </div>
+        </li>
+        <li>
+          <div class="course-details__overview-points-icon"><span class="fas fa-check"></span></div>
+          <div class="course-details__overview-points-content">
+            <h5>Foundation for Robotics / AI:</h5>
+            <p>Final months prepare learners for your Robotics &amp; AI courses.</p>
+          </div>
+        </li>
+      </ul>
+                                                @endif
                                                     </div>
                                                 </div>
+                                                
+                                                
+                                                <!-- <h3 class="course-details__overview-title-2">Learning Goals</h3>
+                                                <ul class="course-details__overview-points list-unstyled">
+                                                    <li>
+                                                        <div class="course-details__overview-points-icon">
+                                                            <span class="fas fa-check"></span>
+                                                        </div>
+                                                        <div class="course-details__overview-points-content">
+                                                            <h5>Build a Portfolio:</h5>
+                                                            <p>Students complete 10 projects they can show to schools, fairs, and competitions.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="course-details__overview-points-icon">
+                                                            <span class="fas fa-check"></span>
+                                                        </div>
+                                                        <div class="course-details__overview-points-content">
+                                                            <h5>Move from Passive to Maker:</h5>
+                                                            <p>Learn to design solutions, not just watch videos.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="course-details__overview-points-icon">
+                                                            <span class="fas fa-check"></span>
+                                                        </div>
+                                                        <div class="course-details__overview-points-content">
+                                                            <h5>Foundation for Robotics / AI:</h5>
+                                                            <p>Final months prepare learners for your Robotics & AI courses.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul> -->
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -447,12 +673,11 @@
                                 <h3 class="course-details__info-list-title">This Course Includes</h3>
                                 <ul class="course-details__info-list-1 list-unstyled">
                                     <li>
-                                        <p><i class="icon-clock"></i>Duration</p>
-                                        <span>10h 30min</span>
+                                        <p><i class="icon-clock"></i>Live Classes</p>
                                     </li>
                                     <li>
                                         <p><i class="icon-chart-simple"></i>Skill Level</p>
-                                        <span>Entry Level</span>
+                                        <span>{{ $course->skill_level }}</span>
                                     </li>
                                     <li>
                                         <p><i class="icon-globe"></i>Language</p>
