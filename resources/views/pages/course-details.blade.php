@@ -11,6 +11,58 @@
 <x-strickyHeader/>
 
 <style>
+    /* Custom styles for course details page */
+    .course-details__main-tab-box,
+    .course-details__main-tab-box .tab-buttons,
+    .course-details__main-tab-box .tabs-content,
+    .course-details__main-tab-box .tab,
+    .course-details__main-tab-box .tab.active-tab {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+    
+    .course-details__main-tab-box .tab-buttons {
+        border-bottom: none !important;
+        padding: 0 !important;
+        margin: 0 0 20px 0 !important;
+    }
+    
+    .course-details__main-tab-box .tab-buttons li {
+        border: none !important;
+        margin: 0 15px 0 0 !important;
+        padding: 0 !important;
+    }
+    
+    .course-details__main-tab-box .tab-buttons li::after {
+        display: none !important;
+    }
+    .course-details__main-tab-box .tabs-content {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .course-details__tab-inner {
+        padding: 20px 0 0 0 !important;
+    }
+    
+    .course-details__overview {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .course-details__overview-points li {
+        margin-bottom: 15px !important;
+    }
+    
+    .course-details__points-box {
+        margin-top: 20px !important;
+    }
+    
+    .tab-buttons {
+        margin-bottom: 20px !important;
+    }
+    
     .comment-form__ratting .icon-star {
     cursor: pointer;
     color: #ddd;
@@ -117,79 +169,215 @@
                                 </div>
                             </div>
                             <div class="course-details__main-tab-box tabs-box">
-                                <ul class="tab-buttons list-unstyled">
+                                <!-- <ul class="tab-buttons list-unstyled mt-5">
                                     <li data-tab="#overview" class="tab-btn active-btn tab-btn-one">
                                         <p><span class="icon-pen-ruler"></span>Overview</p>
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <div class="tabs-content">
                                     <div class="tab active-tab" id="overview">
                                         <div class="course-details__tab-inner">
                                             <div class="course-details__overview">
-                                                <h3 class="course-details__overview-title">Course Overview</h3>
-                                                <p class="course-details__overview-text-1">PCB Design and Fabrications is a hands-on course designed to equip students with the core skills required to design, develop and fabricate Printed Circuit Boards (PCBs) using modern tools like KiCAD 9 and Saturn PCB Toolkit.</p>
-                                                <p class="course-details__overview-text-2">From understanding schematics to generating Gerber files and assembling real hardware, this course provides practical, step-by-step experience and prepares you for professional excellence in electronics and embedded system design.</p>
-                                                <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
-                                                <ul class="course-details__overview-points list-unstyled">
-                                                    <li>
-                                                        <div class="course-details__overview-points-icon">
-                                                            <span class="fas fa-check"></span>
-                                                        </div>
-                                                        <div class="course-details__overview-points-content">
-                                                            <h5>PCB Design Foundations:</h5>
-                                                            <p>Grasp the fundamentals, history, and process of PCB design using modern tools.</p>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__overview-points-icon">
-                                                            <span class="fas fa-check"></span>
-                                                        </div>
-                                                        <div class="course-details__overview-points-content">
-                                                            <h5>KiCAD Mastery:</h5>
-                                                            <p>Learn to set up, navigate, and create complete schematics and layouts in KiCAD 9.</p>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__overview-points-icon">
-                                                            <span class="fas fa-check"></span>
-                                                        </div>
-                                                        <div class="course-details__overview-points-content">
-                                                            <h5>Design to Fabrication:</h5>
-                                                            <p>Understand netlists, routing, Gerber generation, and the full PCB manufacturing workflow.</p>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="course-details__overview-points-icon">
-                                                            <span class="fas fa-check"></span>
-                                                        </div>
-                                                        <div class="course-details__overview-points-content">
-                                                            <h5>Practical Projects:</h5>
-                                                            <p>Build and test real circuits, gaining hands-on experience from design to assembly.</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="course-details__overview-title-3">Requirement?</h3>
-                                                <p class="course-details__overview-text-3">No prior PCB design experience is needed. This course starts with the basics and guides you through fabrication and assembly.</p>
-                                                <div class="course-details__points-box">
-                                                    <div class="row">
-                                                        <div class="col-xl-6">
-                                                            <ul class="course-details__points-list-2 list-unstyled">
-                                                                <li>
-                                                                    <div class="course-details__points-list-icon">
-                                                                        <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
-                                                                    </div>
-                                                                    <h3 class="course-details__points-list-title">Computer with KiCAD Installed</h3>
-                                                                    <p class="course-details__points-list-text">You’ll need a computer (Windows, macOS, or Linux) with KiCAD 9 installed.</p>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="course-details__points-list-icon">
-                                                                        <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
-                                                                    </div>
-                                                                    <h3 class="course-details__points-list-title">Basic Electronics Knowledge (Recommended)</h3>
-                                                                    <p class="course-details__points-list-text">Familiarity with electronic components and circuits is helpful but not mandatory.</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                @php
+                                                    $displayTitle = $course->title;
+                                                @endphp
+                                                
+                                                @if($displayTitle === 'PCB Kickstart Course: 3-Day')
+                                                    <h3 class="course-details__overview-title">Course Overview</h3>
+                                                    <p class="course-details__overview-text-1">PCB Design and Fabrications is a hands-on course designed to equip students with the core skills required to design, develop and fabricate Printed Circuit Boards (PCBs) using modern tools like KiCAD 9 and Saturn PCB Toolkit.</p>
+                                                    <p class="course-details__overview-text-2">From understanding schematics to generating Gerber files and assembling real hardware, this course provides practical, step-by-step experience and prepares you for professional excellence in electronics and embedded system design.</p>
+                                                    <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
+                                                    <ul class="course-details__overview-points list-unstyled">
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>PCB Design Foundations:</h5>
+                                                                <p>Grasp the fundamentals, history, and process of PCB design using modern tools.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>KiCAD Mastery:</h5>
+                                                                <p>Learn to set up, navigate, and create complete schematics and layouts in KiCAD 9.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Design to Fabrication:</h5>
+                                                                <p>Understand netlists, routing, Gerber generation, and the full PCB manufacturing workflow.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Practical Projects:</h5>
+                                                                <p>Build and test real circuits, gaining hands-on experience from design to assembly.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <h3 class="course-details__overview-title-3">Requirements</h3>
+                                                    <p class="course-details__overview-text-3">No prior PCB design experience is needed. This course starts with the basics and guides you through fabrication and assembly.</p>
+                                                    <div class="course-details__points-box">
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <ul class="course-details__points-list-2 list-unstyled">
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Computer with KiCAD Installed</h3>
+                                                                        <p class="course-details__points-list-text">You'll need a computer (Windows, macOS, or Linux) with KiCAD 9 installed.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Basic Electronics Knowledge (Recommended)</h3>
+                                                                        <p class="course-details__points-list-text">Familiarity with electronic components and circuits is helpful but not mandatory.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                @elseif($displayTitle === 'PCB Maker Course: 1-Month')
+                                                    <h3 class="course-details__overview-title">Course Overview</h3>
+                                                    <p class="course-details__overview-text-1">Take your PCB design skills to the next level with our 1-Month intensive course. This program is designed for those who want to dive deeper into professional PCB design and fabrication techniques, with hands-on projects and expert guidance.</p>
+                                                    <p class="course-details__overview-text-2">You'll work on real-world projects, learning advanced PCB design concepts, component selection, and manufacturing considerations to create professional-grade circuit boards.</p>
+                                                    <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
+                                                    <ul class="course-details__overview-points list-unstyled">
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Advanced PCB Layout Techniques:</h5>
+                                                                <p>Master multi-layer board design, impedance control, and high-speed routing strategies.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Component Selection & Management:</h5>
+                                                                <p>Learn to choose the right components and create custom libraries for efficient design workflows.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Design for Manufacturing (DFM):</h5>
+                                                                <p>Understand manufacturing constraints and how to design PCBs that are easy and cost-effective to produce.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Project Portfolio Development:</h5>
+                                                                <p>Complete multiple projects to build a professional portfolio of your work.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <h3 class="course-details__overview-title-3">Requirements</h3>
+                                                    <p class="course-details__overview-text-3">Basic understanding of electronics and PCB design concepts. Completion of the 3-Day course or equivalent experience is recommended.</p>
+                                                    <div class="course-details__points-box">
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <ul class="course-details__points-list-2 list-unstyled">
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Laptop with Design Software</h3>
+                                                                        <p class="course-details__points-list-text">A computer capable of running PCB design software (Windows, macOS, or Linux).</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Basic Electronics Kit</h3>
+                                                                        <p class="course-details__points-list-text">Basic electronic components for hands-on projects (list provided upon registration).</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                @elseif($displayTitle === 'Electronics Innovation Program: 1-Year')
+                                                    <h3 class="course-details__overview-title">Course Overview</h3>
+                                                    <p class="course-details__overview-text-1">Our comprehensive 1-Year Electronics Innovation Program is designed to transform you into a skilled electronics designer. This intensive program covers everything from basic electronics to advanced PCB design and embedded systems development.</p>
+                                                    <p class="course-details__overview-text-2">Through hands-on projects, industry-relevant curriculum, and mentorship, you'll gain the expertise needed to excel in the electronics industry or launch your own hardware startup.</p>
+                                                    <h3 class="course-details__overview-title-2">What You Will Learn?</h3>
+                                                    <ul class="course-details__overview-points list-unstyled">
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Advanced PCB Engineering:</h5>
+                                                                <p>Master complex multi-layer board design, high-speed digital, and RF circuit design principles.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Embedded Systems Integration:</h5>
+                                                                <p>Learn to integrate microcontrollers, sensors, and communication modules into your PCB designs.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Professional-Grade Projects:</h5>
+                                                                <p>Work on real-world projects that solve actual industry problems and build an impressive portfolio.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="course-details__overview-points-icon">
+                                                                <span class="fas fa-check"></span>
+                                                            </div>
+                                                            <div class="course-details__overview-points-content">
+                                                                <h5>Industry Best Practices:</h5>
+                                                                <p>Learn professional workflows, version control, and collaboration tools used in the industry.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <h3 class="course-details__overview-title-3">Requirements</h3>
+                                                    <p class="course-details__overview-text-3">Strong interest in electronics and commitment to complete the program. Prior experience with basic electronics is beneficial but not required.</p>
+                                                    <div class="course-details__points-box">
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <ul class="course-details__points-list-2 list-unstyled">
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-1.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Dedicated Laptop</h3>
+                                                                        <p class="course-details__points-list-text">A reliable computer for design work and programming (minimum specs will be provided).</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="course-details__points-list-icon">
+                                                                            <img src="{{ asset('assets/images/icon/course-details-points-list-icon-2.png') }}" alt="">
+                                                                        </div>
+                                                                        <h3 class="course-details__points-list-title">Stable Internet Connection</h3>
+                                                                        <p class="course-details__points-list-text">For accessing course materials, live sessions, and cloud-based tools.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                @endif
                                                         <div class="col-xl-6">
                                                             <ul class="course-details__points-list-2 list-unstyled">
                                                                 <li>
@@ -214,19 +402,24 @@
                 <div class="col-xl-4 col-lg-5">
                     <div class="course-details__right">
                         <div class="course-details__info-box">
-                            <div class="course-details__video-link" style="position:relative; overflow:hidden; border-radius:20px;">
-                                <video id="coursePreviewVideo" width="100%" height="auto" preload="metadata" poster="{{ asset('assets/images/resources/MyfirstPCB.png') }}" style="display:block;" controls playsinline controlsList="nodownload">
-                                    <source src="{{ asset('assets/videos/myfirstpcb-preview_2.mp4') }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <button type="button" id="coursePreviewPlayBtn" aria-label="Play preview" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:none;background:transparent;cursor:pointer;">
-                                    <div class="course-details__video-icon">
-                                        <span class="icon-play"></span>
-                                        <i class="ripple"></i>
-                                    </div>
-                                </button>
-                            </div>
-
+                            @if($course->preview_video_url)
+                                <div class="course-details__video-link" style="position:relative; overflow:hidden; border-radius:20px;">
+                                    <video id="coursePreviewVideo" width="100%" height="auto" preload="metadata" poster="{{ asset('assets/images/resources/MyfirstPCB.png') }}" style="display:block;" controls playsinline controlsList="nodownload">
+                                        <source src="{{ asset('storage/videos/courses/' . $course->preview_video_url) }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <button type="button" id="coursePreviewPlayBtn" aria-label="Play preview" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:none;background:transparent;cursor:pointer;">
+                                        <div class="course-details__video-icon">
+                                            <span class="icon-play"></span>
+                                            <i class="ripple"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            @else
+                                <div class="alert alert-info">
+                                    Preview video coming soon!
+                                </div>
+                            @endif
                             <div class="course-details__doller-and-btn-box d-flex justify-content-between">
                                 <div class="course-details__doller-btn-box">
                                     <a class="thm-btn-two btn" onclick="showBookingModal()">
@@ -290,7 +483,7 @@
     <div id="bookingModal" aria-hidden="true">
         <div class="modal-card">
             <div class="modal-header">
-                <h4>Printed Circuit Board Design: From Concept to Production (3-Day Course) - ₹1000</h4>
+                <h4 id="modalCourseTitle">{{ $course->title }} - ₹1000</h4>
                 <button type="button" class="close-btn" onclick="closeBookingModal()" aria-label="Close">×</button>
             </div>
             <form id="bookingForm">
@@ -381,6 +574,18 @@
     </script>
 
 <script>
+// Function to open booking modal with course details
+function openBookingModal() {
+    document.getElementById('bookingModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to close booking modal
+function closeBookingModal() {
+    document.getElementById('bookingModal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Tab switching: supports data-tab or data-bs-tab attributes
     const tabButtons = document.querySelectorAll('.tab-buttons .tab-btn');

@@ -209,8 +209,8 @@
                             </h3>
                             <div class="courses-two__btn-and-client-box">
                                 <div class="courses-two__btn-box">
-                                    <a class="thm-btn-two" onclick="enrollInCourse({{ $course }})">
-                                        <span>Enroll Now</span>
+                                    <a href="{{ route('course-details', $course->id) }}" class="thm-btn-two">
+                                        <span>View Course</span>
                                         <i class="icon-angles-right"></i>
                                     </a>
                                 </div>
@@ -589,26 +589,6 @@ Each course is designed to match school and college curricula while helping ever
                         <!-- Review box -->
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="why-choose-two__right-content-two">
-                                <div class="why-choose-two__udemy-review">
-                                    <div class="why-choose-two__udemy-review-img">
-                                        <img src="{{ asset('assets/images/resources/why-choose-two-udemy-review-img.jpg') }}"
-                                            alt="Student Review Robotics Trivandrum">
-                                    </div>
-                                    <div class="why-choose-two__udemy-review-logo">
-                                        <img src="{{ asset('assets/images/resources/why-choose-two-udemy-review-logo.png') }}"
-                                            alt="Nytt Robotics Online Review Logo">
-                                    </div>
-                                    <div class="why-choose-two__udemy-review-client-info">
-                                        <p class="why-choose-two__udemy-review-client-name">Sumi P /</p>
-                                        <div class="why-choose-two__udemy-review-star">
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="why-choose-two__right-content-two-user-details">
                                     <div class="why-choose-two__right-content-two-user-details-top">
                                         <div class="why-choose-two__right-content-two-user-details-top-shape-bg"
@@ -641,7 +621,7 @@ Each course is designed to match school and college curricula while helping ever
 <!--Why Choose Two End -->
 
 <!-- Counter Two Start -->
-<section class="counter-two">
+<!-- <section class="counter-two">
     <div class="counter-two__wrap">
         <ul class="list-unstyled counter-two__list marquee_mode">
             <li>
@@ -710,10 +690,10 @@ Each course is designed to match school and college curricula while helping ever
             
         </ul>
     </div>
-</section>
+</section> -->
 <!-- Counter Two End -->
 
-<div style="height: 250px;"></div>
+<!-- <div style="height: 250px;"></div> -->
 
 
 <!--Team Two Start -->
@@ -973,6 +953,60 @@ Each course is designed to match school and college curricula while helping ever
 
 
 <!-- Testimonial Two Start -->
+<style>
+    /* Custom styles for testimonial navigation buttons */
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav {
+        position: absolute !important;
+        bottom: -60px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        display: flex !important;
+        gap: 20px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        right: auto !important;
+        top: auto !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav button {
+        width: 45px !important;
+        height: 45px !important;
+        background: #f1f1f1 !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        transform: none !important;
+    }
+    
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav button:hover {
+        background: var(--fistudy-primary) !important;
+        color: #fff !important;
+    }
+    
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav button span {
+        font-size: 18px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    .testimonial-two .owl-dots {
+        margin-top: 60px !important;
+    }
+    
+    /* Reset any conflicting styles */
+    .testimonial-two__main-content .owl-carousel .owl-nav {
+        gap: 10px !important;
+    }
+</style>
+
 <section class="testimonial-two">
     <div class="testimonial-two__shape-6">
         <img src="{{ asset('assets/images/shapes/testimonial-two-shape-6.png') }}"
@@ -1141,30 +1175,31 @@ Each course is designed to match school and college curricula while helping ever
                     <div class="testimonial-two__thumb-carousel owl-carousel owl-theme">
                         <div class="testimonial-two__thumb-item">
                             <div class="testimonial-two__img-holder-box">
-                                <div class="testimonial-two__img-holder">
-                                    <img src="{{ asset('assets/images/testimonial/testimonial-2-1.jpg') }}"
-                                        alt="Parent feedback Trivandrum Robotics">
-                                </div>
+                                <!-- <div class="testimonial-two__img-holder"> -->
+                                    <!-- <img src="{{ asset('assets/images/testimonial/testimonial-2-1.jpg') }}" -->
+                                        <!-- alt="Parent feedback Trivandrum Robotics"> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                         <div class="testimonial-two__thumb-item">
                             <div class="testimonial-two__img-holder-box">
-                                <div class="testimonial-two__img-holder">
-                                    <img src="{{ asset('assets/images/testimonial/testimonial-2-2.jpg') }}"
-                                        alt="Parent feedback Coimbatore Robotics">
-                                </div>
+                                <!-- <div class="testimonial-two__img-holder"> -->
+                                    <!-- <img src="{{ asset('assets/images/testimonial/testimonial-2-2.jpg') }}" -->
+                                        <!-- alt="Parent feedback Coimbatore Robotics"> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                         <div class="testimonial-two__thumb-item">
                             <div class="testimonial-two__img-holder-box">
-                                <div class="testimonial-two__img-holder">
-                                    <img src="{{ asset('assets/images/testimonial/testimonial-2-3.jpg') }}"
-                                        alt="Testimonial by local robotics learner parent">
-                                </div>
+                                <!-- <div class="testimonial-two__img-holder"> -->
+                                    <!-- <img src="{{ asset('assets/images/testimonial/testimonial-2-3.jpg') }}" -->
+                                        <!-- alt="Testimonial by local robotics learner parent"> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
-                </div> <!-- /.testimonial-two__thumb-outer-box -->
+                </div> 
+                <!-- /.testimonial-two__thumb-outer-box -->
 
             </div>
         </div>

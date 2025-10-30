@@ -364,28 +364,83 @@
                     </div> <!-- /.testimonial-two__carousel -->
                 </div>
 
+
+                <!-- Testimonial Two Start -->
+<style>
+    /* Custom styles for testimonial navigation buttons */
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav {
+        position: absolute !important;
+        bottom: -60px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        display: flex !important;
+        gap: 20px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        right: auto !important;
+        top: auto !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav button {
+        width: 45px !important;
+        height: 45px !important;
+        background: #f1f1f1 !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        transform: none !important;
+    }
+    
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav button:hover {
+        background: var(--fistudy-primary) !important;
+        color: #fff !important;
+    }
+    
+    .testimonial-two .testimonial-two__main-content .owl-carousel .owl-nav button span {
+        font-size: 18px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    .testimonial-two .owl-dots {
+        margin-top: 60px !important;
+    }
+    
+    /* Reset any conflicting styles */
+    .testimonial-two__main-content .owl-carousel .owl-nav {
+        gap: 10px !important;
+    }
+</style>
                 <!-- Thumbnails (if used) -->
                 <div class="testimonial-two__thumb-outer-box">
                     <div class="testimonial-two__thumb-carousel owl-carousel owl-theme">
                         <div class="testimonial-two__thumb-item">
                             <div class="testimonial-two__img-holder-box">
-                                <div class="testimonial-two__img-holder">
-                                    <img src="{{ asset('assets/images/testimonial/testimonial-2-1.jpg') }}" alt="Parent feedback Trivandrum Robotics">
-                                </div>
+                                <!-- <div class="testimonial-two__img-holder"> -->
+                                    <!-- <img src="{{ asset('assets/images/testimonial/testimonial-2-1.jpg') }}" alt="Parent feedback Trivandrum Robotics"> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                         <div class="testimonial-two__thumb-item">
                             <div class="testimonial-two__img-holder-box">
-                                <div class="testimonial-two__img-holder">
-                                    <img src="{{ asset('assets/images/testimonial/testimonial-2-2.jpg') }}" alt="Parent feedback Coimbatore Robotics">
-                                </div>
+                                <!-- <div class="testimonial-two__img-holder"> -->
+                                    <!-- <img src="{{ asset('assets/images/testimonial/testimonial-2-2.jpg') }}" alt="Parent feedback Coimbatore Robotics"> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                         <div class="testimonial-two__thumb-item">
                             <div class="testimonial-two__img-holder-box">
-                                <div class="testimonial-two__img-holder">
-                                    <img src="{{ asset('assets/images/testimonial/testimonial-2-3.jpg') }}" alt="Testimonial by local robotics learner parent">
-                                </div>
+                                <!-- <div class="testimonial-two__img-holder"> -->
+                                    <!-- <img src="{{ asset('assets/images/testimonial/testimonial-2-3.jpg') }}" alt="Testimonial by local robotics learner parent"> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
