@@ -73,13 +73,11 @@ Route::post('/auth/verify-otp', [AuthController::class, 'verifyOtp'])->name('aut
     Route::get('wishlist', [PagesController::class, 'wishlist'])->name('wishlist');
 
 
-    Route::get('blog', [PagesController::class, 'blog'])->name('blog');
+    // Blog Routes
+    Route::get('blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
+    Route::get('blog/{id}', [\App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
     Route::get('blog-carousel', [PagesController::class, 'blog_carousel'])->name('blog-carousel');
     Route::get('blog-list', [PagesController::class, 'blog_list'])->name('blog-list');
-    Route::get('blog-details/1', [PagesController::class, 'blog_details_1'])->name('blog-details-1');
-    Route::get('blog-details/2', [PagesController::class, 'blog_details_2'])->name('blog-details-2');
-    Route::get('blog-details/3', [PagesController::class, 'blog_details_3'])->name('blog-details-3');
-    Route::get('blog-details/4', [PagesController::class, 'blog_details_4'])->name('blog-details-4');
 
     Route::get('contact', [PagesController::class, 'contact'])->name('contact');
     Route::post('/contact', [ContactController::class, 'store'])->name('contact');

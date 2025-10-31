@@ -52,15 +52,15 @@
                             
                             <td class="py-2 px-4 border">{{ $blog->title }}</td>
                             <td class="py-2 px-4 border">
-    @if($blog->image_url)
-        <img src="{{ asset($blog->image_url) }}" alt="Blog Image" class="h-12 w-12 rounded object-cover">
+    @if($blog->image)
+        <img src="{{ $blog->image_url }}" alt="Blog Image" class="h-12 w-12 rounded object-cover">
     @else
         No Image
     @endif
 </td>
- <!-- Description Column -->
+ <!-- Content Column -->
             <td class="py-2 px-4 border text-gray-700">
-                {{ Str::limit($blog->description, 70) ?? '—' }}
+                {{ Str::limit(strip_tags($blog->content), 70) ?? '—' }}
             </td>
 
                             <td class="py-2 px-4 border">{{ $blog->created_at->format('Y-m-d') }}</td>

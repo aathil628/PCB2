@@ -6,126 +6,58 @@ $subtitle = 'Our Blogs';
 @section('title', 'Blog | MyFirstPCB')
 @section('content')
 
-
-
 <x-strickyHeader />
 <div style="height: 30px;"></div>
 <!--Blog Page Start-->
 <section class="blog-page">
     <div class="container">
         <div class="row">
-            <!--Blog 1: Robotics Courses for Kids in Trivandrum-->
-            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                <a href="{{ route('blog-details-1') }}" style="text-decoration:none;color:inherit;display:block;">
-                <div class="blog-two__single">
-                    <div class="blog-two__img">
-                        <img src="{{ asset('assets/images/blog/robotics-kids-trivandrum.jpg') }}"
-                            alt=" No More Last-Minute Scrambling" style="width:100%; height:auto;">
-                        <div class="blog-two__date">
-                            <span class="icon-calendar"></span>
-                            <p>April 02, 2025</p>
+            @forelse($blogs as $index => $blog)
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ ($index % 3 + 1) * 100 }}ms">
+                    <a href="{{ route('blog.show', $blog->id) }}" style="text-decoration:none;color:inherit;display:block;">
+                        <div class="blog-two__single">
+                            <div class="blog-two__img">
+                                @if($blog->image)
+                                    <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" style="width:100%; height:250px; object-fit: cover;">
+                                @else
+                                    <img src="{{ asset('assets/images/blog/default-blog.jpg') }}" alt="{{ $blog->title }}" style="width:100%; height:250px; object-fit: cover;">
+                                @endif
+                                <div class="blog-two__date">
+                                    <span class="icon-calendar"></span>
+                                    <p>{{ $blog->created_at->format('F d, Y') }}</p>
+                                </div>
+                            </div>
+                            <div class="blog-two__content">
+                                <h4 class="blog-two__title">
+                                    {{ Str::limit($blog->title, 80) }}
+                                </h4>
+                                <p class="blog-two__text">
+                                    {{ Str::limit(strip_tags($blog->content), 200) }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="blog-two__content">
-                        <h4 class="blog-two__title">
-                            Why Every Maker Should Have a PCB Toolkit Ready
-                        </h4>
-                        <p class="blog-two__text">If you’re into electronics, tinkering, or DIY projects, there’s one
-                            thing you’ll quickly learn: having the right tools at your side makes all the difference.
-                            It’s exciting to jump straight into designing circuits or soldering components, but without
-                            a proper toolkit, small hurdles can slow you down or even kill your momentum.</p>
-                    </div>
+                    </a>
                 </div>
-                </a>
-            </div>
-
-            <!--Blog 2: Industry Connect-->
-            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <a href="{{ route('blog-details-2') }}" style="text-decoration:none;color:inherit;display:block;">
-                <div class="blog-two__single">
-                    <div class="blog-two__img">
-                        <img src="{{ asset('assets/images/blog/industry-connect.jpg') }}" alt="Consistency in Quality"
-                            style="width:100%; height:auto;">
-                        <div class="blog-two__date">
-                            <span class="icon-calendar"></span>
-                            <p>April 03, 2025</p>
-                        </div>
-                    </div>
-                    <div class="blog-two__content">
-                        <h4 class="blog-two__title">
-                            5 Simple Projects You Can Do With Our Junior PCB Toolkit
-                        </h4>
-                        <p class="blog-two__text">Getting started with electronics can feel intimidating, but the truth
-                            is, you don’t need to dive into complex circuits on day one. With the Junior PCB Toolkit,
-                            you’ve already got everything you need to try out fun, hands-on projects that will boost
-                            your skills and confidence.
-                        </p>
-                    </div>
+            @empty
+                <div class="col-12 text-center py-5">
+                    <h3>No blog posts found.</h3>
+                    <p>Check back later for new updates!</p>
                 </div>
-                </a>
-            </div>
-
-            <!--Blog 3-->
-            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <a href="{{ route('blog-details-3') }}" style="text-decoration:none;color:inherit;display:block;">
-                <div class="blog-two__single">
-                    <div class="blog-two__img">
-                        <img src="{{ asset('assets/images/blog/robotics-curriculum.jpg') }}" alt="Faster Learning Curve"
-                            style="width:100%; height:auto;">
-                        <div class="blog-two__date">
-                            <span class="icon-calendar"></span>
-                            <p>April 04, 2025</p>
-                        </div>
-                    </div>
-                    <div class="blog-two__content">
-                        <h4 class="blog-two__title">
-                            5 Simple Projects You Can Do With Our Junior PCB Toolkit
-                        </h4>
-                        <p class="blog-two__text">Starting with electronics doesn’t have to be complicated. With the
-                            Junior PCB Toolkit, you already have everything you need to bring small but exciting
-                            projects to life. These projects will help you learn the basics of circuits while giving you
-                            something fun and practical to show off.
-                        </p>
-                    </div>
-                </div>
-                </a>
-            </div>
-
-            <!-- Blog 4 -->
-                         <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <a href="{{ route('blog-details-4') }}" style="text-decoration:none;color:inherit;display:block;">
-                <div class="blog-two__single">
-                    <div class="blog-two__img">
-                        <img src="{{ asset('assets/images/blog/starter- pack for-learning- pcb.jpg') }}" alt="Faster Learning Curve"
-                            style="width:100%; height:auto;">
-                        <div class="blog-two__date">
-                            <span class="icon-calendar"></span>
-                            <p>April 12, 2025</p>
-                        </div>
-                    </div>
-                    <div class="blog-two__content">
-                        <h4 class="blog-two__title">
-                            The Ultimate Starter Pack for Learning PCB Design (Without Getting Overwhelmed)
-                        </h4>
-                        <p class="blog-two__text">If you’ve ever thought about making your own circuits or designing your own PCBs, you probably know the feeling: too many tools, too many tutorials, and too many decisions. It’s easy to get overwhelmed before you even begin.
-                        </p>
-                    </div>
-                </div>
-                </a>
-            </div>
-
-
+            @endforelse
         </div>
+        
+        @if($blogs->hasPages())
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="pagination-wrapper">
+                        {{ $blogs->links() }}
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
 </section>
 <!--Blog Page End-->
-
-
-<!--Newsletter Two Start -->
-
-<!--Newsletter Two End -->
-
-
 
 <x-contact-grid />
 <x-footer2 />

@@ -35,9 +35,9 @@ class BlogController extends Controller
         $blog->content = $request->content;
 
         if ($request->hasFile('image')) {
-        $path = $request->file('image')->store('blogs', 'public');
-        $blog->image_url = 'storage/' . $path; // 👈 this ensures asset() works
-       }
+            $path = $request->file('image')->store('blogs', 'public');
+            $blog->image = $path; // Save just the path without 'storage/' prefix
+        }
 
 
         $blog->save();

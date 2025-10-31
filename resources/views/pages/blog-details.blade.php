@@ -1,9 +1,9 @@
 @extends('layouts.layout2')
 @php
-    $title = 'Blog Details';
+    $title = $blog->title;
     $subtitle = 'Blog Details';
 @endphp
-@section('title', 'Future of Education: Why Online Learning is Here to Stay | MyFirstPCB')
+@section('title', $blog->title . ' | MyFirstPCB')
 @section('content')
 
 <x-strickyHeader/>
@@ -16,51 +16,26 @@
                     <div class="blog-details__left">
                         <div class="blog-details__img-box">
                             <div class="blog-details__img">
-                                <img src="{{ asset('assets/images/blog/blog-details-img-1.jpg') }}" alt="">
+                                @if($blog->image)
+                                    <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" style="width: 100%; height: 500px; object-fit: cover;">
+                                @else
+                                    <img src="{{ asset('assets/images/blog/default-blog.jpg') }}" alt="{{ $blog->title }}" style="width: 100%; height: 500px; object-fit: cover;">
+                                @endif
                             </div>
                         </div>
                         <div class="blog-details__content">
-                            <h3 class="blog-details__title-1">Future of Education: Why Online Learning is Here
-                                to Stay</h3>
-                            <!-- <div class="blog-details__client-and-meta">
-                                <div class="blog-details__client-box">
-                                    <div class="blog-details__client-img">
-                                        <img src="{{ asset('assets/images/blog/blog-details-client-img-1.jpg') }}" alt="">
+                            <h3 class="blog-details__title-1">{{ $blog->title }}</h3>
+                            <div class="blog-details__client-meta list-unstyled" style="display: flex; gap: 20px; margin-bottom: 20px;">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-calendar"></span>
                                     </div>
-                                    <div class="blog-details__client-content">
-                                        <p>Published By</p>
-                                        <h4>Jordan Walk</h4>
-                                    </div>
-                                </div>
-                                <ul class="blog-details__client-meta list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-calendar"></span>
-                                        </div>
-                                        <p>Nov 02, 2024</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-tags"></span>
-                                        </div>
-                                        <p>Marketing</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-comments"></span>
-                                        </div>
-                                        <p>(Comments)</p>
-                                    </li>
-                                </ul>
-                            </div> -->
-                            <p class="blog-details__text-1">The digital era has radically transformed nearly
-                                every industry, and education is no exception. What began as an alternative to
-                                traditional classroom settings has now solidified into an essential component of
-                                modern education. The flexibility, accessibility, and evolving technology of
-                                online learning make it more than just a trend; it’s a pivotal shift that’s here
-                                to stay. In this post, we’ll explore the reasons why online learning has not
-                                only become a staple of modern education but also why it holds the key to the
-                                future.</p>
+                                    <p>{{ $blog->created_at->format('F d, Y') }}</p>
+                                </li>
+                            </div>
+                            <div class="blog-details__text-1">
+                                {!! $blog->content !!}
+                            </div>
                             <h4 class="blog-details__title-2">Flexibility and Accessibility</h4>
                             <p class="blog-details__text-2">One of the most significant advantages of online
                                 learning is the flexibility it offers. Students are no longer bound by
@@ -289,9 +264,30 @@
                     <div class="sidebar">
                         <div class="sidebar__single sidebar__post">
                             <div class="sidebar__title-box">
+                                <h3 class="sidebar__title">Recent Posts</h3>
                                 <div class="sidebar__title-icon">
                                     <img src="{{ asset('assets/images/icon/sidebar-title-icon.png') }}" alt="">
                                 </div>
+                            </div>
+                            <div class="sidebar__post-content">
+                                <ul class="sidebar__post-list list-unstyled">
+                                    @foreach($recentBlogs as $recentBlog)
+                                    <li>
+                                        <div class="sidebar__post-image">
+                                            @if($recentBlog->image)
+                                                <img src="{{ $recentBlog->image_url }}" alt="{{ $recentBlog->title }}" style="width: 80px; height: 80px; object-fit: cover;">
+                                            @else
+                                                <img src="{{ asset('assets/images/blog/default-blog.jpg') }}" alt="{{ $recentBlog->title }}" style="width: 80px; height: 80px; object-fit: cover;">
+                                            @endif
+                                        </div>
+                                        <div class="sidebar__post-text">
+                                            <p>{{ $recentBlog->created_at->format('M d, Y') }}</p>
+                                            <h4><a href="{{ route('blog.show', $recentBlog->id) }}">{{ Str::limit($recentBlog->title, 50) }}</a></h4>
+                                        </div>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
                                 <h3 class="sidebar__title">Latest Post </h3>
                             </div>
                             <ul class="sidebar__post-list list-unstyled">
