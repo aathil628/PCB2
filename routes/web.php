@@ -12,16 +12,22 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
+Route::get('/', [HomeController::class, 'index'])->name('index');
+// Add your normal frontend routes here...
+// Example:
+// Route::get('/about', [PagesController::class, 'about'])->name('about');
+
+// ----------------------
+// Admin Routes
+// ----------------------
+require __DIR__ . '/admin.php';
+
+
+// User Authentication Routes
 Route::middleware(['auth'])->group(function () {
-
-
-    Route::get('/admin/contacts', function () {
-        $contacts = \App\Models\Contact::all();
-        return view('admin.contacts', compact('contacts'));
-    })->name('admin.contacts');
-
-     Route::get('/profile', function () {
+    Route::get('/profile', function () {
         return view('pages.profile');
     })->name('profile');
 
